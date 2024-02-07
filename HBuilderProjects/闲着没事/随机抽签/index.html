@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="viewport" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机抽签</title>
+
+</head>
+
+<body>
+    <section>
+        <div id="interface">
+            <div id="nameDisplay">随机抽签</div>
+            <button onclick="clickButton(this)">Start</button>
+        </div>
+    </section>
+    <script>
+        // var names = ["李华","小明","小红","小张","HXD","LPL","LOL"];
+		var names = ["刘小萍","樊晋君","黄俊","李瑞","陈青婷","江洪苇","邬欢欢",
+		"张梓靖","刘莲花","张世程","王励","郭红梅","杨莹","金伍燕","向洋",
+		"唐敏嘉","唐忠意","王运弛","印前程","林福轩","刘宇","杨钰婷","罗毅凤",
+		"李行","钱昱洁","袁玉","王灿","王锦臣","董百英","蒲皓","陈世豪","查美丽",
+		"邵怡欣","王燕方","王家伟","黄毓茹","马景涛","林仕鸿","王欢"]
+        var length = names.length;
+
+        var displayBoard = document.getElementById("nameDisplay");
+
+        mytime = null
+
+        function clickButton(btn) {
+            var text = btn.innerHTML;
+            console.log(text);
+
+            if (text == "Start") {
+                btn.innerHTML = "End";
+
+                if (mytime == null) {
+                    mytime = setInterval(function () {
+                        var name = randomName();
+                        console.log(name);
+                        displayBoard.innerHTML = name;
+                    }, 100);
+                }
+
+            } else if (text == "End") {
+                btn.innerHTML = "Start";
+
+                if (mytime != null) {
+                    clearInterval(mytime);
+                    mytime = null;
+                }
+            }
+
+
+        }
+
+        function randomName() {
+            var randomNum = Math.ceil(Math.random() * 4000) % length + 1;
+            return names[randomNum - 1];
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Ma Shan Zheng', sans-serif;  
+            overflow-x: hidden;
+
+        }
+
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(94.3deg, rgba(26, 33, 64, 1) 10.9%, rgba(81, 84, 115, 1) 87.1%);
+            overflow: hidden;
+        }
+
+        section:before {
+            position: absolute;
+            content: "";
+            z-index: 2;
+            width: 450px;
+            height: 450px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-100%, -80%);
+            background-color: #FFE53B;
+            background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+            animation: pulse 1.5s infinite;
+
+        }
+
+        section:after {
+            position: absolute;
+            content: "";
+            z-index: 2;
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(10%, 20%);
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+            animation: pulse 0.1s infinite;
+        }
+
+        @keyframes pulse {
+            50% {
+                box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+
+            }
+        }
+
+        #interface {
+            position: relative;
+            z-index: 3;
+            width: 400px;
+            background-color: rgba(255, 255, 255, .1);
+            padding: 45px 30px;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-right: 1px solid rgba(255, 255, 255, .1);
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            backdrop-filter: blur(20px);
+        }
+
+        #nameDisplay {
+            color: #fff;
+            display: block;
+            text-align: center;
+            line-height: 155px;
+            font-size: 70px;
+            margin: 0 0 30px 0;
+            overflow: hidden;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
+            background-size: 200% auto;
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+            cursor: pointer;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+            transition: ease .1s;
+            font-size: 30px;
+            justify-content: center;
+        }
+
+        button:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>

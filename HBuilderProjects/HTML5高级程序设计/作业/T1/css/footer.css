@@ -1,0 +1,15 @@
+.footer {
+    height: 2rem;
+    color: rgb(255, 255, 255);
+    line-height: 2rem;
+    text-align: center;
+}
+@media screen and (max-width:780px){
+
+    .footer{
+        position: fixed;
+        bottom:0rem;
+        width: 100%;
+    }
+ 
+}

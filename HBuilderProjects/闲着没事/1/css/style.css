@@ -1,0 +1,59 @@
+@charset "utf-8";
+*
+input, button, select, textarea {
+  outline:none;
+}
+textarea {
+  font-size:13px;
+  resize:none;
+}
+#main{
+  width:690px;
+  height:300px;
+  position:relative;
+  overflow:hidden;
+
+}
+#picbox{
+  width:3500px;
+  height:300px;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+.pics{
+  width:690px;
+  height:300px;
+  float:left;
+}
+#pic1{
+  background:url(../images/gg1.jpg);
+}
+#pic2{
+  background:url(../images/gg2.jpg);
+}
+#pic3{
+  background:url(../images/gg3.jpg);
+}
+#pic4{
+  background:url(../images/gg4.jpg);
+}
+#pic5{
+  background:url(../images/gg5.jpg);
+}
+
+#nav{
+  width:200px;
+  height:22px;
+  position:absolute;
+  bottom:10px;
+  left:280px;
+}
+.anvli{
+  width:18px;
+  height:16px;
+  float:left;
+  margin-right:8px;
+  cursor:pointer;
+  background:url(../images/dot.png) 0px -16px;
+}

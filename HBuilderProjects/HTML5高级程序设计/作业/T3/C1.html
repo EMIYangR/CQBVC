@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片拖放</title>
+		<style>
+			* {
+				padding: 0;
+				margin: auto;
+			}
+
+			#d {
+				display: flex;
+			}
+
+			#d1 {
+				width: 20%;
+				height: 450px;
+			}
+
+			.d1 {
+				width: 20%;
+				height: 150px;
+				border: 1px dashed #6cf;
+				margin: 10px 2.5%;
+			}
+
+			.d1-1 {
+				height: 150px;
+				width: 90%;
+			}
+		</style>
+		<script>
+			function allowDrop(e) {
+				//关闭默认处理
+				e.preventDefault();
+			}
+			//拖放操作
+			function drag(e) {
+				// 获取dataTransfer对象
+				let dt = e.dataTransfer;
+				dt.setData("id", e.target.id);
+			}
+
+			function drop(e) {
+				e.preventDefault();
+				let id = e.dataTransfer.getData("id");
+				e.target.appendChild(document.getElementById(id))
+			}
+		</script>
+	</head>
+	<body>
+		<div id="d">
+			<div id="d1" class="d1" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<div id="d1-red" class="d1-1" style="background-color: red;" draggable="true" ondragstart="drag(event)"></div>
+				<div id="d1-green" class="d1-1" style="background-color: green;" draggable="true" ondragstart="drag(event)"></div>
+				<div id="d1-bule" class="d1-1" style="background-color: blue;" draggable="true" ondragstart="drag(event)"></div>
+			</div>
+			<div id="d2" class="d1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+			</div>
+			<div id="d3" class="d1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+			</div>
+			<div id="d4" class="d1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+			</div>
+		</div>
+
+
+	</body>
+	</body>
+</html>

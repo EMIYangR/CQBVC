@@ -1,0 +1,15 @@
+*{
+	float: none;
+	
+}
+head div{
+	width: 100%;
+	height: 1000px;
+}
+head div a{
+	background-size: 100%;
+}
+#backgroudImage{
+	background-size: ;
+	background-image: url(/交互网页/img/lockscreenbg.jpg);
+}

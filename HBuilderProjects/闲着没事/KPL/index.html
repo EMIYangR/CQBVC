@@ -1,0 +1,1711 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="gbk">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="robots" content="all">
+  <meta name="author" content="Tencent-CP">
+  <meta name="Copyright" content="Tencent">
+  <meta name="description" content="王者荣耀官方赛事中心，提供王者荣耀直播、kpl直播、kpl赛程、kpl解说、kpl购票、战队信息等赛事信息" />
+  <meta name="keywords" content="kpl,kpl王者荣耀,王者荣耀kpl" />
+  <title>kpl职业联赛-王者荣耀直播-王者荣耀官方网站-腾讯游戏</title>
+  <!-- 页面设计：深圳欣米 | 页面制作：深圳欣米 | 创建：2021-12-07 -->
+  <!--<link rel="stylesheet" href="/cp/a20190613xxx/css/comm.css" charset="utf-8">-->
+  <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-3.4.2.min.css">
+  <link rel="stylesheet" href="css/comm.css" charset="utf-8">
+  <style>
+    .msg-nodata {
+      display: none;
+      line-height: 120px;
+      font-size: 14px;
+      color: #cbcbcb;
+      text-align: center;
+    }
+
+    .msg-nodata.show {
+      display: block;
+    }
+
+    body {
+      background-color: #eceff5;
+      padding-top:30px;
+    }
+  </style>
+  <script>
+    function is_pc() {
+      var os = ["Android", "iPhone", "Windows Phone", "iPod", "BlackBerry", "MeeGo",
+          "SymbianOS","iPad"
+      ]; // 其他类型的移动操作系统类型，自行添加
+      var info = navigator.userAgent;
+      var len = os.length;
+      for (var i = 0; i < len; i++) {
+          if (info.indexOf(os[i]) > 0) {
+              return false;
+          }
+      }
+      return true;
+    }
+    // 如果是移动设备
+    if (!is_pc()) {
+      //mode  移动端的适配方式 按需 传参  目前只有两种 px和rem
+      (function(win, doc, mode) {
+        var std = 750;
+        if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+            var h = document.getElementsByTagName("head")[0];
+            h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-capable" content="yes">');
+            h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-status-bar-style" content="black">');
+            h.insertAdjacentHTML('beforeEnd', '<meta name="format-detection" content="telephone=no">');
+            h.insertAdjacentHTML('beforeEnd', '<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />');
+            if(mode == 'px') {
+                //	Px移动端速配
+                if (!win.addEventListener) return;
+                var html=document.documentElement;
+                function setFont()
+                {
+                    function adaptVP(a){function c(){var c,d;return b.uWidth=a.uWidth?a.uWidth:750,b.dWidth=a.dWidth?a.dWidth:window.screen.width||window.screen.availWidth,b.ratio=window.devicePixelRatio?window.devicePixelRatio:1,b.userAgent=navigator.userAgent,b.bConsole=a.bConsole?a.bConsole:!1,a.mode?(b.mode=a.mode,void 0):(c=b.userAgent.match(/Android/i),c&&(b.mode="android-2.2",d=b.userAgent.match(/Android\s(\d+.\d+)/i),d&&(d=parseFloat(d[1])),2.2==d||2.3==d?b.mode="android-2.2":4.4>d?b.mode="android-dpi":d>=4.4&&(b.mode=b.dWidth>b.uWidth?"android-dpi":"android-scale")),void 0)}function d(){var e,f,g,h,c="",d=!1;switch(b.mode){case"apple":f=(window.screen.availWidth*b.ratio/b.uWidth)/b.ratio;c="width="+b.uWidth+",initial-scale="+f+",minimum-scale="+f+",maximum-scale="+f+",user-scalable=no";break;case"android-2.2":a.dWidth||(b.dWidth=2==b.ratio?720:1.5==b.ratio?480:1==b.ratio?375:.75==b.ratio?240:480),e=window.screen.width||window.screen.availWidth,375==e?b.dWidth=b.ratio*e:750>e&&(b.dWidth=e),b.mode="android-dpi",d=!0;case"android-dpi":f=160*b.uWidth/b.dWidth*b.ratio,c="target-densitydpi="+f+", width="+b.uWidth+", user-scalable=no",d&&(b.mode="android-2.2");break;case"android-scale":c="width="+b.uWidth+", user-scalable=no"}g=document.querySelector("meta[name='viewport']")||document.createElement("meta"),g.name="viewport",g.content=c,h=document.getElementsByTagName("head"),h.length>0&&h[0].appendChild(g)}function e(){var a="";for(key in b)a+=key+": "+b[key]+"; ";alert(a)}if(a){var b={uWidth:0,dWidth:0,ratio:1,mode:"apple",userAgent:null,bConsole:!1};c(),d(),b.bConsole&&e()}};adaptVP({uWidth:750});
+                }
+                win.addEventListener('resize',setFont,false)
+                setFont();
+            }
+            else if(mode == 'rem') {
+                var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function() {
+                        var clientWidth = docEl.clientWidth;
+                        if(!clientWidth) return;
+                        docEl.style.fontSize = 100 * (clientWidth / std) + 'px';
+                    };
+                if(!doc.addEventListener) return;
+                recalc();
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+            }
+        }
+      })(window, document, 'px');
+      // document.getElementById('floor_3')
+    }
+  </script>
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+<style>.chromeframe{background:#000;color:#fff;padding:10px 0;text-align:center;width:100%;font-size:14px;position:relative;z-index:12}.chromeframe a{color:#f13c35}</style>
+<p class="chromeframe">
+    <span>您使用的IE浏览器版本过低，本站不再支持，</span>
+    <a href="//windows.microsoft.com/">升级您的IE浏览器</a>
+    <span>，或使用</span>
+    <a href="//www.google.cn/chrome/">Google Chrome</a><a>、</a><a href="//www.firefox.com.cn/download/">Firefox</a>
+    <span>等高级浏览器，将会得到更好的体验！</span>
+</p>
+<![endif]-->
+
+  <div class="floor3" id="floor_3">
+    <div class="center-box">
+      <!-- 赛事进程 开始 -->
+      <div class="schedule">
+        <div class="top-container">
+          <div class="title-wrap">
+            <div class="floor3-tit1"></div>
+          </div>
+          <a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=481177" class="btn-learn format-rules" target="_blank" onclick="PTTSendClick('btn','btn-learn','一分钟了解赛制')">
+            了解完整赛制
+          </a>
+        </div>
+        <div class="menu-container">
+          <div class="select-wrap">
+            <select name="" id="f3Select">
+              <option value="KPL2022S2">2022KPL夏季赛</option>
+              <option value="KPL2022S1">2022KPL春季赛</option>
+              <option value="KPL2021S2">2021KPL秋季赛</option>
+            </select>
+            <div class="select-arrow"></div>
+          </div>
+          <ul class="tab-container" id="f3-tab">
+          </ul>
+        </div>
+        <div class="main-container">
+
+        </div>
+      </div>
+      <!-- 赛事进程 结束 -->
+
+      <!-- 积分榜 开始 -->
+      <div class="scoreboard">
+        <div class="floor3-tit2"></div>
+        <div class="scoreboard-content-box" id="KPL2021S2-jfb">
+          <div class="scoreboard-tab" id="scoreboardTab">
+
+          </div>
+          <div class="scoreboard-content">
+            <div class="scoreboard-title">
+              <div class="board-pm">排名</div>
+              <div class="board-tn">战队名</div>
+              <div class="board-jcent">胜负场</div>
+              <div class="board-jf">积分</div>
+              <div class="board-jjjg">晋级结果</div>
+            </div>
+            <div class="board-scroll" id="board-tpl">
+              <div class="board-S board-group" id="board-tpl-S"></div>
+              <div class="board-A board-group" id="board-tpl-A"></div>
+              <div class="board-B board-group" id="board-tpl-B"></div>
+            </div>
+            <div class="board-text">
+              <!-- 本轮最终积分结果，将决定2022年秋手赛季后赛的晋级名额<br> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 积分榜 结束 -->
+    </div>
+  </div>
+
+  <!-- 视频回顾 -->
+  <div class="module-replay replay-hover" id="replay-hover">
+    <ul class="games-list">
+    </ul>
+  </div>
+
+  <!-- 首发名单 -->
+  <div class="module-starting starting-hover" id="starting-hover"></div>
+  <!-- 解说阵容浮窗盒子 -->
+  <div class="module-person person-hover" id="person-hover">
+    <i  class="person-hover-angle angle1"></i>
+    <i  class="person-hover-angle angle2"></i>
+    <i  class="person-hover-angle angle3"></i>
+    <i  class="person-hover-angle angle4"></i>
+    <div class="person-content"></div>
+  </div>
+  <!-- 首发名单内容 -->
+  <script type="text/html" id="tpl-playerFirstList">
+    <div class="team-t">
+      <div class="logo-wrap">
+        <img src="{{teamInfo[0].logo}}" alt="">
+        <p class="team-name">{{teamInfo[0].name}}</p>
+      </div>
+      <ul class="player-list">
+        {{each data[0] as item i}}
+        <li>
+          <div class="deco-circle header-img">
+            <img src="{{item.playerlogo}}" alt="">
+          </div>
+          <p class="name">{{item.playernick}}</p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="role-container">
+      <div class="text-vs"></div>
+      <div class="role-wrap">
+        <i class="icon-dk"></i>
+        <span>对抗</span>
+      </div>
+      <div class="role-wrap">
+        <i class="icon-dy"></i>
+        <span>打野</span>
+      </div>
+      <div class="role-wrap">
+        <i class="icon-zl"></i>
+        <span>中路</span>
+      </div>
+      <div class="role-wrap">
+        <i class="icon-fy"></i>
+        <span>发育</span>
+      </div>
+      <div class="role-wrap">
+        <i class="icon-fz"></i>
+        <span>辅助</span>
+      </div>
+    </div>
+    <div class="team-b">
+      <div class="logo-wrap">
+        <img src="{{teamInfo[1].logo}}" alt="">
+        <p class="team-name">{{teamInfo[1].name}}</p>
+      </div>
+      <ul class="player-list">
+        {{each data[1] as item i}}
+        <li>
+          <div class="deco-circle header-img">
+            <img src="{{item.playerlogo}}" alt="">
+          </div>
+          <p class="name">{{item.playernick}}</p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+  <!-- 解说阵容内容模板 -->
+  <script type="text/html" id="tpl-personList">
+    {{if hostPeopleData.length > 0}}
+    <div class="ib host-con">
+        <div class="tit-tag host-tag"></div>
+        <div class="person-con">
+            {{each hostPeopleData as hp_item hp_i}}
+            <div class="ib item">
+                <div class="person-box">
+                    <img src="{{hp_item.header}}" alt="">
+                </div>
+                <p class="name">{{hp_item.stage_name}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+    {{if commPeopleData.length > 0}}
+    <div class="ib narrate-con">
+        <div class="tit-tag narrate-tag"></div>
+        <div class="person-con">
+            {{each commPeopleData as cp_item cp_i}}
+            <div class="ib item">
+                <div class="person-box">
+                    <img src="{{cp_item.header}}" alt="">
+                </div>
+                <p class="name">{{cp_item.stage_name}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+    
+    {{if guestPeopleData.length > 0}}
+    <div class="ib guest-con">
+        <div class="tit-tag guest-tag"></div>
+        <div class="person-con">
+            {{each guestPeopleData as gp_item gp_i}}
+            <div class="ib item">
+                <div class="person-box">
+                    <img src="{{gp_item.header}}" alt="">
+                </div>
+                <p class="name">{{gp_item.stage_name}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+  </script>
+  <!-- 常规赛 资格赛模板 -->
+  <script type="text/html" id="tpl-weekScheduleList">
+    {{each data as item i}}
+    <li class="{{item.state_class}}" data-date='{{item.date}}' data-scheduleid='{{item.scheduleid}}'>
+      <div class="time-wrap">
+        <p class="date">{{item.date}}</p>
+        <p class="time">{{item.time}}</p>
+        <div class="status">{{item.state_text}}</div>
+      </div>
+      <div class="battle-wrap">
+        <div class="team-l">
+          <div class="content-box">
+            <span class="result-msg {{item.host_result_class}}">{{item.host_result}}</span>
+            <span class="team-name">{{item.hname}}</span>
+          </div>
+          <img src="{{item.hlogo}}" alt="">
+        </div>
+        <div class="score-wrap">
+          <div class="score-l">{{item.host_score}}<i></i></div>
+          <div class="score-r">{{item.guest_score}}<i></i></div>
+          <i class="circle1"></i>
+          <i class="circle2"></i>
+        </div>
+        <div class="team-r">
+          <img src="{{item.glogo}}" alt="">
+          <div class="content-box">
+            <span class="team-name">{{item.gname}}</span>
+            <span class="result-msg {{item.guest_result_class}}">{{item.guest_result}}</span>
+          </div>
+        </div>
+        {{if item.comment_people_list.length != 0 || item.host_people_list.length != 0 || item.guest_people_list != 0}}
+        <div class="btn-wrap">
+          {{if item.match_state == 1}}
+          <a href="javascript:;" class="stateend-bg"
+            onclick="PTTSendClick('btn','btn-coming-soon-{{item.scheduleid}}','敬请期待')">敬请期待</a>
+          {{else if item.match_state == 3}}
+          <a href="javascript:;" class="stateend-bg" data-scheduleid='{{item.scheduleid}}'
+            onclick="PTTSendClick('btn','btn-starting-{{item.scheduleid}}','进行中')">首发名单</a>
+          {{else if item.match_state == 4}}
+          <!-- <a href="javascript:;" class="stateend-bg" data-scheduleid='{{item.scheduleid}}' onclick="PTTSendClick('btn','btn-replay-{{item.scheduleid}}','数据')">数据</a> -->
+          <a href="https://pvp.qq.com/m/matchdata/detail.html?league_id={{item.league_id}}&match_id={{item.match_id}}"
+            class="stateend-bg video-playback" data-scheduleid='{{item.scheduleid}}'
+            onclick="PTTSendClick('btn','btn-replay-{{item.scheduleid}}','视频回放')" target="_blank">比赛回放</a>
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+      <!-- 当没有解说阵容时显示 -->
+      {{if item.comment_people_list.length == 0 && item.host_people_list.length == 0 && item.guest_people_list == 0}}
+      <div class="btn-wrap">
+        {{if item.match_state == 1}}
+        <a href="javascript:;" class="stateend-bg"
+          onclick="PTTSendClick('btn','btn-coming-soon-{{item.scheduleid}}','敬请期待')">敬请期待</a>
+        {{else if item.match_state == 3}}
+        <a href="javascript:;" class="stateend-bg" data-scheduleid='{{item.scheduleid}}'
+          onclick="PTTSendClick('btn','btn-starting-{{item.scheduleid}}','进行中')">首发名单</a>
+        {{else if item.match_state == 4}}
+        <!-- <a href="javascript:;" class="stateend-bg" data-scheduleid='{{item.scheduleid}}' onclick="PTTSendClick('btn','btn-replay-{{item.scheduleid}}','数据')">数据</a> -->
+        <a href="https://pvp.qq.com/m/matchdata/detail.html?league_id={{item.league_id}}&match_id={{item.match_id}}"
+          class="stateend-bg video-playback" data-scheduleid='{{item.scheduleid}}'
+          onclick="PTTSendClick('btn','btn-replay-{{item.scheduleid}}','视频回放')" target="_blank">比赛回放</a>
+        {{/if}}
+      </div>
+      {{/if}}
+      {{if item.comment_people_list.length != 0 || item.host_people_list.length != 0 || item.guest_people_list != 0}}
+      <div class="person-wrap swiper-container swiper-container-horizontal" id="swiper6-{{i}}">
+          <div class="swiper-wrapper">
+              {{if item.host_people_list.length != 0}}
+                  {{each item.host_people_list as h_p_item hpi}}
+                      <div class="swiper-slide item">
+                          <div class="person-tit">主持人</div>
+                          <div class="person-box">
+                              <img src="{{h_p_item.header}}" alt="">
+                          </div>
+                          <p class="name">{{h_p_item.stage_name}}</p>
+                      </div>
+                  {{/each}}
+              {{/if}}
+              {{if item.comment_people_list.length != 0}}
+                  {{each item.comment_people_list as c_p_item cpi}}
+                      <div class="swiper-slide item">
+                          <div class="person-tit">解说</div>
+                          <div class="person-box">
+                              <img src="{{c_p_item.header}}" alt="">
+                          </div>
+                          <p class="name">{{c_p_item.stage_name}}</p>
+                      </div>
+                  {{/each}}
+              {{/if}}
+              {{if item.guest_people_list.length != 0}}
+                  {{each item.guest_people_list as g_p_item gpi}}
+                      <div class="swiper-slide item">
+                          <div class="person-tit">嘉宾</div>
+                          <div class="person-box">
+                              <img src="{{g_p_item.header}}" alt="">
+                          </div>
+                          <p class="name">{{g_p_item.stage_name}}</p>
+                      </div>
+                  {{/each}}
+              {{/if}}
+          </div>
+          <div class="swiper-scrollbar"></div>
+      </div>
+      {{/if}}
+    </li>
+    {{/each}}
+  </script>
+
+  <!-- 赛程tab模板 -->
+  <script type="text/html" id="tpl-matchTab">
+    {{each data as item i}}
+    <li data-match-tabt='{{i+1}}' data-key="{{item.key}}" {{if item.method}}onclick="{{item.method}}" {{/if}}
+      {{if item.plus}}data-plus="{{item.plus}}" {{/if}} data-coming-hint="{{item.hint}}">
+      <span>{{item.text}}</span>
+      <div class="deco"></div>
+    </li>
+    {{/each}}
+  </script>
+
+  <!-- 常规赛赛程swiper模板 -->
+  <script type="text/html" id="tpl-comm-schedule">
+    <div class="match-data-wrap">
+      <div class="week-container">
+        <div class="swiper-container" id="swiper2">
+          <div class="swiper-wrapper">
+
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <a href="javascript:;" class="arrow-left" id="click-swiper-prev"></a>
+          <a href="javascript:;" class="arrow-right" id="click-swiper-next"></a>
+        </div>
+      </div>
+      <div class="match-schedule">
+        <ul class="match-list" id="weekScheduleList">
+
+        </ul>
+      </div>
+    </div>
+  </script>
+
+
+  <!-- KPL 2021年秋季赛季后赛模板 -->
+  <script type="text/html" id="tpl-KPL2021S2-jhs">
+    <div class="match-flow3 match-kpl-2022S2-jhs tpl-KPL2021S2" id="KPL2021S2-jhs">
+      <ul class="schedule-list">
+        <li class="item1" data-time="2021/12/04 19:00:00">
+          <div class="top-info">
+            <div class="time">12月04日 19:00</div>
+            <div class="times">M3</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line2"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item2" data-time="2021/12/05 19:00:00">
+          <div class="top-info">
+            <div class="time">12月05日 19:00</div>
+            <div class="times">M4</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item3" data-time="2021/12/02 19:00:00">
+          <div class="top-info">
+            <div class="time">12月02日 19:00</div>
+            <div class="times">M1</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item4" data-time="2021/12/03 19:00:00">
+          <div class="top-info">
+            <div class="time">12月03日 19:00</div>
+            <div class="times">M2</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item5" data-time="2021/12/09 19:00:00">
+          <div class="top-info">
+            <div class="time">12月09日 19:00</div>
+            <div class="times">M5</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="//game.gtimg.cn/images/yxzj/match/kpl/kingproleague/logo-dg.png" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item6" data-time="2021/12/10 19:00:00">
+          <div class="top-info">
+            <div class="time">12月10日 19:00</div>
+            <div class="times">M6</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="//game.gtimg.cn/images/yxzj/match/kpl/kingproleague/logo-dg.png" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item7" data-time="2021/12/16 19:00:00">
+          <div class="top-info">
+            <div class="time">12月16日 19:00</div>
+            <div class="times">M9</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line3"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item8" data-time="2021/12/11 19:00:00">
+          <div class="top-info">
+            <div class="time">12月11日 19:00</div>
+            <div class="times">M7</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line4"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item9" data-time="2021/12/12 19:00:00">
+          <div class="top-info">
+            <div class="time">12月12日 19:00</div>
+            <div class="times">M8</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item10" data-time="2021/12/17 19:00:00">
+          <div class="top-info">
+            <div class="time">12月17日 19:00</div>
+            <div class="times">M10</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item11" data-time="2021/12/18 19:00:00">
+          <div class="top-info">
+            <div class="time">12月18日 19:00</div>
+            <div class="times">M11</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line5"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item12 gpl-zjs" data-time="2021/12/25 18:00:00">
+          <div class="gpl-icon-zjs"></div>
+          <div class="top-info">
+            <div class="time">12月25日 18:00</div>
+            <div class="times">M12</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+          <img src="//game.gtimg.cn/images/yxzj/match/kpl/kingproleague/camp-img.png" class="camp-img" />
+        </li>
+      </ul>
+      <!-- <p class="gpl-rule">本赛季的冠军和亚军将优先获得2022年KPL春季资格赛的评审资格，如评审通过将与2021年KPL秋季赛临时席位的俱乐部参加2022年KPL春季资格赛，
+            <br>决出2022年KPL春季赛2个临时席位。
+        </p> -->
+      <div class="gpl-icon-win"></div>
+      <div class="gpl-icon-lose"></div>
+    </div>
+  </script>
+  <!-- KPL 2022年春季赛季后赛模板 -->
+  <script type="text/html" id="tpl-KPL2022S1-jhs">
+    <div class="match-flow3 match-kpl-2022S2-jhs tpl-KPL2022S1" id="KPL2022S1-jhs">
+      <ul class="schedule-list">
+        <li class="item1" data-time="2022/04/21 19:00:00">
+          <div class="top-info">
+            <div class="time">04月21日 19:00</div>
+            <div class="times">M3</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line2"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item2" data-time="2022/04/22 19:00:00">
+          <div class="top-info">
+            <div class="time">04月22日 19:00</div>
+            <div class="times">M4</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item3" data-time="2022/04/21 15:00:00">
+          <div class="top-info">
+            <div class="time">04月21日 15:00</div>
+            <div class="times">M1</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item4" data-time="2022/04/22 15:00:00">
+          <div class="top-info">
+            <div class="time">04月22日 15:00</div>
+            <div class="times">M2</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item5" data-time="2022/04/23 19:00:00">
+          <div class="top-info">
+            <div class="time">04月23日 19:00</div>
+            <div class="times">M5</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="//game.gtimg.cn/images/yxzj/match/kpl/kingproleague/logo-dg.png" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item6" data-time="2022/04/24 19:00:00">
+          <div class="top-info">
+            <div class="time">04月24日 19:00</div>
+            <div class="times">M6</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="//game.gtimg.cn/images/yxzj/match/kpl/kingproleague/logo-dg.png" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item7" data-time="2022/04/28 19:00:00">
+          <div class="top-info">
+            <div class="time">04月28日 19:00</div>
+            <div class="times">M9</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line3"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item8" data-time="2022/04/26 19:00:00">
+          <div class="top-info">
+            <div class="time">04月26日 19:00</div>
+            <div class="times">M7</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line4"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item9" data-time="2022/04/27 19:00:00">
+          <div class="top-info">
+            <div class="time">04月27日 19:00</div>
+            <div class="times">M8</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item10" data-time="2022/04/29 19:00:00">
+          <div class="top-info">
+            <div class="time">04月29日 19:00</div>
+            <div class="times">M10</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item11" data-time="2022/04/30 19:00:00">
+          <div class="top-info">
+            <div class="time">04月30日 19:00</div>
+            <div class="times">M11</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line5"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item12 gpl-zjs" data-time="2022-05-08 18:00:00">
+          <div class="gpl-icon-zjs"></div>
+          <div class="top-info">
+            <div class="time">05月08日 18:00</div>
+            <div class="times">M12</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+          <img src="//game.gtimg.cn/images/yxzj/match/kpl/kingproleague/camp-img.png" class="camp-img" />
+        </li>
+      </ul>
+      <!-- <p class="gpl-rule">本赛季的冠军和亚军将优先获得2022年KPL春季资格赛的评审资格，如评审通过将与2021年KPL秋季赛临时席位的俱乐部参加2022年KPL春季资格赛，
+            <br>决出2022年KPL春季赛2个临时席位。
+        </p> -->
+      <div class="gpl-icon-win"></div>
+      <div class="gpl-icon-lose"></div>
+    </div>
+  </script>
+  <!-- KPL 2022年夏季赛季后赛模板 -->
+  <script type="text/html" id="tpl-KPL2022S2-jhs">
+    <div class="match-flow3 match-kpl-2022S2-jhs tpl-KPL2022S2" id="KPL2022S2-jhs">
+      <ul class="schedule-list">
+        <li class="item1" data-time="2022/08/18 19:00:00">
+          <div class="top-info">
+            <div class="time">08月18日 19:00</div>
+            <div class="times">M3</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line2"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item2" data-time="2022/08/20 19:00:00">
+          <div class="top-info">
+            <div class="time">08月20日 19:00</div>
+            <div class="times">M4</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item3" data-time="2022/08/17 19:00:00">
+          <div class="top-info">
+            <div class="time">08月17日 19:00</div>
+            <div class="times">M1</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item4" data-time="2022/08/19 19:00:00">
+          <div class="top-info">
+            <div class="time">08月19日 19:00</div>
+            <div class="times">M2</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item5" data-time="2022/08/21 19:00:00">
+          <div class="top-info">
+            <div class="time">08月21日 19:00</div>
+            <div class="times">M5</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item6" data-time="2022/08/22 19:00:00">
+          <div class="top-info">
+            <div class="time">08月22日 19:00</div>
+            <div class="times">M6</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item7" data-time="2022/08/25 19:00:00">
+          <div class="top-info">
+            <div class="time">08月25日 19:00</div>
+            <div class="times">M9</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line3"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item8" data-time="2022/08/23 19:00:00">
+          <div class="top-info">
+            <div class="time">08月23日 19:00</div>
+            <div class="times">M7</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line4"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item9" data-time="2022/08/24 19:00:00">
+          <div class="top-info">
+            <div class="time">08月24日 19:00</div>
+            <div class="times">M8</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item10" data-time="2022/08/26 19:00:00">
+          <div class="top-info">
+            <div class="time">08月26日 19:00</div>
+            <div class="times">M10</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line1"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item11" data-time="2022/08/27 19:00:00">
+          <div class="top-info">
+            <div class="time">08月27日 19:00</div>
+            <div class="times">M11</div>
+          </div>
+          <div class="team teamA">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+            <div class="tie-line autumn-kpl-line5"></div>
+          </div>
+          <div class="team teamB">
+            <img src="" />
+            <div class="tname"></div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <div class="btn-comm">解说阵容</div>
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+        </li>
+        <li class="item12 gpl-zjs" data-time="2022-09-04 18:00:00">
+          <div class="gpl-icon-zjs"></div>
+          <div class="top-info">
+            <div class="time">待定</div>
+            <div class="times">M12</div>
+          </div>
+          <div class="team teamA">
+            <img src="//smhtv-pic.tga.qq.com/198e10d9a00970e035478165c579355b.png" />
+            <div class="tname">待定</div>
+            <div class="score"></div>
+          </div>
+          <div class="team teamB">
+            <img src="//smhtv-pic.tga.qq.com/198e10d9a00970e035478165c579355b.png" />
+            <div class="tname">待定</div>
+            <div class="score"></div>
+          </div>
+          <div class="info">
+            <div class="btn-list">首发名单</div>
+            <!-- <div class="btn-comm">解说阵容</div> -->
+            <a class="jhs-btn-play btn-video" target="_blank"></a>
+            <span class="status"></span>
+            <div class="battle-img"></div>
+          </div>
+          <img src="//game.gtimg.cn/images/yxzj/match/kpl/kingproleague/camp-img.png" class="camp-img" />
+        </li>
+      </ul>
+      <!-- <p class="gpl-rule">本赛季的冠军和亚军将优先获得2022年KPL春季资格赛的评审资格，如评审通过将与2021年KPL秋季赛临时席位的俱乐部参加2022年KPL春季资格赛，
+            <br>决出2022年KPL春季赛2个临时席位。
+        </p> -->
+      <div class="gpl-icon-win"></div>
+      <div class="gpl-icon-lose"></div>
+    </div>
+  </script>
+  <!-- KPL 2021年秋季赛、 2022年春季赛常规赛积分榜 S组模板 -->
+  <script type="text/html" id="tpl-KPL2021S2-jfb-S">
+    <div class="group">
+      <p>S</p>
+      <p>组</p>
+    </div>
+    <div class="group-list">
+      {{if data.length > 0}}
+      {{each data as v i}}
+      <div class="group-list-li">
+        <div class="board-pm ">
+          <div class="rank-S">{{v.rank}}</div>
+        </div>
+        <div class="board-tn match-rank-team">
+          <img src="{{v.logo}}" width="28" height="28">
+          <span>{{v.name}}</span>
+        </div>
+        <div class="board-jcent">
+          <span class="vic">{{v.win_match}}</span>
+          <span class="centline">/</span>
+          <span>{{v.lost_match}}</span>
+        </div>
+        <div class="board-jf">{{v.points}}</div>
+        {{if v.ls == 1}}
+        <div class="board-jjjg  board-jjjg2 board-jjjg-ls0">
+          {{if (i == 4 || i == 5) && (v.ls != 3)}}
+          <div class="board-arrows"></div>
+          {{/if}}
+          {{if (v.ls == 3)}}
+          <div>晋级季后赛</div>
+          {{/if}}
+        </div>
+        {{/if}}
+        {{if v.ls == 2}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls1">
+          {{if (i == 4 || i == 5) && (v.ls != 3)}}
+          <div class="board-arrows"></div>
+          {{/if}}
+          {{if (v.ls == 3)}}
+          <div>晋级季后赛</div>
+          {{/if}}
+        </div>
+        {{/if}}
+        {{if v.ls == 3}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls2">
+          {{if (i == 4 || i == 5) && (v.ls != 3)}}
+          <div class="board-arrows"></div>
+          {{/if}}
+          {{if (v.ls == 3)}}
+          <div>晋级季后赛</div>
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+      {{/if}}
+      {{if data.length <= 0}}
+      <p class="msg-nodata show">暂时没有数据</p>
+      {{/if}}
+    </div>
+  </script>
+  <!-- KPL 2021年秋季赛、 2022年春季赛常规赛积分榜 A组模板 -->
+  <script type="text/html" id="tpl-KPL2021S2-jfb-A">
+    <div class="group">
+      <p>A</p>
+      <p>组</p>
+    </div>
+    <div class="group-list">
+      {{if data.length > 0}}
+      {{each data as v i}}
+      <div class="group-list-li">
+        <div class="board-pm ">
+          <div class="rank-A">{{v.rank}}</div>
+        </div>
+        <div class="board-tn match-rank-team">
+          <img src="{{v.logo}}" width="28" height="28">
+          <span>{{v.name}}</span>
+        </div>
+        <div class="board-jcent">
+          <span class="vic">{{v.win_match}}</span>
+          <span class="centline">/</span>
+          <span>{{v.lost_match}}</span>
+        </div>
+        <div class="board-jf">
+          {{v.points}}
+        </div>
+        {{if v.ls == 1}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls0">
+          {{if (i == 0 || i == 1) && (v.ls != 3)}}
+          <div class="board-arrows2"></div>
+          {{/if}}
+          {{if (i == 4 || i == 5) && (v.ls != 3)}}
+          <div class="board-arrows"></div>
+          {{/if}}
+          {{if (v.ls == 3) && (i < 4)}}
+          <div>晋级季后赛</div>
+          {{/if}}
+        </div>
+        {{/if}}
+        {{if v.ls == 2}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls1">
+          {{if (i == 0 || i == 1) && (v.ls != 3)}}
+          <div class="board-arrows2"></div>
+          {{/if}}
+          {{if (i == 4 || i == 5) && (v.ls != 3)}}
+          <div class="board-arrows"></div>
+          {{/if}}
+          {{if (v.ls == 3) && (i < 4)}}
+          <div>晋级季后赛</div>
+          {{/if}}
+        </div>
+        {{/if}}
+        {{if v.ls == 3}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls2">
+          {{if (i == 0 || i == 1) && (v.ls != 3)}}
+          <div class="board-arrows2"></div>
+          {{/if}}
+          {{if (i == 4 || i == 5) && (v.ls != 3)}}
+          <div class="board-arrows"></div>
+          {{/if}}
+          {{if (v.ls == 3) && (i < 4)}}
+          <div>晋级季后赛</div>
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+      {{/if}}
+      {{if data.length <= 0}}
+      <p class="msg-nodata show">暂时没有数据</p>
+      {{/if}}
+    </div>
+  </script>
+  <!-- KPL 2021年秋季赛、 2022年春季赛常规赛积分榜 B组模板 -->
+  <script type="text/html" id="tpl-KPL2021S2-jfb-B">
+    <div class="group">
+      <p>B</p>
+      <p>组</p>
+    </div>
+    <div class="group-list">
+      {{if data.length > 0}}
+      {{each data as v i}}
+      <div class="group-list-li">
+        <div class="board-pm ">
+          <div class="rank-B">
+            {{v.rank}}
+          </div>
+        </div>
+        <div class="board-tn match-rank-team">
+          <img src="{{v.logo}}" width="28" height="28">
+          <span>{{v.name}}</span>
+        </div>
+        <div class="board-jcent">
+          <span class="vic">{{v.win_match}}</span>
+          <span class="centline">/</span>
+          <span>{{v.lost_match}}</span>
+        </div>
+        <div class="board-jf">{{v.points}}</div>
+        {{if v.ls == 1}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls0">
+          {{if (i == 0 || i == 1) && (v.ls != 3)}}
+          <div class="board-arrows2"></div>
+          {{/if}}
+        </div>
+        {{/if}}
+        {{if v.ls == 2}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls1">
+          {{if (i == 0 || i == 1) && (v.ls != 3)}}
+          <div class="board-arrows2"></div>
+          {{/if}}
+        </div>
+        {{/if}}
+        {{if v.ls == 3}}
+        <div class="board-jjjg board-jjjg2 board-jjjg-ls2">
+          {{if (i == 0 || i == 1) && (v.ls != 3)}}
+          <div class="board-arrows2"></div>
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+      {{/if}}
+      {{if data.length <= 0}}
+      <p class="msg-nodata show">暂时没有数据</p>
+      {{/if}}
+    </div>
+  </script>
+  <!-- 2021年秋季赛常规赛积分榜tab模板 -->
+  <script type="text/html" id="tpl-KPL2021S2-jfbTab">
+    {{each data as item i}}
+    <a href="javascript:;" data-jfb-tabt="{{i+1}}" data-coming-hint="{{item.hint}}"
+      {{if item.method}}onclick="{{item.method}}" {{/if}}>{{item.text}}</a>
+    {{/each}}
+  </script>
+  <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/milo_bundle/milo.js"></script>
+
+  <script src="//ossweb-img.qq.com/images/js/swiper/swiper-3.4.2.min.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/ArtTemplate.js" charset="utf-8"></script>
+  <script src="js/lodash.min.js"></script>
+  <script src="js/request.js"></script>
+  <script src="js/comm.js"></script>
+  <script src="js/config-data.js"></script>
+  <script src="js/render-data.js"></script>
+
+  <script>
+    // 如果是H5就添加一个类名
+    if (!is_pc()) {
+      $('.floor3').addClass('h5')
+      $('body').addClass('h5')
+      $('body.h5').css({'min-width':'750px'})
+      console.log($('body'))
+    }
+    // 如果链接存在schedule 则只显示赛程部分 积分榜部分隐藏
+    if(milo.request('schedule') && milo.request('schedule') == 'true'){
+      console.log(milo.request('schedule'))
+      $('.schedule').show()
+      $('.scoreboard').hide()
+    }
+    // 如果链接存在scoreboard 则只显示积分榜部分 赛程部分隐藏
+    if(milo.request('scoreboard') && milo.request('scoreboard') == 'true'){
+      console.log(milo.request('schedule'))
+      $('.scoreboard').show()
+      $('.schedule').hide()
+    }
+    if (milo.request('seasonid')) {
+      matchJs.seasonid = milo.request('seasonid');
+      $('select').val(matchJs.seasonid);
+    }
+    if (milo.request('hide')) {
+      var hideBtn = milo.request('hide');
+    }
+    // 赛程tab(第一轮，第二轮 ，第三轮，季后赛)
+    cimi.tabSwitch('data-match-tabt', 'data-match-tabc', 1, function (_this) {
+      var plus = $(_this).attr('data-plus');
+      if(is_pc()){
+        if (plus && plus == 'true') {
+          $('.floor3').removeClass('expand');
+        } else {
+          $('.floor3').addClass('expand');
+        }
+      }
+    });
+    //积分榜
+    cimi.tabSwitch('data-jfb-tabt', 'data-jfb-tabc', 1, )
+
+    // 判断是否开启常规赛，季后赛，赛季名次tab
+    function openMatchTabFunc(seasonid) {
+      return new Promise(resolve => {
+        matchJs.getSchedules_KPL2022S1(seasonid).then((res) => {
+          var cgs1 = false,
+              cgs2 = false,
+              kws = false,
+              cgs3 = false;
+          cgs1 = judegStatus(res, 'cgs1')
+          cgs1 ? (cgs2 = judegStatus(res, 'cgs2'), config_matchData[seasonid]['defaultTabIndex'] = 2,config_matchData[seasonid]['jfbTabIndex'] = 2) :
+                  ($('#f3-tab li').eq(1).attr('data-coming-hint', 'true').removeAttr('onclick'), $('#scoreboardTab a').eq(1).attr('data-coming-hint', 'true').removeAttr('onclick'))
+          cgs2 ? (kws = judegStatus(res, 'kws'), config_matchData[seasonid]['defaultTabIndex'] = 3,config_matchData[seasonid]['jfbTabIndex'] = 2) :
+                 ($('#f3-tab li').eq(2).attr('data-coming-hint', 'true').removeAttr('onclick'), $('#scoreboardTab a').eq(2).attr('data-coming-hint', 'true').removeAttr('onclick'))
+          kws ? (cgs3 = judegStatus(res, 'cgs3'), config_matchData[seasonid]['defaultTabIndex'] = 4,config_matchData[seasonid]['jfbTabIndex'] = 3) :
+                ($('#f3-tab li').eq(3).attr('data-coming-hint', 'true').removeAttr('onclick'), $('#scoreboardTab a').eq(2).attr('data-coming-hint', 'true').removeAttr('onclick'))
+          cgs3 ? (config_matchData[seasonid]['defaultTabIndex'] = 5) : ($('#f3-tab li').eq(4).attr('data-coming-hint', 'true').removeAttr('onclick'))
+          resolve()
+        })
+      })
+    }
+    // 判断每个阶段的所有比赛是否结束
+    function judegStatus(data, key) {
+      var arrayData = _.filter(data, function (item, i) {
+        return item.stage == key
+      }.bind(this))
+      if (arrayData && arrayData.length != 0) {
+        return _.every(arrayData, function (val, index) {
+          return val.match_state == 4
+        })
+      }
+      // if(key == 'cgs3' || key == 'cgs1' || key == 'cgs2' ||key == 'kws'){
+      //     return true
+      // }else{
+      //     return false
+      // }
+    }
+
+    function initMatchTab(seasonid) {
+      seasonid = seasonid || matchJs.seasonid
+      renderJs.matchTab(seasonid);
+      $('.floor3 #f3Select').val(seasonid);
+      if (seasonid == 'KPL2021S2') {
+        // 赛制规则
+        $('.format-rules').attr({'href':'https://pvp.qq.com/web201706/newsdetail.shtml?tid=481177'})
+        var index = config_matchData['KPL2021S2']['defaultTabIndex'] - 1;
+        var jgbindex = config_matchData['KPL2021S2']['jfbTabIndex'] - 1
+        $('#f3-tab > li').eq(index)[0].click()
+        $('#scoreboardTab a').eq(jgbindex)[0].click()
+      } else if (seasonid == 'KPL2022S1') {
+        $('.format-rules').attr({'href':'https://pvp.qq.com/web201706/newsdetail.shtml?tid=551608'})
+        var index = config_matchData['KPL2022S1']['defaultTabIndex'] - 1;
+        var jgbindex = config_matchData['KPL2022S1']['jfbTabIndex'] - 1
+        $('#f3-tab > li').eq(index)[0].click()
+        $('#scoreboardTab a').eq(jgbindex)[0].click()
+      }else if (seasonid == 'KPL2022S2') {
+        $('.format-rules').attr({'href':'https://pvp.qq.com/web201706/newsdetail.shtml?tid=566294'})
+        openMatchTabFunc(seasonid).then(function () {
+          var index = config_matchData['KPL2022S2']['defaultTabIndex'] - 1;
+          var jgbindex = config_matchData['KPL2022S2']['jfbTabIndex'] - 1;
+          $('#f3-tab > li').eq(index)[0].click()
+          $('#scoreboardTab a').eq(jgbindex)[0].click()
+        })  
+      }
+    }
+    initMatchTab(matchJs.seasonid);
+
+    // 赛季下拉选择
+    $('.floor3 #f3Select').on('change', function () {
+      var f3Select = $('.floor3 #f3Select > option:selected').val();
+      console.log(f3Select)
+      initMatchTab(f3Select);
+    });
+
+
+    // KPL2021秋季常规赛、KPL2022春季常规赛、KPL2022夏季常规赛
+    function KPL2021S2_cgsFunc(key, seasonid) {
+      var seasonid = seasonid ? seasonid : matchJs.seasonid;
+      $('.floor3 .schedule .main-container').html(template('tpl-comm-schedule'));
+      window.swiper2Obj = null;
+      matchJs.getSchedules_KPL2022S1(seasonid).then((res) => {
+        renderJs.weekTab_KPL2021S2(key, seasonid);
+      });
+      if(typeof (PTTSendClick) == "function"){
+        PTTSendClick('btn','match-' + key,seasonid + '_赛程常规赛')
+      }
+    }
+    // KPL2021秋季季后赛、KPL2022春季季后赛、KPL2022夏季季后赛
+    function KPL2021S2_jhsFunc(seasonid) {
+      seasonid = seasonid ? seasonid : matchJs.seasonid
+      if (seasonid == 'KPL2021S2') {
+        $('.floor3 .schedule .main-container').html(template('tpl-KPL2021S2-jhs'));
+      } else if(seasonid == 'KPL2022S1') {
+        $('.floor3 .schedule .main-container').html(template('tpl-KPL2022S1-jhs'))
+      }else if(seasonid == 'KPL2022S2') {
+        $('.floor3 .schedule .main-container').html(template('tpl-KPL2022S2-jhs'))
+      }
+      matchJs.SpringJhsIntegrahandle_KPL2022S(seasonid).then((res) => {
+        renderJs.jhsList_KPL2021S2(res, seasonid)
+      })
+      if(typeof (PTTSendClick) == "function"){
+        PTTSendClick('btn','match-jhs-' + seasonid,seasonid + '_赛程季后赛')
+      }
+    }
+    // KPL2021年秋季赛积分榜、KPL2022年春季赛积分榜
+    function KPL2021S2_jfb_cgsFunc(index, seasonid) {
+      seasonid = seasonid ? seasonid : matchJs.seasonid
+      // 积分榜tab
+      matchJs.SpringCgsIntegrahandle_KPL2022S(index, seasonid)
+      if(typeof (PTTSendClick) == "function"){
+        PTTSendClick('btn','match-jfb-' + index,seasonid + '_赛程积分榜')
+      }
+    }
+    // 卡位赛tab
+    function KPL2021S2_kwsFunc(key, seasonid){
+      seasonid = seasonid ? seasonid : matchJs.seasonid
+      $('.floor3 .schedule .main-container').html(template('tpl-comm-schedule'));
+      window.swiper2Obj = null;
+      matchJs.getKwsSchedules_KPL2022S2(seasonid).then((res)=>{
+        renderJs.weekKwsTab_KPL2021S2(key,res,seasonid)
+      })
+    }
+    
+  </script>
+  <!-- 通用统计代码(1)，跳转链接或者功能按钮按需加上PTTSendClick('btn','start','开始游戏') -->
+  <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+  <script>
+    //此段代码不能放到外链JS中，
+    var setSite = { //设置网站属性
+      siteType: "kingproleague", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+      pageType: "match", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+      pageName: "赛事进程和回放", //必填项:页面中文名
+      project: "other", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+      osact: 0 //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+    };
+    if (typeof (pgvMain) == 'function') pgvMain(); //千万不能忘记！
+  </script>
+</body>
+
+</html>

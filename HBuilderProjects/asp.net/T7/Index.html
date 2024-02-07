@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+
+		</div>
+		<input id="btn1" type="button" value="载入数据1">
+		<input id="btn2" type="button" value="载入数据2">
+		<input id="btn3" type="button" value="载入数据3">
+		<input id="btn4" type="button" value="载入数据4">
+		<input id="btn5" type="button" value="载入数据5">
+		<input id="btn6" type="button" value="载入数据6">
+		<script>
+			$(function() {
+				$("#btn1").click(function() {
+					$("#app").load("a.txt", function(res, textStatus, XMLHttpRequest) {
+						console.log(res);
+						console.log(textStatus);
+						console.log(XMLHttpRequest);
+					});
+				});
+				$("#btn2").click(function() {
+					$("#app").load("a.xml", function(res, textStatus, XMLHttpRequest) {
+						console.log(res);
+						console.log(textStatus);
+						console.log(XMLHttpRequest);
+					});
+				});
+				$("#btn3").click(function() {
+					let pc = {
+						id: 1
+					}
+					$.get("https://localhost:44361/NewFolder1/Handler1.ashx", pc, function(res) {
+						console.log(res);
+						$("#app").html(res);
+					});
+				});
+				$("#btn4").click(function() {
+					$.ajax({
+						url: 'https://localhost:44361/NewFolder1/Handler1.ashx?id=3',
+						type: "get",
+						success: function(res) {
+							console.log(res);
+							$("#app").html(res);
+						},
+						error: function(res) {
+							console.log(res);
+						}
+					});
+				});
+				$("#btn5").click(function() {
+
+					let pc = {
+						ClassName: "123",
+						ParentClassID: 0
+					}
+					$.post("https://localhost:44361/NewFolder1/Handler2.ashx", pc, function(res) {
+						console.log(res);
+						$("#app").html(res);
+					});
+				});
+				$("#btn6").click(function() {
+					let pc = {
+						ClassName: "1234",
+						ParentClassID: 0
+					}
+					$.ajax({
+						url: 'https://localhost:44361/NewFolder1/Handler2.ashx',
+						type: 'post',
+						data: pc,
+						success: function(res) {
+							console.log(res);
+							$("#app").html(res);
+						},
+						error: function(res) {
+							console.log(res);
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

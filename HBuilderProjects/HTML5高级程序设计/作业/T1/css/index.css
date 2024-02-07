@@ -1,0 +1,84 @@
+
+.header .top__title {
+    flex: 1;
+}
+
+.header .top__nav {   
+    width:10rem;
+}
+
+.content {
+    height: 10rem;
+    line-height: 10rem;
+}
+
+.content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav__btn {   
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size:1.25rem; 
+    border-radius: .5rem;  
+}
+.nav__btn i{
+    margin-right: .3rem;
+}
+
+.nav__btn--bg-c1{
+    background-color: rgb(104,140,250);
+    background-image: linear-gradient(135deg, rgb(105, 119, 160), rgb(104,140,250));
+    box-shadow: 2rem 2rem 3rem rgba(34, 50, 84, 0.5), .1rem .1rem 0.1rem rgb(104,140,250);
+}
+.nav__btn--bg-c2{
+    background-color: rgb(255,90,107);
+    background-image: linear-gradient(135deg, rgb(252, 175, 183), rgb(255,90,107));
+    box-shadow: 2rem 2rem 3rem rgba(34, 50, 84, 0.5), .1rem .1rem 0.1rem rgb(255,90,107);
+}
+
+.nav__btn--bg-c3{
+    background-color: rgb(43,203,157);
+    background-image: linear-gradient(135deg, rgb(125, 167, 155), rgb(43,203,157));
+    box-shadow: 2rem 2rem 3rem rgba(34, 50, 84, 0.5), .1rem .1rem 0.1rem rgb(43,203,157);
+}
+
+.nav__btn--bg-c4{
+    background-color: rgb(251,152,95);
+    background-image: linear-gradient(135deg, rgb(241, 204, 182), rgb(251,152,95));
+    box-shadow: 2rem 2rem 3rem rgba(34, 50, 84, 0.5), .1rem .1rem 0.1rem rgb(251,152,95);
+}
+.nav__btn--bg-c5{
+    background-color: rgb(27,157,255);
+    background-image: linear-gradient(135deg, rgb(151, 204, 245), rgb(27,157,255));
+    box-shadow: 2rem 2rem 3rem rgba(34, 50, 84, 0.5), .1rem .1rem 0.1rem rgb(27,157,255);
+}
+.nav__btn--bg-c6{
+    background-color: rgb(128, 99, 225);
+    background-image: linear-gradient(135deg, rgb(189, 123, 232), rgb(128, 99, 225));
+    box-shadow: 2rem 2rem 3rem rgba(34, 50, 84, 0.5), .1rem .1rem 0.1rem rgb(128, 99, 225);
+}
+
+.nav__btn--active{
+    top:.5rem;
+    left:.5rem;
+    background-color: rgb(255, 165, 0);
+    background-image: linear-gradient(135deg, rgb(136, 255, 0), rgb(255, 165, 0));
+    box-shadow: 1rem 1rem 1rem rgba(34, 50, 84, 0.5), .1rem .1rem 0 .1rem rgb(255, 165, 0);
+}
+.nav__btn--selected{
+    border:double .5rem rgb(255, 165, 0);
+}
+
+
