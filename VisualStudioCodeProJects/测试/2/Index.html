@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  搜索框 */
+        .search-bar {
+            width: 200px;
+            height: 100rpx;
+            margin-top: 2%;
+        }
+
+        .search-bar-box {
+            display: flex;
+            margin: 0 auto;
+            width: 620rpx;
+            height: 70rpx;
+            border: 5rpx solid #00a8cc;
+            border-radius: 50rpx;
+        }
+
+        .search-span {
+            width: 100rpx;
+            height: 56rpx;
+            margin-top: 6rpx;
+            margin-left: 30rpx;
+        }
+
+        .search-text {
+            width: 100%;
+            margin-top: 10rpx;
+            margin-left: 20rpx;
+            font-size: 30rpx;
+            color: #7f7f81;
+        }
+
+        .search-btn {
+            background-color: #00a8cc;
+            /* Green */
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 35rpx;
+            width: 240rpx;
+            height: 70rpx;
+            line-height: 65rpx;
+            border-radius: 30rpx;
+            letter-spacing: 3rpx;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 搜索框 -->
+    <view class="search-bar">
+        <view class="search-bar-box">
+            <i class="bi bi-search search-span"></i>
+            <input type="text" value="" placeholder="请输入搜索内容" class="search-text" maxlength="10" focus />
+            <button class="search-btn">搜索</button>
+        </view>
+    </view>
+
+
+</body>
+
+</html>

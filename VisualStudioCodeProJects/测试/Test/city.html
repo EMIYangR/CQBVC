@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body,
+        td,
+        th {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        @media (pointer: coarse) {
+            a {
+                padding: .8em;
+            }
+        }
+    </style>
+
+    <script type="text/javascript" src=""http://api.map.baidu.com/api?v=2.0&ak=24661721a13ef054b221f80ab69b36e8">
+    </script>
+    <script type="text/javascript" src="js/include.js"></script>
+</head>
+
+<body>
+    <center>
+        <img src="logo.gif" alt="logo" />
+        <div style="text-align:left; width:320px;">
+            <div id="results"></div>
+            <br /><br />
+
+            <form name="taxi" action="javascript:void(0)">
+                <strong>所在城市(必填)：</strong><input type="text" size="16" name="city" /><br /><br />
+                <strong>请输入出发及目的地：</strong><br />
+                出发地：<input type="text" size="28" name="startp" /><br />
+                目的地：<input type="text" size="28" name="endp" /><br />
+                夜间价：<select name="mode">
+                    <option value="0">否</option>
+                    <option value="1">是</option>
+                </select>
+                <br />
+                <center><input type="button" value="开始计算"
+                        onclick="sotaxi(document.taxi.city.value,document.taxi.startp.value,
+                        document.taxi.endp.value,document.taxi.mode.value);" />
+                </center>
+            </form>
+            <br />
+        </div>
+        <br />
+        <hr width="80%" />
+    </center>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62195-10"></script>
+    <script>
+        load();
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-62195-10');
+    </script>
+</body>
+
+</html>
