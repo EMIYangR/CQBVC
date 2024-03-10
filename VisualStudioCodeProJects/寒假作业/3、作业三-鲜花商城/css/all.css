@@ -1,0 +1,127 @@
+/* 全局 */
+* {
+    padding: 0 auto;
+    margin: auto;
+}
+
+img{
+    background-repeat: no-repeat;
+}
+
+/* 字体 */
+/* 字体大小 */
+.size-2 {
+    font-size: 18px;
+}
+
+.size-4 {
+    font-size: 36px;
+}
+
+.size-6 {
+    font-size: 54px;
+}
+
+.size-8 {
+    font-size: 72px;
+}
+
+/* 字体颜色 */
+.black {
+    color: black;
+}
+
+.red {
+    color: #fe4500;
+}
+.pink {
+    color: #fd625f;
+}
+
+/* 字体粗细 */
+.bold {
+    font-weight: bold;
+}
+
+/* 对齐 */
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+
+/* 字体样式 */
+/* 下划线 */
+.line-through{
+    text-decoration: line-through;
+}
+
+/* 无 */
+.none{
+    text-decoration: none;
+}
+
+
+/* 悬浮 */
+a:hover {
+    color: #fe4500;
+}
+
+/* 水平间距 */
+.Spacing-h-1 {
+    margin-top: 15px;
+}
+
+.Spacing-h-2 {
+    margin-top: 30px;
+}
+
+.Spacing-h-3 {
+    margin-top: 45px;
+}
+
+.Spacing-h-4 {
+    margin-top: 60px;
+}
+
+.Spacing-h-5 {
+    margin-top: 75px;
+}
+
+.Spacing-h-6 {
+    margin-top: 90px;
+}
+
+/* 垂直间距 */
+.Spacing-v-1 {
+    margin-left: 15px;
+}
+
+.Spacing-v-2 {
+    margin-left: 30px;
+}
+
+.Spacing-v-3 {
+    margin-left: 45px;
+}
+
+.Spacing-v-4 {
+    margin-left: 60px;
+}
+
+.Spacing-v-5 {
+    margin-left: 75px;
+}
+
+.Spacing-v-6 {
+    margin-left: 90px;
+}
+
+ion-icon:hover{
+    color: #fd625f;
+}

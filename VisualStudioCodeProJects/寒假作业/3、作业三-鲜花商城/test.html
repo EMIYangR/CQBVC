@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style type="text/css">
+        /* 图片大小 */
+        table img {
+            height: 300px;
+        }
+
+        table td div {
+            height: 300px;
+            width: 300px;
+        }
+
+        /* 悬浮购物界面 */
+        ion-icon {
+            color: black;
+            padding: 10px;
+            background-color: #dddddd;
+            font-size: 24px;
+            margin-top: 250px;
+        }
+
+        ion-icon:hover {
+            background-color: #eaa9a9;
+        }
+
+        /* 产品-背景图片 */
+        tr .td1 {
+            border-bottom: 3px solid #f1f1ef;
+            background-image: url(images/product/product-01.jpg);
+            background-size: 300px;
+            background-repeat: no-repeat;
+        }
+
+        /* 产品详情（名称、价格、购物、悬浮） */
+        #flowerName {
+            padding-top: 25px;
+        }
+
+        #flowerPrice {
+            margin-top: 10px;
+        }
+
+        tr .td1 img:hover {
+            display: block;
+        }
+
+        /* logo大小 */
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="td1">
+                <div id="d">
+                    <!-- <img src="images/product/product-01.jpg" alt=""> -->
+                    <p class="center" id="flowerLogo">
+                        <span>
+                            <ion-icon name="bag-handle-outline"></ion-icon>
+                        </span>
+                        <span>
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </span>
+                        <span>
+                            <ion-icon name="search-outline"></ion-icon>
+                        </span>
+                    </p>
+                    <!-- </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"> -->
+                    <p class="center" id="flowerName">一往情深</p>
+                    <p class="center" id="flowerPrice">
+                        <span class="line-through">&yen;56</span>
+                        <span class="pink">&yen;45</span>
+                    </p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

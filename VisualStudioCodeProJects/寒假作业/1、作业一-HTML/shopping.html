@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC商城-购物车</title>
+    <link rel="stylesheet" href="css/shoppping.css">
+</head>
+
+<body>
+    <header class="head">
+        <div class="head__lop">
+            <div class="head__left">
+                <ul class="head__left--nav">
+                    <li><a href="index.html">EC商城</a></li>
+                    <li>|</li>
+                    <li><a href="">游戏</a></li>
+                    <li>|</li>
+                    <li><a href="">云服务</a></li>
+                    <li>|</li>
+                    <li><a href="">金融</a></li>
+                    <li>|</li>
+                    <li><a href="">问题反馈</a></li>
+                </ul>
+            </div>
+            <div class="head__middle"></div>
+            <div class="head__right">
+                <ul class="asd">
+                    <li><a href="login.html">登录</a></li>
+                    <li>|</li>
+                    <li><a href="register.html">注册</a></li>
+                    <li>|</li>
+                    <li><a href="">消息通知</a></li>
+                    <li>|</li>
+                    <li><a href="shopping.html" class="cart">购物车</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="all">
+        <div class="all__1">
+            <div><a href=""><img src="images/logo_top.png"></a></div>
+            <div class="all__font"><a href="">我的购物车</a></div>
+            <div class="all__color">温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="body__table">
+            <form action="" method="post">
+                <table>
+                    <tr class="body__height">
+                        <th class="body__height--left"><input type="checkbox" id="checkbox" />全选</th>
+                        <th>商品名称</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr class="body__height--1">
+                        <td><input type="checkbox" id="checkbox" class="body--1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="img"><img src="images/gwc_xiaomi6.jpg">EC6全网通6GB内存+64GB 亮黑色</td>
+                        <td>2499元</td>
+                        <td><input type="number" id="number" value="1" min="1" /></td>
+                        <td>2499元</td>
+                        <td><input type="submit" id="submit" value="删除" /></td>
+                    </tr>
+                    <tr class="body__height--1">
+                        <td><input type="checkbox" id="checkbox" class="body--1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="img"><img src="images/gwc_xiaomi6.jpg">ECMiX全网通6GB内存+64GB 亮黑色</td>
+                        <td>3499元</td>
+                        <td><input type="number" id="number" value="1" min="1" /></td>
+                        <td>3499元</td>
+                        <td><input type="submit" id="submit" value="删除" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="white">
+            <div class="white--1">继续购物</div>
+            <div class="white--2">|</div>
+            <div class="white--3">共2件商品，已选择1件</div>
+            <div class="white--4">共计(不含运费)：<span id="money">
+                    2499元
+                </span></div>
+            <div class="white--5">
+                <a href=""><input type="submit" id="sumbit--1" value="去结算" /></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="under"></div>
+    <div id="foot">
+        <div>@EC.com 京ICP证 11××××号 京ICP备100×××××号 京公网安备 11010×××××34号 京网文[2018]00××-000×号</div>
+    </div>
+</body>
+
+</html>

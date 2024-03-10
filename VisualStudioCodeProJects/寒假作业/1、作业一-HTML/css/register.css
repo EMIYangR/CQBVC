@@ -1,0 +1,133 @@
+* {
+	padding: 0 auto;
+	margin: 0;
+}
+
+body {
+	background: rgb(20, 33, 42);
+	font: 16px "宋体", "times new roman";
+}
+
+#head {
+	width: 100vw;
+	height: 12vh;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+#head img {
+	padding-left: 100px;
+}
+
+#body {
+	background-color: #fff;
+	width: 80vw;
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 70vh;
+	margin: 20px auto;
+
+}
+
+#body .float {
+	float: left;
+	font-weight: bold;
+	font-size: 1.8rem;
+}
+
+#first {
+	overflow: hidden;
+}
+
+#body .float-right {
+	float: right;
+	font-size: 1.5rem;
+}
+
+a {
+	color: lightgreen;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+hr {
+	background-color: lightgreen;
+	margin-top: 1rem;
+	height: 1px;
+}
+
+#table {
+	margin: 30px 50px;
+}
+
+#input {
+	margin: 20px 40px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+#input div {
+	margin: 20px 20px;
+	font-weight: bolder;
+}
+
+#input .style {
+	font-size: 12px;
+	color: lightgray;
+}
+
+#youguess {
+	height: 25px;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+}
+
+#youguess-1 {
+	width: 5rem;
+	height: 25px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+.a1 {
+	letter-spacing: 3.5px;
+}
+
+#input .style-1 {
+	height: 30px;
+	line-height: 30px;
+}
+
+#input .style-1 img {
+	height: 25px;
+	line-height: 25px;
+	position: absolute;
+	border-radius: 5px;
+	margin-top: 3px;
+	margin-left: 5px;
+}
+
+.foot {
+	width: 250px;
+	height: 50px;
+	background-color: lightgreen;
+	border: none;
+	border-radius: 8px;
+	margin-left: 20px;
+	color: white;
+	font-weight: bolder;
+	font-size: 20px;
+	letter-spacing: 1rem;
+	padding-left: 20px;
+}
+
+#finally {
+	background-color: #FFF;
+	height: 10vh;
+	width: 100vw;
+	text-align: center;
+	letter-spacing: 5px;
+	padding-top: 30px;
+	font-size: 0.1px;
+}

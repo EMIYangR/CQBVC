@@ -1,0 +1,120 @@
+* {
+    padding: 0 auto;
+    margin: 0;
+}
+
+body {
+    background: rgb(20, 33, 42);
+    font: 12px "宋体", "times new roman"
+}
+
+.head {
+    height: 12vh;
+    width: 100vw;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.head img {
+    padding-left: 100px;
+}
+
+#body-1 {
+    background-image: url(../images/login_bg.jpg);
+    height: 70vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: 100px;
+}
+
+#body {
+    border: 1px solid red;
+    margin-left: 850px;
+    height: 55vh;
+    margin-top: 5vh;
+    width: 35vw;
+    border-radius: 8px;
+    padding: 40px;
+    background-color: darkred;
+}
+
+.table div:not(.right) {
+    color: white;
+}
+
+#first {
+    overflow: hidden;
+}
+
+.enter {
+    float: left;
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+
+.h1 {
+    width: 550px;
+    border: 1px solid lightgreen;
+    overflow: hidden;
+}
+
+.right {
+    float: right;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+#content-1 div {
+    margin-top: 60px;
+}
+
+#x2 {
+    height: 30px;
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.a1 {
+    font-size: 16px;
+}
+
+#c2 {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+#content-1 .a1 img {
+    height: 33px;
+    position: absolute;
+    margin-left: 5px;
+}
+
+#c1 {
+    height: 40px;
+    width: 300px;
+    margin-left: 100px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+#finally {
+    background-color: #FFF;
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+    letter-spacing: 5px;
+    padding-top: 30px;
+    font-size: 0.1px;
+}

@@ -1,0 +1,317 @@
+/* 顶部 */
+#fttg,
+#tta {
+	height: 40px;
+}
+
+#fttg {
+	float: left;
+	margin-left: 75px;
+}
+
+#tta {
+	margin-left: 775px;
+	line-height: 50px;
+}
+
+#fttg a {
+	margin-left: 15px;
+}
+
+#fttg a ion-icon {
+	font-size: 32px;
+	color: black;
+	margin: 10px;
+}
+
+#tta span {
+	margin-left: 15px;
+}
+
+/* 顶部分割线 */
+#header hr {
+	margin: 15px 75px;
+	font-weight: bold;
+	color: #edeeec;
+	background-color: #edeeec;
+}
+
+/* 列表 */
+#line {
+	height: 59px;
+	line-height: 59px;
+}
+
+#line #Navigation {
+	float: left;
+}
+
+#line a img {
+	margin-left: 75px;
+	margin-right: 450px;
+	float: left;
+}
+
+#line a.line {
+	text-decoration: none;
+	color: black;
+	margin-right: 45px;
+}
+
+#search {
+	margin-left: 375px;
+}
+
+#line a ion-icon {
+	font-size: 32px;
+	color: black;
+	margin: 10px;
+}
+
+/* 主体 */
+/* 主界面 */
+#slide-bg {
+	height: 700px;
+	padding-left: 75px;
+	padding-top: 100px;
+	background-image: url(../images/slider/slide-bg-1.jpg
+);
+	background-size: 1600px;
+	background-repeat: no-repeat;
+}
+
+#slide-bg #more a {
+	text-decoration: none;
+}
+
+/* 特色鲜花图标 */
+
+/* 填充 */
+.tc{
+    padding-top: 25px;
+}
+/* 特色鲜花背景 */
+table img {
+	height: 300px;
+}
+
+#quanbu tr td,
+#yulan tr td {
+	height: 300px;
+	width: 300px;
+	border-bottom: 3px solid #f1f1ef;
+	background-size: 300px;
+	background-repeat: no-repeat;
+}
+
+#quanbu tr td ion-icon,
+#yulan tr td ion-icon {
+	color: black;
+	padding: 10px;
+	background-color: #dddddd;
+	font-size: 24px;
+	margin-top: 250px;
+}
+
+#quanbu tr td ion-icon:hover,
+#yulan tr td ion-icon:hover {
+	background-color: #eaa9a9;
+}
+
+.line-through {
+	margin-top: 10px;
+}
+
+#product-01 {
+	background-image: url(../images/product/product-01.jpg);
+}
+
+#product-02 {
+	background-image: url(../images/product/product-02.jpg);
+}
+
+#product-03 {
+	background-image: url(../images/product/product-03.jpg);
+}
+
+#product-04 {
+	background-image: url(../images/product/product-04.jpg);
+}
+
+#product-05 {
+	background-image: url(../images/product/product-05.jpg);
+}
+
+#product-06 {
+	background-image: url(../images/product/product-06.jpg);
+}
+
+#product-07 {
+	background-image: url(../images/product/product-07.jpg);
+}
+
+#product-08 {
+	background-image: url(../images/product/product-08.jpg);
+}
+
+#product-09 {
+	background-image: url(../images/product/product-09.jpg);
+}
+
+#product-10 {
+	background-image: url(../images/product/product-10.jpg);
+}
+
+#product-11 {
+	background-image: url(../images/product/product-11.jpg);
+}
+
+#product-12 {
+	background-image: url(../images/product/product-12.jpg);
+}
+
+
+/* 特色鲜花 */
+#tsflowers table p img {
+	height: 300px;
+}
+
+/* 特色鲜花-2 */
+#xq table {
+	width: 100%;
+	height: 370px;
+}
+
+#xq p {
+	display: none;
+	padding: 0 5%;
+	margin: 0 5%;
+	background: rgba(248, 247, 246, 0.5);
+}
+
+#xq #padding {
+	padding-top: 15%;
+}
+
+#xq #txt {
+	padding-bottom: 15%;
+}
+
+#birthday,
+#love,
+#Apologize {
+	height: 300px;
+	width: 475px;
+	background-repeat: no-repeat;
+}
+
+#birthday {
+	background-image: url(../images/banner/banner-01.jpg);
+}
+
+#love {
+	background-image: url(../images/banner/banner-02.jpg);
+}
+
+#Apologize {
+	background-image: url(../images/banner/banner-03.jpg);
+}
+
+#xq div:hover p {
+	display: block;
+}
+
+/* 底部 */
+#footer {
+	background-color: #f6f6f6;
+}
+
+ul li {
+	list-style: none;
+}
+
+ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+/* 支持 */
+#Support {
+	margin: 0 75px;
+	padding-top: 50px;
+	height: 275px;
+}
+
+#about,
+#Fast,
+#Contact,
+#blog {
+	float: left;
+}
+
+/* 关于 */
+#about {
+	width: 29%;
+}
+
+/* 快捷入口 */
+#Fast {
+	margin-left: 15px;
+	width: 15%;
+}
+
+#Fast ul li {
+	margin-bottom: 8px;
+}
+
+#Fast ul li.Spacing-h-2 {
+	margin-top: 30px;
+}
+
+/* 联系方式 */
+#Contact {
+	margin-left: 15px;
+	width: 25%;
+}
+
+/* 博客 */
+
+#blog {
+	width: 20%;
+}
+
+#blog table {
+	height: 200px;
+}
+
+#blog table img {
+	height: 75px;
+	width: 75px;
+}
+
+#blog table a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/* 版权及开源许可 */
+#copy {
+	background-color: #f1f0f1;
+}
+
+#footer #copy {
+	font-size: 15px;
+	padding-top: 15px;
+	padding-bottom: 45px;
+}
+
+#footer #copy span.opencode ion-icon {
+	size: 15px;
+	color: #9594ad;
+}
+
+#footer p span.opencode a {
+	text-decoration: none;
+	color: #9594ad;
+}
