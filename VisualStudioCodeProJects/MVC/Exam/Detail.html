@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td> 线路编号：</td>
+                <td> <span id="pid"></span></td>
+            </tr>
+            <tr>
+                <td> 线路名称：</td>
+                <td> <input type="text" id="name"></input></td>
+            </tr>
+            <tr>
+                <td> 天数：</td>
+                <td> <span id="days"></span></td>
+            </tr>
+            <tr>
+                <td> 价格：</td>
+                <td> <span id="price"></span></td>
+            </tr>
+            <tr>
+                <td> 出行方式：</td>
+                <td> <span id="vehicle"></span></td>
+            </tr>
+            <tr>
+                <td> 酒店类型：</td>
+                <td> <span id="hotel"></span></td>
+            </tr>
+            <tr>
+                <td> 是否含有伙食：</td>
+                <td> <span id="hasMeal"></span></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="change" value="修改"></td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <script>
+        let url = location.href
+        let str = url.split('?')[1]
+        let id = str.split('=')[1]
+
+        $(function () {
+            $.get('https://localhost:44316/api/Lines/' + id, function (res) {
+                $("#pid").html(res.lineID)
+                $("#name").val(res.lineName)
+                $("#days").html(res.days)
+                $("#price").html(res.price)
+                $("#vehicle").html(res.vehicle)
+                $("#hotel").html(res.hotel)
+                $("#hasMeal").html(res.hasMeal)
+            })
+        })
+
+        $("#change").click(function () {
+            $.ajax({
+                url: 'https://localhost:44316/api/Lines/' + id,
+                type: "PUT",
+                data: {
+                    lineName: $("#name").val()
+                },
+                success: function (res) {
+                    console.log("成功")
+                },
+                error: function (res) {
+                    console.log("失败")
+                }
+            })
+
+        })
+    </script>
+</body>
+
+</html>

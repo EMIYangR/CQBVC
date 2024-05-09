@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <p style="text-align: center;">
+
+            <input type="text" id="search-input">
+            <input type="button" id="search" value="搜索">
+
+        </p>
+    </div>
+    <div>
+        <table id="tb" class="table">
+            <tr>
+                <th>索引</th>
+                <th>线路名称</th>
+                <th>天数</th>
+                <th>价格</th>
+                <th>出行方式</th>
+                <th>酒店类型</th>
+                <th>是否含有伙食</th>
+                <th>操作</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p align="center">
+            <button id="btn-first" class="btn btn-primary">首页</button>
+            <i id="last-page" class="bi bi-chevron-double-left"></i>
+            <span id="sp">1</span>
+            <i id="next-page" class="bi bi-chevron-double-right"></i>
+        </p>
+    </div>
+    <script>
+        function bindData(res) {//传入集合 将集合数据与表格绑定
+            $("#tb tr:gt(0)").remove() //删除节点
+            $.each(res, function (index, data) {
+                let tr = '<tr>' +
+                    '<td>' + (index + 1) + '</td>' +
+                    '<td>' + data.lineName + '</td>' +
+                    '<td>' + data.days + '</td>' +
+                    '<td>' + data.price + '</td>' +
+                    '<td>' + data.vehicle + '</td>' +
+                    '<td>' + data.hotel + '</td>' +
+                    '<td>' + data.hasMeal + '</td>' +
+                    '<td><a class="btn btn-info" href="detail.html?id=' + data.lineID + '">详情</a></td></tr > '
+                $("#tb").append(tr)
+            })
+        }
+        $(function () {
+            //绑定表格数据
+            $.get('https://localhost:44316/api/Lines?pageIndex=1&pageSize=8', function (res) {
+                bindData(res)
+            })
+        })
+        $("#btn-first").click(function () {
+            $.get('https://localhost:44316/api/Lines?pageIndex=1&pageSize=8', function (res) {
+                $("#sp").html(1)
+                bindData(res)
+            })
+        })
+
+        $("#last-page").click(function () {//上一页
+            let pageIndex = parseInt($("#sp").html()) - 1 //获取页码数-1
+            $.get('https://localhost:44316/api/Lines?pageIndex='
+                + pageIndex + '&pageSize=8', function (res) {
+                    $("#sp").html(pageIndex) //更新页码数
+                    bindData(res)
+                })
+        })
+
+        $("#next-page").click(function () {//下一页
+            let pageIndex = parseInt($("#sp").html()) + 1
+            $.get('https://localhost:44316/api/Lines?pageIndex='
+                + pageIndex + '&pageSize=8', function (res) {
+                    $("#sp").html(pageIndex)
+                    bindData(res)
+                })
+        })
+        $("#search").click(function () {//搜索
+            let url = "https://localhost:44316/api/Lines?name=" + $("#search-input").val()
+            console.log(url)
+            $.get(url, function (res) {
+                bindData(res)
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

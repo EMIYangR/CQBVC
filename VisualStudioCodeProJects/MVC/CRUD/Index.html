@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div>
+        <p style="text-align: center;">
+            <span>产品类别：</span>
+            <select id="select">
+                <option value="0">全部</option>
+            </select>
+            <!-- <input type="text" id="search-input">
+            <input type="button" id="search" value="搜索"> -->
+
+        </p>
+    </div>
+    <div>
+        <table id="tb" class="table">
+            <tr>
+                <th>索引</th>
+                <th>产品编号</th>
+                <th>产品名称</th>
+                <th>产品价格</th>
+                <th>产品简介</th>
+                <th>类别名称</th>
+                <th>操作</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p style="text-align: center;">
+            <input type="button" id="btn" value="首页" class="btn btn-primary">
+            <i class="bi bi-chevron-double-left" id="last-page"></i>
+            <span id="page-index">1</span>
+            <i class="bi bi-chevron-double-right" id="next-page"></i>
+
+        </p>
+
+    </div>
+    <script>
+        // 数据绑定
+        function DataBind(res) {
+            $("#tb tr:gt(0)").remove()
+
+            $.each(res, function (index, data) {
+                let tr = "<tr><td>" + (index + 1) + "</td>"
+                    + "<td>" + data.ProductID + "</td>"
+                    + "<td>" + data.ProductName + "</td>"
+                    + "<td>" + data.ProductPrice + "</td>"
+                    + "<td>" + data.ProductDesc + "</td>"
+                    + "<td>" + data.ClassName + "</td>"
+                    + "<td><button class='btn btn-danger' onclick='DelProduct(" + data.ProductID + ")'>删除</button>"
+                    + "<a class='btn btn-info' href='Detail.html?id=" + data.ProductID + "'>详情</a></td></tr>"
+                $("#tb").append(tr)
+            })
+        }
+        // 删除
+        function DelProduct(id) {
+            if (confirm('是否确定删除？')) {
+                $.ajax({
+                    url: 'https://localhost:44334/api/Products/' + id,
+                    type: 'DELETE',
+                    success: function (res) {
+                        if (res) {
+                            console.log("删除成功！")
+                            $.get("https://localhost:44334/api/Products?pageIndex=" + $('#page-index').html() + "&pageSize=8", function (res) {
+                                DataBind(res)
+                            })
+                        } else {
+                            alert("删除失败！")
+                        }
+                    }
+                })
+            }
+        }
+        // 初始化
+        $(function () {
+            $.get("https://localhost:44334/api/Products?pageIndex=1&pageSize=8", function (res) {
+                $("#page-index").html(1)
+                DataBind(res)
+            })
+
+            $.get("https://localhost:44334/api/ProductClasses", function (res) {
+                $.each(res, function (index, data) {
+                    let opt = '<option value="' + data.ClassID + '">' + data.ClassName + '</option>'
+                    $("#select").append(opt)
+                })
+            })
+        })
+        // 首页
+        $("#btn").click(function () {
+            $.get("https://localhost:44334/api/Products?pageIndex=1&pageSize=8", function (res) {
+                $("#page-index").html(1)
+                DataBind(res)
+            })
+        })
+        // 上一页
+        $("#last-page").click(function () {
+            let pageIndex = parseInt($("#page-index").html()) - 1
+            $("#page-index").html(pageIndex)
+
+            $.get("https://localhost:44334/api/Products?pageIndex=" + pageIndex + "&pageSize=8", function (res) {
+                DataBind(res)
+            })
+        })
+        // 下一页
+        $("#next-page").click(function () {
+            let pageIndex = parseInt($("#page-index").html()) + 1
+            $("#page-index").html(pageIndex)
+
+            $.get("https://localhost:44334/api/Products?pageIndex=" + pageIndex + "&pageSize=8", function (res) {
+                DataBind(res)
+            })
+        })
+        // 类别
+        $("#select").change(function () {
+            $.get("https://localhost:44334/api/Products?id=" + $(this).val() + "&name=", function (res) {
+                $("#page-index").html(1)
+                DataBind(res)
+            })
+        })
+        // 假的搜索
+        $("#search").click(function () {
+            let url = 'https://localhost:44334/api/v_Product_ProductClass?name=' + $("#search-input").val()
+            console.log(url)
+            $.get(url, function (res) {
+                console.log(res)
+                DataBind(res)
+            })
+        })
+    </script>
+</body>
+
+</html>

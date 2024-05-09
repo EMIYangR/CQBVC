@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <p>
+        <span>商品名称：</span>
+        <input type="text" id="name">
+        <input type="button" value="搜索" id="s">
+    </p>
+
+    <button id="btn">查询数据</button>
+    <table id="tb" class="">
+        <tr>
+            <th>索引</th>
+            <th>产品编号</th>
+            <th>产品名称</th>
+            <th>产品图片</th>
+            <th>产品价格</th>
+            <th>产品简介</th>
+            <th>加入时间</th>
+        </tr>
+    </table>
+    <script>
+        $("#btn").click(function () {
+            $.get("https://localhost:44360/api/Product", function (res) {
+                $.each(res, function (index, product) {
+                    let td = "<td>" + (index + 1) + "</td>"
+                    let td1 = "<td>" + product.ProductID + "</td>"
+                    let td2 = "<td>" + product.ProductName + "</td>"
+                    let td3 = "<td>" + product.ProductPic + "</td>"
+                    let td4 = "<td>" + product.ProductPrice + "</td>"
+                    let td5 = "<td>" + product.ProductDesc + "</td>"
+                    let td6 = "<td>" + product.AddTime + "</td>"
+                    let tr = "<tr>" + td + td1 + td2 + td3 + td4 + td5 + td6 + "</tr>"
+                    $("#tb").append(tr)
+                })
+            })
+        })
+        $("#s").click(function () {
+            let url = "https://localhost:44360/api/Product?name=" + $("#name").val()
+            console.log(url)
+            $.get("https://localhost:44360/api/Product?name=" + $("#name").val(), function (res) {
+                $("#tb tr:gt(0)").remove()
+                console.log(res)
+                $.each(res, function (index, product) {
+                    let td = "<td>" + (index + 1) + "</td>"
+                    let td1 = "<td>" + product.ProductID + "</td>"
+                    let td2 = "<td>" + product.ProductName + "</td>"
+                    let td3 = "<td>" + product.ProductPic + "</td>"
+                    let td4 = "<td>" + product.ProductPrice + "</td>"
+                    let td5 = "<td>" + product.ProductDesc + "</td>"
+                    let td6 = "<td>" + product.AddTime + "</td>"
+                    let tr = "<tr>" + td + td1 + td2 + td3 + td4 + td5 + td6 + "</tr>"
+                    $("#tb").append(tr)
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
