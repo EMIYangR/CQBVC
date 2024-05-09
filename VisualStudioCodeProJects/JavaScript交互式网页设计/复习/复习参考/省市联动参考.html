@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面重新布局</title>
+    <style type="text/css">
+        #contanier {
+            border: 1px solid red;
+            width: 99%;
+            height: 600px;
+            position: relative;
+        }
+
+        #content {
+            border: 5px solid gray;
+            width: 50%;
+            height: 60%;
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            background-color: white;
+            padding-top: 50px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            var cities = new Array(3);
+            cities[0] = new Array("武汉市", "宜昌市", "黄冈市", "襄阳市");
+            cities[1] = new Array("长沙市", "岳阳市", "株洲市", "郴州市");
+            cities[2] = new Array("石家庄市", "邯郸市", "廊坊市", "保定市");
+            cities[3] = new Array("郑州市", "洛阳市", "开封市", "安阳市");
+            $("#province").change(function () {
+                $("#city").empty();
+                var val = this.value;
+                $.each(cities, function (i, n) {
+                    if (val == i) {
+                        $.each(cities[i], function (j, m) {
+                            var textNode = document.createTextNode(m);
+                            var opEle = document.createElement("option");
+                            $(opEle).append(textNode);
+                            $("#city").append($(opEle));
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <select id="province">
+        <option>--请选择--</option>
+        <option value="0">湖北</option>
+        <option value="1">湖南</option>
+        <option value="2">河北</option>
+        <option value="3">河南</option>
+    </select>
+    <select id="city">
+        <option>--请选择--</option>
+    </select>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="Case/第7章/实践案例2/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var x = 5, y = 15;
+            $("#small_img").mousemove(function (e) {
+                $("#big_img").attr("src", this.src);
+                $("#big_img").css({
+                    "top": e.pageX + y + "px",
+                    "left": e.pageY + x + "px",
+                    "position": "absolute"
+                });
+                $("#big_img").show();
+            });
+            $("#small_img").mouseout(function (e) {
+                $("#big_img").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="Case/第7章/实践案例2/img_2.jpg" height="50" width="100" id="small_img">
+    <img id="big_img">
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>试题导入</title>
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/plugins/webuploader/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="css/demo/webuploader-demo.css">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        #fileUpload{
+            display: none;
+        }
+        #filePicker div:nth-child(2){
+            width:100%!important;
+            height:100%!important;
+        }  
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>选择阶段和科目</h5>
+                        <div class="ibox-tools">
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <form role="form" class="form-inline">
+                            <div class="form-group col-md-3">
+                                <label for="name">选择阶段:</label>
+                                <select id="se1" class="form-control">
+                                    <option selected value="1">大一</option>
+                                    <option value="2">大二</option>
+                                    <option value="3">大三</option>
+                                    <option value="4">其它</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group col-md-4">
+                                <label for="name">选择科目:</label>
+                                <select id="se2" class="form-control">
+                                </select>
+                            </div>
+                            
+                            <button id="btnSure" class="btn btn-primary" type="button">确定</button>
+                            <a href="data/题目模板.xlsx" download="题目模板.xlsx" 
+                                    class="btn btn-info">下载题目模板</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fileUpload" class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>文件导入</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="page-container">
+                            <p>您可以尝试文件拖拽或点击按钮选择试题上传</p>
+                            <div id="uploader" class="wu-example">
+                                <div class="queueList">
+                                    <div id="dndArea" class="placeholder">
+                                        <div id="filePicker">
+                                            <input onchange="getExcelData(this)" class="col-lg-offset-4 btn-primary" type="file">
+                                        </div>
+                                        <p id="tips">文件格式:xls或.xlsx</p>
+                                    </div>
+                                </div>
+                                <div class="statusBar" style="display:none;">
+                                    <div class="progress">
+                                        <span class="text">0%</span>
+                                        <span class="percentage"></span>
+                                    </div>
+                                    <div class="info"></div>
+                                    <div class="btns">
+                                        <div id="filePicker2"></div>
+                                        <div class="uploadBtn">开始上传</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/xlsx.core.min.js"></script>
+    <script>
+        //读取Excel数据
+			function getExcelData(obj) {
+				const FILE_MAXSIZE = 20480;
+                let file = obj.files;
+                if (!file) return;  //类型判定
+                let endName = file[0].name.split(".")[1];
+                if (endName !== 'xls' && endName !== 'xlsx') {//格式判定
+                    alert('导入的文件格式不正确!');
+                    return;
+                }
+                if (obj.files[0].size / 1024 > FILE_MAXSIZE) {//大小判定
+                    alert('导入的表格文件不能大于20M!');
+                    return;
+                }
+
+				$("#tips").html("正在读取，请稍后...");
+				$(this).css("display", "none");
+				var reader = new FileReader();
+
+				//文件加载完成后调用
+				reader.onload = function(e) {
+					var data = e.target.result;
+
+					const workbook = XLSX.read(data, {
+						type: 'array'
+					})
+					//获取json格式的Excel数据
+					var jsonData0 = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {
+						defval: 'null' //单元格为空时的默认值
+					});
+
+                    var fileName=$("#se2").find("option:selected").text().trim();
+					download(fileName+".json", JSON.stringify(jsonData0));
+					$("#tips").html("");
+					$(this).css("display","block");
+				};
+
+				//加载文件
+				reader.readAsArrayBuffer(obj.files[0]);
+                // $("#tips").html("解析完成，请将此文件移动到项目data/papers目录下...")
+                alert("解析完成，请将此文件移动到项目data/papers目录下...");
+			}
+
+			//下载文件
+			function download(filename, text) {
+				var pom = document.createElement('a');
+				pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+				pom.setAttribute('download', filename);
+				if (document.createEvent) {
+					var event = document.createEvent('MouseEvents');
+					event.initEvent('click', true, true);
+					pom.dispatchEvent(event);
+				} else {
+					pom.click();
+				}
+			}
+
+        $(function(){
+            $.getJSON("data/gradeAndSubjects.json",function(result){    //获取json数据
+                    $.each(result,function(index,filed){            //成功后再result中，遍历result
+                        if(index==0){           //页面默认选中大一
+                            $.each(filed.subjects,function(a,b){    //大一里面所有科目为数组，遍历数组
+                                var opt=$("<option value='"+a+"'>"+b+"</option>");
+                                $("#se2").append(opt)   //依次拼接节点
+                            })
+                            return;
+                        }
+                    })
+            });
+            
+            $("#se1").change(function(){
+                var grade=$(this).val();
+                $.getJSON("data/gradeAndSubjects.json",function(result){    //获取json数据
+                    $.each(result,function(index,filed){    //成功后再result中，遍历result
+                        // if(grade==4){
+                        //     $("#se2").children().remove();
+                        // }
+                        if(index==grade-1){
+                            $("#se2").children().remove();
+                            $.each(filed.subjects,function(a,b){
+                                var opt=$("<option value='"+a+"'>"+b+"</option>");
+                                $("#se2").append(opt)
+                            })
+                            return;
+                        }
+                    })
+            });
+            })
+            //确定按钮点击后将div展示出来
+            $("#btnSure").click(function(){
+                $("#fileUpload").slideDown(200);
+            })
+
+            $("#btnSure").next("a").click(function(){
+                alert("请将你的试卷按此模板修改后上传!")
+            })
+        })
+    </script>
+    <!-- 全局js -->
+
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!-- Web Uploader -->
+    <!-- <script type="text/javascript">
+        // 添加全局站点信息
+        var BASE_URL = 'js/plugins/webuploader';
+    </script> -->
+    <!-- <script src="js/plugins/webuploader/webuploader.min.js"></script> -->
+
+    <!-- <script src="js/demo/webuploader-demo.js"></script> -->
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+</body>
+
+</html>

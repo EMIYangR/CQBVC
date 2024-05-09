@@ -1,0 +1,203 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>试题浏览</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <!-- Data Tables -->
+    <!-- <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet"> -->
+
+    <style>
+        #paper-show{
+            display: none;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div id="exam-show" class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>试题浏览</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-4 m-b-xs">
+                                <div data-toggle="buttons" class="btn-group">
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option1" name="options">大一</label>
+                                    <label class="btn btn-sm btn-white active">
+                                        <input type="radio" id="option2" name="options">大二</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option3" name="options">大三</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option3" name="options">其它</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" placeholder="请输入科目关键词" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="tb" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>阶段</th>
+                                        <th>科目</th>
+                                        <th>题目数</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="paper-show" class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>题目浏览</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" placeholder="请输入题目关键词" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="paper-list" class="">
+                            <ol>
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity -->
+    <script src="js/demo/peity-demo.js"></script>
+    
+    <script>
+        $(function(){
+            $("#sp").attr("class","pie")
+            $.getJSON("data/gradeAndSubjects.json",function(result){
+                $.each(result,function(index,filed){    //grade+subjects
+                    //外层拼接每个阶段
+                    var tr1=$("<tr><td>"+filed.gradeName+"</td><td></td><td>400</td><td></td></tr>");
+                    $("#tb #tbody").append(tr1);
+                    
+                    // $.ajaxSetup({ scriptCharset: "utf-8", contentType: "application/json; charset=utf-8" }); 
+                    $.each(filed.subjects,function(a,subject){   //单独每个科目
+                        //获取题目数
+                        var count=0;
+                        //将ajax设置为同步  默认为异步，false则为同步
+                        $.ajaxSettings.async=false;
+                        $.getJSON("data/papers/"+encodeURIComponent(subject)+".json", function (result) { 
+                            // console.log(subject+" "+result.length)
+                            count=result.length;
+                        });
+
+                        //内层拼接每个科目  
+                        var tr2=$("<tr><td></td><td>"+subject+"</td>"+
+                                    "<td>"+count+"</td><td>"
+                            +"<a href='#?a="+subject+"' onclick='paperShow(this)'>查看</a></td></tr>");
+                        $("#tb #tbody").append(tr2);
+                    })
+                })
+            })
+        })
+        
+        function paperShow(subject){
+            $("#exam-show").css("display","none");
+            $("#paper-show").css("display","block");//隐藏原有div，显示另外一个
+            var a=subject.toString();
+            //获取a标签中信息进行字符串分割，最终解码得到科目信息
+            var subjectName=decodeURIComponent((a.split('?')[1]).split('=')[1]);
+            
+            var fileURI="data/papers/"+subjectName+".json";
+            //根据科目名字获取文件信息
+            $.getJSON(fileURI,function(result){
+                $.each(result,function(index,test){//遍历，得到索引和每一道题
+                    //获取7个题目信息
+                    var contentType=test.contentType;//题目类型：单选题、多选题
+                    var content=test.content;//题干
+                    var answer=test.answer;	//答案
+                    var a=test.a;//四个选项
+                    var b=test.b;	
+                    var c=test.c;	
+                    var d=test.d;
+                    //创建节点
+                    var li=$("<li><strong>"+content+"("+contentType+")</strong><ol type='A'>"
+                        +"<li>"+a+"</li><li>"+b+"</li><li>"+c+"</li><li>"+d+"</li></ol><p>答案:"+answer+"</p></li>");
+                    //追加节点
+                    $("#paper-list>ol").append(li);
+                })
+            })
+        }
+    
+    </script>
+    <!-- Data Tables -->
+    <!-- <script src="js/plugins/dataTables/jquery.dataTables.js"></script> -->
+    <!-- <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script> -->
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+            //  $('.dataTables-example').dataTable();
+        });
+        
+    </script>
+</body>
+
+</html>

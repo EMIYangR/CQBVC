@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态添加</title>
+</head>
+<body>
+    <script>
+        function msg(name,age,gender,department) {
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+            this.department=department;
+        }
+        var p1=new msg("张三","25","男","人事部");
+        var p2=new msg("李四","23","女","财务部");
+        var p3=new msg("王五","24","女","研发部");
+        var arr=new Array(p1,p2,p3);
+        function init() {
+            var table=document.getElementById("tab");
+            for (var i in arr) {
+                var tr=document.createElement("tr");
+                for (var j in arr[i]) {
+                    var td=document.createElement("td");
+                    with(arr[i]){
+                        if (j=="name") {
+                            td.innerHTML=name;
+                        }
+                        if (j=="age") {
+                            td.innerHTML=age;
+                        }
+                        if (j=="gender") {
+                            td.innerHTML=gender;
+                        }
+                        if (j=="department") {
+                            td.innerHTML=department;
+                        }
+                    }
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+        }
+        window.onload=function(){
+            init();
+        };
+    </script>
+        <table border="1" id="tab">
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>部门</th>
+            </tr>
+        </table>
+</body>
+</html>

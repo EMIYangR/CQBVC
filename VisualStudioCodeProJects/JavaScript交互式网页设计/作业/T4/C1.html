@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>更改字体颜色和背景颜色</h2>
+    <select id="sel">
+        <option value="white">白色</option>
+        <option value="red">红色</option>
+        <option value="orange">橙色</option>
+        <option value="yellow">黄色</option>
+        <option value="green">绿色</option>
+        <option value="blue">蓝色</option>
+        <option value="cyan">青色</option>
+        <option value="purple">紫色</option>
+        <option value="black">黑色</option>
+    </select>
+    <script type="text/javascript">
+        document.getElementById("sel").onchange=function(){
+            document.bgColor=this.value;
+            document.fgColor=this.value+255;
+        }
+    </script>
+</body>
+
+</html>

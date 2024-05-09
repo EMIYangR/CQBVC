@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Case/第4章/实践案例2/login.css">
+</head>
+
+<body>
+    <div id="login">
+        <form>
+            <fieldset>
+                <legend>登录</legend>
+                <ul>
+                    <li class="current" id="logone1">邮箱用户</li>
+                    <li id="logone2">手机用户</li>
+                </ul>
+                <div class="box">
+                    <div id="email">
+                        <p>
+                            <label>邮箱：</label>
+                            <input type="email" class="txt">
+                        </p>
+                        <p>
+                            <label>密码：</label>
+                            <input type="password" class="txt">
+                        </p>
+                        <p>
+                            <input type="image" src="Case/第4章/实践案例2/login_normal.png" class="btn" name="btnlogin">
+                            <a href="#">忘记密码？</a>
+                        </p>
+                    </div>
+                    <div id="phone" style="display: none;">
+                        <p>
+                            <label>手机号：</label>
+                            <input type="tel" class="txt">
+                        </p>
+                        <p>
+                            <label>密码：</label>
+                            <input type="password" class="txt">
+                        </p>
+                        <p>
+                            <input type="image" src="Case/第4章/实践案例2/login_normal.png" class="btn" name="btnlogin">
+                            <a href="#">忘记密码？</a>
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var btns = document.getElementsByName("btnlogin");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].onmouseover = function () {
+                    this.src = "Case/第4章/实践案例2/Login.jpg"
+                }
+                btns[i].onmouseout = function () {
+                    this.src = "Case/第4章/实践案例2/login_normal.png"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="js/C4-1.js"></script> -->
+</head>
+
+<body>
+    <p id="txt"></p>
+    <img id="img">
+    <script>
+        window.onload = function () {
+            var url = window.location.href;
+            if (isMobile()) {
+                if (url.indexOf("C4-1.html") > 0) {
+                    window.location.href = "C4-2.html";
+                }
+            } else {
+                if (url.indexOf("C4-2.html") > 0) {
+                    window.location.href = "C4-1.html";
+                }
+            }
+            if (window.screen.availHeight > 1280) {
+                document.getElementById("txt").innerHTML = "屏幕可用高度大于1280px,使用大图片";
+                document.getElementById("img").src = "Case/第3章/实践案例1/mobile.jpg";
+            } else {
+                document.getElementById("txt").innerHTML = "屏幕可用高度小于1280px,使用小图片";
+                document.getElementById("img").src = "Case/第3章/实践案例1/pc.jpg";
+            }
+        }
+        function isMobile() {
+            var userAgentInfo = navigator.userAgent.toLowerCase();
+            var agents = ["android", "iphone", "symbianos", "windows phone", "ipad", "ipod"];
+            for (var i = 0; i < agents; i++) {
+                if (userAgentInfo.indexOf(agents[i]) > 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

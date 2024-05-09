@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+#login{
+	float:left;
+	width:400px;
+}
+#login fieldset {
+	color:#333;
+	border:1px solid #dedede;
+}
+
+#login legend{
+	height:36px;
+	font:bold 20px/36px Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	color:#f8ae00;
+	margin-left:20px;
+}
+#login ul {
+	overflow:hidden;
+	padding:0px;
+}
+
+#login ul li {
+	float:left;
+}
+#login ul li a,#login ul li{
+	display:block;
+	width:75px;
+	height:25px;
+	line-height:25px;
+	margin-left:5px;
+	background-image:url(../实践案例2/gray.gif);
+	cursor:hand;
+}
+
+#login ul li.current{
+	color:white;
+	background-image:url(../实践案例2/current.gif);
+}
+
+#login .box{
+	background:#fafafa;
+	overflow:hidden;
+	height:192px;
+}
+#login .box #email,#phone{
+	padding:15px 30px;
+	height:122px;
+}
+#login .txt{
+	border:1px solid #a5afc3;
+	height:25px;
+	line-height:25px;
+}
+#login p{
+	margin-bottom:10px;
+}
+#login input.btn{
+	border:none;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+

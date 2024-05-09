@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getArea(a,b){
+            document.write("面积为"+a*b);
+        }
+
+        function getHumanAndSalary(){
+            var count = 0,sum = 0;
+            count = arguments,length;
+            for(let index=0;index < count;index++){
+                sum+=arguments[index];
+            }
+            document.write("员工总人数为"+count+",薪资总和为："+sum);
+        }
+    </script>
+
+    <h2><script>document.write("面积为："+getArea(5,7))</script></h2>
+    <h2><script>document.write("员工薪资总和为："+getHumanAndSalary(1000,1500,2000,2500))</script></h2>
+</body>
+</html>

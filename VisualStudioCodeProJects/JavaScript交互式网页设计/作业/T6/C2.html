@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="Case/第6章/实践案例2/jquery-3.3.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            overflow: hidden;
+        }
+        #left{
+            background-image: url("Case/第6章/实践案例2/frozen.jpg");
+            width: 10%;
+            height: 200px;
+            background-size: 100% 100%;
+            margin-top: 3px;
+        }
+        #left,#right{
+            float: left;
+        }
+        #right{
+            width: 18%;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="left">
+            
+        </div>
+        <div id="right">
+            <p><span class="a">评分：</span><span id="sp">8.4</span></p>
+            <p><span class="a">别名：</span><span>冰雪大冒险/魔雪奇缘</span></p>
+            <P><span class="a">演员：</span><a href="" class="b">易迪娜.门泽尔</a></P>
+            <P><span class="a">导演：</span><a href="" class="b">克里斯.巴克Jennifer Lee</a></P>
+            <P><span class="a">地区：</span><span>美国</span></P>
+            <P><span class="a">简介：</span><span>《Frozen》讲述一个诅咒令王国被冰天雪地永久覆盖，乐观无畏的安娜（由克里斯汀·贝尔配音)和一个大胆的...</span></P>
+            <p><a href="">more</a></p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $(".a").css("color","red")
+            $(".b").css("text-decoration","none")
+            $("#sp").css("color","orange")
+        })
+        
+    </script>
+</body>
+</html>

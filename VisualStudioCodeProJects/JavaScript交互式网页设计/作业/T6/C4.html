@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="Case/第6章/实践案例4/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h2>Web前端技术</h2>
+    <ul>
+        <li>使用DIV+CSS设计前端页面
+            <ul>
+                <li>页面布局</li>
+                <li>美化页面</li>
+                <li>页面特效</li>
+            </ul>
+        </li>
+        <li>使用JavaScript+jQuery制作页面特效
+            <ul>
+                <li>JavaScript基础</li>
+                <li>jQuery选择器</li>
+                <li>jQuery操作DOM</li>
+            </ul>
+        </li>
+    </ul>
+    <p><input type="button" value="更改样式"></p>
+    <script>
+        $(function(){
+            $("input").click(function(){
+                $("h2").css("color","red");
+                $("ul").css("list-style","url(./img/list.gif)")
+                $("ul>li>ul").css("list-style","url(./img/list_icon.gif)")
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Case/第7章/实践案例1/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("ul").css("list-style-type","none");
+            var lis = $("li").get();
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].style.cssFloat="left";
+                lis[i].style.marginRight="10px";
+            }
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="">首页</a></li>
+        <li><a href="">新闻</a></li>
+        <li><a href="">消息</a></li>
+        <li><a href="">关于</a></li>
+    </ul>
+</body>
+</html>

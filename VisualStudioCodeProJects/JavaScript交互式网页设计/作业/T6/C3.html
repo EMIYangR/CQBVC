@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="Case/第6章/实践案例3/jquery-3.3.1.min.js"></script>
+    <style>
+        #h2{
+            color: blue;
+        }
+        #a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>影视排行榜<a href="#" id="a">(收起)</a></h2>
+    <ul>
+        <li>捉妖记2</li>
+        <li>战狼2</li>
+        <li>奇门遁甲</li>
+        <li>妖猫传</li>
+        <li>时空终点</li>
+        <li>前任3：再见前任</li>
+        <li>冰雪奇缘</li>
+        <li>极品飞车</li>
+    </ul>
+    <script>
+        $(function(){
+            $("#a").click(function(){
+            var flag=$('ul li:gt(4)').is("visible");
+            if(flag){
+                $('ul li:gt(4)').css("display","none");
+                $(this).text("(展开)");
+            }else{
+                $('ul li:gt(4)').css("display","list-item");
+                $(this).text("(收起)");
+            }
+            })
+        })
+        
+    </script>
+</body>
+</html>

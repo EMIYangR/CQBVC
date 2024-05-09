@@ -1,0 +1,13 @@
+* {
+    margin: 0, auto;
+    padding: 0px;
+}
+form {
+    width: 300px;
+}
+legend,.pp{
+    text-align: center;
+}
+.btn{
+    margin-left: 15%;
+}

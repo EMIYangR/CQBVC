@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".btnAdd").click(function () {
+                var txtObj = $(this).siblings("input[type='text']");
+                console.log(txtObj);
+                var number = parseInt(txtObj.val());
+                txtObj.val(number + 1);
+                calPrice($(this), number + 1);
+                calTotalPrice();
+            });
+            $(".btnMinus").click(function () {
+                var txtObj = $(this).siblings("input[type='text']");
+                var number = parseInt(txtObj.val());
+                if (number > 1) {
+                    txtObj.val(number - 1);
+                    calPrice($(this), number - 1);
+                    calTotalPrice();
+                }
+            });
+            function calPrice($btnObj, number) {
+                var $tdObj = $btnObj.parent().next();
+                var price = parseFloat($tdObj.text().substr(1));
+                var $tdTotal = $tdObj.next();
+                var total = price * number;
+                $($tdTotal).html("&yen;" + total.toFixed(1))
+            }
+            function calTotalPrice() {
+                var sum = 0;
+                $("td[title='price']").each(function (index, element) {
+                    sum += parseFloat($(this).text().substr(1));
+                });
+                $("#spanTotal").html("&yen;" + sum.toFixed(1));
+            }
+        });
+    </script>
+    <style type="text/css">
+        hr{
+            margin-bottom: 10px;
+            size: 1px;
+        }
+        table {
+            border: 1px solid #dfdfdf;
+            border-collapse: collapse;
+            width: 100%;
+            clear: both;
+        }
+
+        table tr {
+            height: 50px;
+            border-bottom: 1px dashed #dfdfdf;
+            border: 1px solid #dfdfdf;
+        }
+
+        table td,
+        th {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        table td.item {
+            width: 400px;
+            height: 60px;
+            text-align: left;
+        }
+
+        table td.item img {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        table td.cal {
+            text-align: right;
+        }
+
+        table td.cal span {
+            font: bold 25px Geneva, Verdana, sans-self;
+            color: #ffa500;
+        }
+
+        table .btn {
+            border: 1px solid #dfdfdf;
+            background-color: #fff;
+            width: 16px;
+            height: 16px;
+        }
+
+        table .txt {
+            width: 60px;
+            height: 30px;
+            border: 1px solid #dfdfdf;
+            font: 15px/30px Geneva, Verdana, sana-serif;
+            text-align: center;
+            background-color: #bbb;
+        }
+
+        table .txt:hover {
+            border: 1px solid #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="line"></div> -->
+    <hr>
+    <table id="tabOrder">
+        <tr>
+            <th>项目</th>
+            <th>状态</th>
+            <th>类型/数量</th>
+            <th>单价</th>
+            <th>小计</th>
+        </tr>
+        <tr>
+            <td class="item">
+                <a href="#">
+                    林木实业北欧衣柜：11.11光棍节优惠活动，每满200元可立减30元
+                </a>
+            </td>
+            <td>可购买</td>
+            <td>
+                <input type="button" value="-" class="btn btnMinus">
+                <input type="text" value="1" class="txt" disabled="disabled">
+                <input type="button" value="+" class="btn btnAdd">
+            </td>
+            <td>&yen;2999.9</td>
+            <td title="price">&yen;2999.9</td>
+        </tr>
+        <tr>
+            <td class="item">
+                <a href="#">
+                    红米40K：运行内存12G，储存空间128G，打游戏超流畅
+                </a>
+            </td>
+            <td>可购买</td>
+            <td>
+                <input type="button" value="-" class="btn btnMinus">
+                <input type="text" value="1" class="txt" disabled="disabled">
+                <input type="button" value="+" class="btn btnAdd">
+            </td>
+            <td>&yen;2299.9</td>
+            <td title="price">&yen;2299.9</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="cal">
+                已选<span>2</span>件商品 应付金额：<span id="spanTotal">&yen;5299.8</span>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

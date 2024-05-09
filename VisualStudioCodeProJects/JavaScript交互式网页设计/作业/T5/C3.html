@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市级联菜单</title>
+</head>
+<body>
+    <script>
+        var provinces=new Array('湖北省','湖南省','广东省','广西省');
+        var citys=new Array();
+        citys['湖北省']=['武汉市','黄石市','十堰市','宜昌市','襄阳市','鄂州市','荆门市',
+        '孝感市','荆州市','黄冈市','咸宁市','随州市'];
+        citys['湖南省']=['长沙市','株洲市','湘潭市','衡阳市','邵阳市','岳阳市','常德市',
+        '张家界市','益阳市','郴州市','永州市','怀化市'];
+        citys['广东省']=['广州市','韶关市','深圳市','珠海市','汕头市','佛山市','江门市',
+        '湛江市','东莞市','中山市','潮州市','梅州市'];
+        citys['广西省']=['南宁市','柳州市','桂林市','梧州市','北海市','防城港市','钦州市',
+        '贵港市','玉林市','百色市','贺州市','河池市'];
+        function Init() {
+            var province=document.getElementById("province");
+            for(var i=0;i<provinces.length;i++){
+                var option=document.createElement("option");
+                option.text=provinces[i];
+                option.value=provinces[i];
+                province.options.add(option);
+            }
+        }
+        function fillCity() {
+            var city=document.getElementById("city");
+            city.options.length=0;
+            var province=document.getElementById("province").value;
+            console.log(province);
+            for(var i=0;i<citys[province].length;i++){
+                var option=document.createElement("option");
+                option.text=citys[province][i];
+                option.value=citys[province][i];
+                city.options.add(option);
+            }
+        }
+        window.onload=function(){
+            Init();
+            fillCity();
+        };
+    </script>
+    <h2>请选择城市：<br/>
+        省份：<select id="province" onchange="fillCity()"></select>
+        城市：<select id="city"></select>
+    </h2>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="js/C4-2.js"></script> -->
+</head>
+
+<body>
+    <h2>这是一个手机端的页面</h2>
+    <p id="txt"></p>
+    <img id="img">
+    <script>
+        window.onload = function () {
+            if (window.screen.availHeight > 1280) {
+                document.getElementById("txt").innerHTML = "屏幕可用高度大于1280px,使用大图片";
+                document.getElementById("img").src = "Case/第3章/实践案例1/mobile.jpg";
+            } else {
+                document.getElementById("txt").innerHTML = "屏幕可用高度小于1280px,使用小图片";
+                document.getElementById("img").src = "Case/第3章/实践案例1/pc.jpg";
+            }
+        }
+    </script>
+</body>
+
+</html>

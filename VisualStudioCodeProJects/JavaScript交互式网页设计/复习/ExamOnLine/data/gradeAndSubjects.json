@@ -1,0 +1,37 @@
+[{
+    "grade":1,
+    "gradeName":"大一",
+    "subjects":["计算机应用基础",
+    "Photoshop+UI设计",
+    "html5网页设计",
+    "Java程序设计基础",
+    "JAVA面向对象编程",
+    "MySQL数据操作与查询",
+    "C#程序设计基础",
+    "SQL+Server数据操作与查询",
+    "C#可视化编程技术"]
+},
+{
+    "grade":2,
+    "gradeName":"大二",
+    "subjects":["SQL高级查询与T-SQL编程",
+    "C#面向对象程序设计",
+    "C#程序设计基础",
+    "HTML5响应式网页设计",
+    "JavaScript交互式网页设计",
+    "ASP.NET Web程序设计",
+    "HTML5高级程序设计"]
+},{
+    "grade":3,
+    "gradeName":"大三",
+    "subjects":["Vue.js高效前端开发",
+    "EntityFramework数据持久化",
+    "ASP.NET MVC企业级程序设计",
+    "NET微服务应用开发",
+    "Python程序设计基础",
+    "软件工程"]
+},{
+    "grade":4,
+    "gradeName":"其它",
+    "subjects":["test"]
+}]

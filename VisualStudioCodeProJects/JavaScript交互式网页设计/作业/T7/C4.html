@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/C4.css">
+    <script src="Case/第7章/实践案例4/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".btnAdd").click(function () {
+                var txtObj = $(this).siblings("input[type='text']");
+                console.log(txtObj);
+                var number = parseInt(txtObj.val());
+                txtObj.val(number + 1);
+                calPrice($(this), number + 1);
+                calTotalPrice();
+            });
+
+            $(".btnMinus").click(function () {
+                var txtObj = $(this).siblings("input[type='text']");
+                var number = parseInt(txtObj.val());
+                if (number > 1) {
+                    txtObj.val(number - 1);
+                    calPrice($(this), number - 1);
+                    calTotalPrice();
+                }
+            });
+
+            function calPrice($btnObj, number) {
+                var $tdObj = $btnObj.parent().next();
+                var price = parseFloat($tdObj.text().substr(1));
+                var $tdTotal = $tdObj.next();
+                var total = price * number;
+                $($tdTotal).html("&yen;" + total.toFixed(2))
+            }
+
+            function calTotalPrice() {
+                var sum = 0;
+                $("td[title='price']").each(function (index, element) {
+                    sum += parseFloat($(this).text().substr(1));
+                });
+                $("#spanTotal").html("&yen;"+sum.toFixed(2));
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <table id="tabOrder">
+        <tr>
+            <th>项目</th>
+            <th>状态</th>
+            <th>类型/数量</th>
+            <th>单价</th>
+            <th>小计</th>
+        </tr>
+        <tr>
+            <td class="item">
+                <a href="#">
+                    <img src="Case/第7章/实践案例4/item1.jpg" align="left">
+                    欢乐空间量贩式KTV：欢唱套餐2选1，国家法定节假日到点另付20元，可升级
+                </a>
+            </td>
+            <td>可购买</td>
+            <td>
+                <input type="button" value="-" class="btn btnMinus">
+                <input type="text" value="1" class="txt" disabled="disabled">
+                <input type="button" value="+" class="btn btnAdd">
+            </td>
+            <td>&yen;39.9</td>
+            <td title="price">&yen;39.9</td>
+        </tr>
+        <tr>
+            <td class="item">
+                <a href="#">
+                    <img src="Case/第7章/实践案例4/item2.jpg" align="left">
+                    途乐时尚主体量贩式KTV：任选1小时欢唱，可升级，提供免费WiFi
+                </a>
+            </td>
+            <td>可购买</td>
+            <td>
+                <input type="button" value="-" class="btn btnMinus">
+                <input type="text" value="1" class="txt" disabled="disabled">
+                <input type="button" value="+" class="btn btnAdd">
+            </td>
+            <td>&yen;59.9</td>
+            <td title="price">&yen;59.9</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="cal">
+                已选<span>2</span>件商品 应付金额：<span id="spanTotal">&yen;99.8</span>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

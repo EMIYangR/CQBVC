@@ -1,0 +1,53 @@
+table{
+    border: 1px solid #dfdfdf;
+    border-collapse: collapse;
+    width: 100%;
+    clear: both;
+}
+
+table tr{
+    height: 50px;;
+    border-bottom: 1px dashed #dfdfdf;
+}
+
+table td,th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+table td.item{
+    width: 400px;
+    height: 60px;
+    text-align: left;
+}
+
+table td.item img{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+table td.cal{
+    text-align: right;
+}
+table td.cal span{
+    font: bold 25px Geneva,Verdana,sans-self;
+    color: #ffa500;
+}
+
+table .btn{
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+}
+
+table .txt{
+    width: 60px;
+    height: 30px;
+    border: 1px solid #dfdfdf;
+    font: 15px/30px Geneva,Verdana,sana-serif;
+}
+
+table .txt:hover{
+    border: 1px solid #f00;
+}

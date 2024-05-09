@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万年历</title>
+    <link rel="stylesheet" href="css/index1.css">
+</head>
+<body>
+    <div id="cal">
+        <div id="month_year">
+            <select id="year"></select>年
+            <select id="month"></select>月
+        </div>
+        <ul id="title">
+            <li>星期日</li>
+            <li>星期一</li>
+            <li>星期二</li>
+            <li>星期三</li>
+            <li>星期四</li>
+            <li>星期五</li>
+            <li>星期六</li>
+        </ul>
+        <ul id="date"></ul>
+    </div>
+    <script>
+        var year1=document.getElementById("year");
+        var month1=document.getElementById("month");
+        var date=document.getElementById("date");
+        function Init() {
+            for(var year=2000;year<=2035;year++){
+                createOption(year,year,year1);
+            }
+            for(var month=1;month<13;month++){
+                createOption(month,month,month1);
+            }
+            var now=new Date();
+            showSelect(now.getFullYear(),now.getMonth());
+            showDates();
+            year1.onchange=function(){
+                showDates();
+            }
+            month1.onchange=function(){
+                showDates();
+            }
+        }
+        function createOption(t,v,p) {
+            var option=document.createElement("option");
+            option.innerText=t;
+            option.value=v;
+            p.appendChild(option);
+        }
+        function showSelect(year,month) {
+            year1.value=year;
+            month1.value=month;
+        }
+        function showDates() {
+            date.innerHTML="";
+            var year=year1.value;
+            var month=month1.value;
+            for(var i=0;i<getDays(year,month);i++){
+                createLi("",date);
+            }
+            for(var j=1;j<=getDatesOfMonth(year,month);j++){
+                createLi(j,date);
+            }
+        }
+        function getDays(year,month) {
+            var d=new Date(year,month,1);
+            return d.getDay();
+        }
+        function createLi(t,p) {
+            var li=document.createElement("li");
+            li.innerHTML=t;
+            p.appendChild(li);
+        }
+        function getDatesOfMonth(year,month) {
+            var d=new Date(year,month,0);
+            return d.getDate();
+        }
+        Init();
+    </script>
+</body>
+</html>

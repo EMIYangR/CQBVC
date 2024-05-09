@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片缩放</title>
+    <link rel="stylesheet" href="css/index2.css">
+</head>
+<body>
+    <script>
+        window.onload=function(){
+            var input=document.getElementById("input");
+            var div=document.getElementById("div");
+            var img=document.getElementById("img");
+            window.onmousemove=function(){
+                var x=img.offsetLeft+img.offsetWidth/2;
+                var y=img.offsetTop+img.offsetHeight/2+div.offsetTop;
+                var b=event.clientX-x;
+                var a=event.clientY-y;
+                var c=Math.sqrt(Math.pow(b,2)+Math.pow(a,2));
+                var scale=Math.floor(c)/100-1;
+                if (scale<0.5) {
+                    scale=0.5;
+                } else if(scale>3){
+                    scale=3;
+                }
+                input.value=scale;
+                img.style.width=scale*300+"px";
+                img.style.height=scale*150+"px";
+            };
+        };
+    </script>
+    <p>图片缩放系数：<input type="text" id="input" /></p>
+    <div id="div"><img id="img" src="./img/img_1.jpg" /></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+[{
+    "grade":1,
+    "subjects":["计算机应用基础",
+    "Photoshop+UI设计",
+    "HTML5网页设计",
+    "Java程序设计基础",
+    "Java面向对象编程",
+    "MySQL数据操作与查询",
+    "C#程序设计基础",
+    "SQL Server数据操作与查询",
+    "C#可视化编程技术"
+    ]
+},{
+    "grade":2,
+    "subjects":["Android程序设计基础",
+    "ASP.NETWeb程序设计",
+    "C#面向对象程序设计",
+    "HTML5高级程序设计",
+    "HTML5响应式网页设计",
+    "JavaScript交互式网页设计",
+    "JavaWeb程序设计",
+    "Java高级程序设计",
+    "Linux操作系统",
+    "MySQL高级查询与编程",
+    "python程序设计基础",
+    "SQL高级查询与T-SQL编程"
+    ]
+},{
+    "grade":3,
+    "subjects":[".NET微服务应用开发.xlsx",
+    "Android组件应用开发",
+    "ASP.NET+MVC+企业级程序设计",
+    "EntityFramework数据持久化",
+    "H5++跨平台移动UI+设计",
+    "Hive大数据分析与处理技术",
+    "Java+EE数据持久化框架",
+    "Python+程序设计基础",
+    "Python数据分析与可视化",
+    "Spark高效数据分析与应用开发",
+    "Spring+Cloud微服务应用开发",
+    "Spring+MVC+企业级程序设计",
+    "Vue.js高效前端开发",
+    "软件工程"
+    ]
+},{
+    "grade":4,
+    "subjects":["test"
+    ]
+}]

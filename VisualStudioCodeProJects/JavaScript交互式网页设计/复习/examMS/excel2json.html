@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>xlsx导出为json</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/xlsx.core.min.js"></script>
+</head>
+
+<body>
+
+	<div style="margin:20px">
+		<p id="tips"></p>
+		<input id="fileExcel" type="file" onchange="getExcelData(this)" style="width: 320px;">
+	</div>
+	<script>
+		//读取Excel数据
+		function getExcelData(obj) {
+			$("#tips").html("正在读取，请稍后...");
+			$("#fileExcel").css("display", "none");
+			var reader = new FileReader();
+
+			//文件加载完成后调用
+			reader.onload = function (e) {
+				var data = e.target.result;
+
+				const workbook = XLSX.read(data, {
+					type: 'array'
+				})
+				//获取json格式的Excel数据
+				var jsonData0 = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {
+					defval: 'null' //单元格为空时的默认值
+				});
+				//表格存在多个 Sheet 可以使用下标获取数据
+				//var jsonData1 = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[1]], {});
+
+				// 如果表格内存在日期，需要处理一下
+				for (var i = 0; i < jsonData0.length; i++) {
+					jsonData0[i]["日期"] = formatDate(jsonData0[i]["日期"]);
+				}
+				download("data.json", JSON.stringify(jsonData0));
+				$("#tips").html("");
+				$("#fileExcel").css("display", "block");
+			};
+
+			//加载文件
+			reader.readAsArrayBuffer(obj.files[0]);
+		}
+
+		//下载文件
+		function download(filename, text) {
+			var pom = document.createElement('a');
+			pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+			pom.setAttribute('download', filename);
+			if (document.createEvent) {
+				var event = document.createEvent('MouseEvents');
+				event.initEvent('click', true, true);
+				pom.dispatchEvent(event);
+			} else {
+				pom.click();
+			}
+		}
+
+		//将excel日期转为字符串格式
+		var format = "-";
+		function formatDate(numb) {
+			const time = new Date((numb - 1) * 24 * 3600000 + 1)
+			time.setYear(time.getFullYear() - 70)
+			const year = time.getFullYear() + ''
+			const month = time.getMonth() + 1 + ''
+			const date = time.getDate() - 1 + ''
+			if (format && format.length === 1) {
+				return year + format + month + format + date
+			}
+			return year + (month < 10 ? '0' + month : month) + (date < 10 ? '0' + date : date)
+		}
+	</script>
+</body>
+
+</html>

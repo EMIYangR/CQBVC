@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Case/第7章/实践案例3/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("a:contains('增加')").click(function () {
+                var first_tr = $("table tr:eq(1)");
+                var new_tr = first_tr.clone(true);
+                new_tr.appendTo(first_tr.parent());
+            });
+
+            $("a.delete_btn").click(function () {
+                $(this).parent().parent().remove();
+            });
+
+            $("a:contains('查询')").click(function () {
+                var key = $("input").val();
+                var trr = $("table tr:gt(0)");
+                if (key != "") {
+                    for (var i = 0; i < trr.length; i++) {
+                        var id = trr.eq(i).find("td:first").html();
+                        if (id == key) {
+                            trr.eq(i).show();
+                        } else {
+                            trr.eq(i).hide();
+                        }
+                    }
+                } else {
+                    for (var i = 0; i < trr.length; i++) {
+                        trr.eq(i).show();
+                    }
+                }
+            });
+
+            $(".modify_btn").click(function () {
+                var tds = $(this).parent().parent().children();
+                for (var i = 0; i < tds.length; i++) {
+                    var td = tds.eq(i);
+                    if (td.children().length <= 0) {
+                        var html = "<input type = 'text' value='" + td.text() + "'/> ";
+                        td.html(html);
+                    }
+                }
+                $(".save_btn").show();
+                $(".modify_btn").hide();
+            });
+
+            $(".save_btn").click(function () {
+                var tr = $(this).parent().parent().children();
+                var inputs = tr.find("input[type='text']");
+                for (var i = 0; i < inputs.length; i++) {
+                    var input = inputs.eq(i);
+                    input.parent().text(input.val());
+                    input.remove();
+                }
+                $(".save_btn").hide();
+                $(".modify_btn").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <a href="#">增加</a>&nbsp;&nbsp;
+        <input type="text"><a href="#">查询</a>
+    </p>
+    <table border="1" id="table">
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>薪水</th>
+            <th>功能</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>8000</td>
+            <td>
+                <a href="#" class="save_btn" style="display: none;">保存</a>&nbsp;
+                <a href="#" class="modify_btn">修改</a>&nbsp;
+                <a href="#" class="delete_btn">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>李四</td>
+            <td>9000</td>
+            <td>
+                <a href="#" class="save_btn" style="display: none;">保存</a>&nbsp;
+                <a href="#" class="modify_btn">修改</a>&nbsp;
+                <a href="#" class="delete_btn">删除</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

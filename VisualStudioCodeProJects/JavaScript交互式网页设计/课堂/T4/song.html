@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <span>歌曲：</span>
+    <input type="text" id="i1"><br />
+    <span>歌手：</span>
+    <input type="text" id="i2"><br />
+    <input type="button" id="i3" value="添加">
+    <table id="tab" border="1">
+        <tr>
+            <th>全选<input type="checkbox"></th>
+            <th>歌曲</th>
+            <th>歌手</th>
+            <th>删除</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>成都</td>
+            <td>赵雷</td>
+            <td><button onclick="del(this)">删除</button></td>
+            </td>
+        </tr>
+    </table>
+    <script src="js/song.js"></script>
+</body>
+
+</html>
