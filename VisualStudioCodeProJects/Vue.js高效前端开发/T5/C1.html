@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+</head>
+
+<body>
+    <div id="app" style="margin:20px auto;width:600px">
+        <fieldset style="width:300px">
+            <leaend>CMS用户当录<eaend>
+                    <p>
+                        <a-input placeholder="请输入登录名称…" v-model="user.loginld" />
+                    </p>
+                    <p>
+                        <a-input type="password" placeholder=" 请输入登录密码…" v-model="user.loginPwd">
+                    </p>
+                    <a-button type="primary" @click="doLogin">登录</a-button>
+        </fieldset>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                user: {
+                    loginId: "",
+                    loginPwd: ""
+                }
+            },
+            methods: {
+                doLogin: function () {
+                    this.smessage.info(this.user.loginld + "登录成功");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

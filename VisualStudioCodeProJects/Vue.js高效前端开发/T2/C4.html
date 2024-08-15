@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            width: 400px;
+            padding: 50px;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            list-style: none;
+        }
+
+        ul li {
+            width: 100px;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px 5px 0 0;
+        }
+
+        #app div {
+            box-shadow: 0 15px 10px #888;
+            height: 200px;
+            color: #fff;
+            border-radius: 0 10px 10px 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li :style="nav1Style" @click="doChange(1)">工作技能</li>
+            <li :style="nav2Style" @click="doChange(2)">工作积极性</li>
+        </ul>
+        <div id="panel1" :style="panel1Style">
+            工作技能是指完成工作。
+        </div>
+        <div id="panel2" :style="panel2Style">
+            工作积极性是指对工作任务产生的一种能动的自觉的心理状态，它表现为个体或集体对组织目标明确，执行计划和实现目标过程中的克服障碍的意志努力和积极性的情感。
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nav1Style: {
+                    background: "#F16565"
+                },
+                nav2Style: {
+                    background: "#5757FC"
+                },
+                panel1Style: {
+                    display: "block",
+                    backgroundColor: "#F16565"
+                },
+                panel2Style: {
+                    display: "none",
+                    backgroundColor: "#5757FC"
+                }
+            },
+            methods: {
+                doChange: function (index) {
+                    if (index == 1) {
+                        this.panel1Style = {
+                            display: "block",
+                            backgroundColor: "F16565"
+                        };
+                        this.panel2Style = {
+                            display: "none"
+                        };
+                    } else {
+                        this.panel1Style = {
+                            display: "none"
+                        };
+                        this.panel2Style = {
+                            display: "block",
+                            backgroundColor: "5757FC"
+                        };
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

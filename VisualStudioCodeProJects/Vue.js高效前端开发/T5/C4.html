@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <a-table v-bind="attrs" :columns="columns" bordered>
+            <span slot="id" slot-scope="text">
+                <a href="javascript:;" @click="doRemove(text)">删除</a>
+            </span>
+        </a-table>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                columns: [{
+                    title: "标题",
+                    dataIndex: "title",
+                    key: "title",
+                    align: "center"
+                }, {
+                    title: "发布人",
+                    dataIndex: "creator",
+                    key: "creator",
+                    align: "center"
+                }, {
+                    title: "日期",
+                    dataIndex: "pubDate",
+                    key: "pubDate",
+                    align: "center"
+                }, {
+                    title: "操作",
+                    dataIndex: "id",
+                    key: "id",
+                    align: "center",
+
+                    scopedSlots: {
+                        customRender: "id"
+                    },
+                }],
+                attrs: {
+                    dataSource: [{
+                        id: 1,
+                        title: "十大最美风景区",
+                        creator: "管理员",
+                        pubDate: "2019年6月3日"
+                    }, {
+                        id: 2,
+                        title: "十大最美建筑",
+                        creator: "管理员",
+                        pubDate: "2019年6月10日"
+                    }, {
+                        id: 3,
+                        title: "十大最美背景音乐",
+                        creator: "管理员",
+                        pubDate: "2019年6月22日"
+                    }, {
+                        id: 4,
+                        title: "十大最美山峰",
+                        creator: "管理员",
+                        pubDate: "2019年6月23日"
+                    }],
+                    rewkey: "id"
+                }
+            },
+            methods: {
+                doRemove: function (id) {
+                    this.attrs.dataSource.splice(id - 1, 1);
+                    this.$message.warn("数据删除成功！");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

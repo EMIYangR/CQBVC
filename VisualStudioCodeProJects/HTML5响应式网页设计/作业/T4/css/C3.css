@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#d div{
+    border-radius: 20px;
+    width: 250px;
+    height: 180px;
+}
+#d1{
+    background-image: url(../Case/实践案例3/images/good1.jpg);
+    background-size: 100% 100%;
+}
+#d2{
+    background-image: url(../Case/实践案例3/images/good2.jpg);
+    background-size: 100% 100%;
+}
+#d div:hover{
+    transform-origin: top left;
+    transform: translate(300px,300px) scale(1.5,-1.8);
+    transition-delay: .1s;
+    transition-duration: 600ms;
+    transition-property: transform;
+}

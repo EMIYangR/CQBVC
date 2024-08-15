@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#d div{
+    border-radius: 20px;
+    width: 250px;
+    height: 180px;
+}
+#d1{
+    background-image: url(../Case/实践案例4/images/good1.jpg);
+    background-size: 100% 100%;
+    transform: translate(100px,220px);
+    opacity: 0.3;
+}
+#d2{
+    background-image: url(../Case/实践案例4/images/good2.jpg);
+    background-size: 100% 100%;
+    transform: translate(100px,0px) skew(20deg,0deg);
+    opacity: 0.6;
+    transform-origin: top left;
+}
+#d3{
+    background-image: url(../Case/实践案例4/images/good3.jpg);
+    background-size: 100% 100%;
+    transform: translate(100px,-180px) skew(40deg,0deg);
+    transform-origin: top left;
+}
+#d div:hover{
+    opacity: 1.0;
+    transition-delay: .1s;
+    transition-duration: 600ms;
+    transition-property: transfrom,opacity;
+}
+#d1:hover{
+    transform: translate(500px,280px) scale(1.5,1.5) rotate(20deg);
+}
+#d2:hover{
+    transform: translate(500px,0px) scale(1.5,1.5) rotate(20deg);
+}
+#d3:hover{
+    transform: translate(500px,-180px) scale(1.5,1.5) rotate(20deg);
+}

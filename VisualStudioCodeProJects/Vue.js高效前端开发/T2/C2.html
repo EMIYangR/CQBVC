@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <style>
+        #app {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .banner {
+            width: 495px;
+            height: 212px;
+            line-height: 212px;
+            box-shadow: 5px 5px 10px #888;
+            background-color: #033592;
+            margin: 0px auto;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div :style="imageUrl" :class="bannerClass"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                index: 0,
+                imageUrl: {
+                    "background-image": "url(image/1.png)",
+                },
+                bannerClass: {
+                    banner: true
+                },
+            },
+            mounted() {
+                let _this = this;
+                this.timer = setInterval(function () {
+                    _this.imageUrl = {
+                        backgroundImage: "url(image/" + (_this.index % 2 + 1) + ".png)",
+                        transition: "all 1.5s 0s"
+                    }
+                    _this.index++
+                }, 3000)
+            },
+            beforeDestroy() {
+                if (this.timer) {
+                    clearInterval(this.timer)
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

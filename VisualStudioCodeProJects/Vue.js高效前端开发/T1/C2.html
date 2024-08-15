@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <style>
+        #app {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .banner {
+            width: 600px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            box-shadow: 5px 5px 10px #888;
+            font-size: 48px;
+            font-weight: bolder;
+            background-color: #033592;
+            color: #fff;
+            margin: 0px auto;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="banner">
+            {{adTitle}}
+        </div>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                ads: [],
+                index: 0,
+                adTitle: ""
+            },
+            created() {
+                this.ads = [
+                    "地球交通委提醒您：",
+                    "道路千万条，",
+                    "安全第一条。",
+                    "行车不规范，",
+                    "亲人两行泪。"
+                ]
+                this.adTitle = ads[0];
+            },
+            mounted() {
+                let _this = this;
+                this.timer = setInterval(function () {
+                    if (_this.index < _this.ads.length - 1) {
+                        _this.index++;
+                    } else {
+                        _this.index = 0;
+                    }
+                    _this.adTitle = _this.ads[_this.index];
+                }, 3000);
+            },
+            beforeDestroy() {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

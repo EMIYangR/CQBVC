@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <fieldset>
+            <legend>个人工资计算器</legend>
+            <p><label>基本工资：</label><input type="number" v-model="base"></p>
+            <p><label>岗位工资：</label><input type="number" v-model="jobs"></p>
+            <p><label>月度奖金：</label><input type="number" v-model="bonus"></p>
+            <p><label>综合补贴：</label><input type="number" v-model="subsidies"></p>
+            <p><label>扣款金额：</label><input type="number" v-model="deductions"></p>
+            <p><label>应发工资：</label>&yen;{{(parseInt(base)+parseInt(jobs)+parseInt(bonus)+parseInt(subsidies)-parseInt(deductions)).toFixed(2)}}
+            </p>
+        </fieldset>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                base: 0,
+                jobs: 0,
+                bonus: 0,
+                subsidies: 0,
+                deductions: 0
+            }
+        })
+    </script>
+</body>
+
+</html>

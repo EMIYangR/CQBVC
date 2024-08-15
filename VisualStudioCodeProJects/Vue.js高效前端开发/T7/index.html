@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="../js/bootstrap.min.js"></script> -->
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <a-layout>
+            <a-layout-header></a-layout-header>
+            <a-layout>
+                <a-layout-sider>
+                    <a-menu mode="inline">
+                        <a-sub-menu title="产品管理">
+                            <a-menu-item>产品查询</a-sub-item>
+                        </a-sub-menu>
+
+                    </a-menu>
+                </a-layout-sider>
+                <a-layout-content>
+                    <a-row class="m-3">
+                        <a-col offset="2">
+                            <a-breadcrumb>
+                                <a-breadcrumb-item>
+                                    <a href="#">首页</a>
+                                </a-breadcrumb-item>
+                                <a-breadcrumb-item>
+                                    <a href="#">产品管理</a>
+                                </a-breadcrumb-item>
+                                <a-breadcrumb-item>
+                                    产品查询
+                                </a-breadcrumb-item>
+                            </a-breadcrumb>
+                        </a-col>
+                    </a-row>
+                    <a-row class="m-3">
+                        <a-col span="6">
+                            每页<a-input v-model="attrs.pagination.pageSize" style="width: 40%;"></a-input>条
+                        </a-col>
+                        <a-col span="6" offset="5">
+                            <a-input placeholder="输入商品关键字以搜索..." v-model="attrs.name"></a-input>
+                        </a-col>
+                        <a-col span="2" offset="1">
+                            <a-button type="primary" icon="search" @click="onSearch">搜索</a-button>
+                        </a-col>
+                    </a-row>
+
+                    <a-table v-bind="attrs" bordered>
+                        <span slot="ProductID" slot-scope="text">
+                            <a-button type="danger" @click="doRemoveProduct">删除</a-button>
+                        </span>
+                    </a-table>
+                </a-layout-content>
+            </a-layout>
+            <a-layout-footer></a-layout-footer>
+        </a-layout>
+    </div>
+    <script>
+        //页码数改变，重新绑定数据
+        function changePage(page) {
+            vm.attrs.pagination.current = page
+            vm.bindData()
+        }
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                attrs: {
+                    columns: [
+                        { title: "产品编号", dataIndex: "ProductID", key: "ProductID", align: "center" },
+                        { title: "产品名称", dataIndex: "ProductName", key: "ProductName", align: "center" },
+                        { title: "产品图片", dataIndex: "ProductPic", key: "ProductPic", align: "center" },
+                        { title: "产品价格", dataIndex: "ProductPrice", key: "ProductPrice", align: "center" },
+                        { title: "产品详情", dataIndex: "ProductDesc", key: "ProductDesc", align: "center" },
+                        { title: "添加时间", dataIndex: "AddTime", key: "AddTime", align: "center" },
+                        { title: "所属类别", dataIndex: "ClassName", key: "ClassName", align: "center" },
+                        {
+                            title: "操作", dataIndex: "ProductID", key: "del", align: "center",
+                            scopedSlots: {
+                                customRender: "ProductID"
+                            }
+                        }
+                    ],
+                    dataSource: [],
+                    rowkey: "ProductID",
+                    pagination: {
+                        total: 60,
+                        current: 1,
+                        pageSize: 8,
+                        hideOnSinglePage: true,
+                        showSizeChanger: true,
+                        onChange: page => changePage(page)
+                    },
+                    name: ""
+                }
+
+            },
+            methods: {
+                doRemoveProduct() {
+                    this.$message.info("id", id)
+                },
+                bindData() {
+                    let _this = this;
+                    // let str=name.trim()!=''?
+                    $.get("https://localhost:44367/api/GetProductByPaging?pageIndex=" + _this.attrs.pagination.current
+                        + "&pageSize=" + _this.attrs.pagination.pageSize
+                        + "&productName=" + _this.attrs.name, function (data) {
+                            // 处理过长的产品简介   处理日期格式
+                            $.each(data, function (index, val) {
+                                if (val.ProductDesc.length > 10) {   //超过10个字符则截取部分
+                                    val.ProductDesc = val.ProductDesc.substr(0, 10) + '...'
+                                }
+
+                                let d = new Date(val.AddTime)
+
+                                val.AddTime = d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + (d.getDay()) + "日"
+                            })
+                            console.log(data)
+                            _this.attrs.dataSource = data
+                        })
+                },
+                onSearch() {
+                    this.bindData()
+                    this.getProductTotal(this.attrs.name)
+                },
+                getProductTotal(name) {
+                    let _this = this;
+
+                    $.get('https://localhost:44367/api/GetCount?name=' + name, function (data) {
+                        _this.attrs.pagination.total = data;
+                    })
+                }
+            },
+            mounted() {
+                let _this = this;
+                //挂载时进行数据绑定
+                this.bindData()
+                //获取数据条数
+                this.getProductTotal(' ')
+            },
+            watch: {
+                // // 对pageSize进行侦听
+                // 'attrs.pagination.pageSize': function (newVal, oldVal) {
+                //     if (newVal != oldVal && newVal != "") {        //不相等且新值不为空
+                //         console.log("侦听了变化")
+                //         this.bindData(1, '');
+                //     }
+
+                // }
+                'attrs.name': function (newVal, oldVal) {
+                    if (newVal != oldVal) {        //不相等
+                        this.attrs.pagination.current = 1;
+                        this.bindData();
+                        this.getProductTotal(this.attrs.name)
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

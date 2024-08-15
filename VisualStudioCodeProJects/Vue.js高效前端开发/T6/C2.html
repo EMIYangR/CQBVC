@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>人力资源管理员工信息</h1>
+        <p></p>
+        <a-row>
+            <a-col :span="2"></a-col>
+            <a-col :span="20">
+                <p>
+                    <span>姓名：</span><br>
+                    <a-input placeholder="请输入姓名..." v-model="emp.name"></a-input>
+                </p>
+                <p>
+                    <span>性别：</span>
+                    <a-radio-group v-model="emp.sex">
+                        <a-radio value="男">男</a-radio>
+                        <a-radio value="女">女</a-radio>
+                    </a-radio-group>
+                </p>
+                <p>
+                    <span>学历：</span><br>
+                    <a-select v-model="emp.emp">
+                        <a-select-option v-for="item in edus" :key="item">{{edus}}</a-select-option>
+                    </a-select>
+                </p>
+                <p>
+                    <span>邮件：</span><br>
+                    <a-input placeholder="请输入邮件..." type="email" v-model="emp.email"></a-input>
+                </p>
+                <p>
+                    <span>备注：</span><br>
+                    <a-input placeholder="请输入备注..." type="textarea" v-model="emp.remark"></a-input>
+                </p>
+                <p>
+                    <a-button type="primary" @click="doSave">保存</a-button>
+                </p>
+            </a-col>
+            <a-col :span="2"></a-col>
+        </a-row>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                emp: {
+                    name: "",
+                    sex: "男",
+                    edus: "大学",
+                    email: "",
+                    remark: "",
+                },
+                edus: ["大学", "中学", "小学", "博士", "硕士"]
+            }, 
+            methods: {
+                doSave:function(){
+                    console.log("this.emp");
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

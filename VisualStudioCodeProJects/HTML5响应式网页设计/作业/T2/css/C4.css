@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#header{
+    background: #1b368e;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+p{
+    column-count: 3;
+    column-fill: balance;
+    column-rule: medium solid black;
+    column-gap: 10px;
+    overflow: auto;
+}
+img{
+    float: left;
+    width: 200px;
+    height: 162px;
+    border: medium double black;
+    background-color: lightgray;
+    padding: 2px;
+    margin: 2px;
+}

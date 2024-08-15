@@ -1,0 +1,239 @@
+#header{
+    height: 6rem;
+    background-color: #3C3E3B;
+    line-height: 6rem;
+    box-shadow: 2px 2px 4px 2px #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+}
+body{
+    background: linear-gradient(#899678,#ffffff);
+}
+#header a{
+    color: white;
+    font-size: 1.2rem;
+}
+.icon-home:before{
+    content: '\e021';
+}
+.icon-about:before{
+    content: '\e265';
+}
+.icon-sq:before{
+    content: '\e245';
+}
+.icon-zc:before{
+    content: '\e281';
+}
+#header ul li{
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+}
+#header ul li:hover{
+    background-color: #026783;
+}
+#header #end{
+    background-color: black;
+    height: 2.5rem;
+    border-radius: 0 0 2rem 2rem;
+    line-height: 2.5rem;
+}
+#header #end a{
+    color: gray;
+}
+#header #end a:hover{
+    color: white;
+}
+#header #end a span{
+    font-size: 0.9rem;
+}
+.icon-login:before{
+    content: '\e004';
+}
+.icon-gwc:before{
+    content: '\e203';
+}
+.icon-ss:before{
+    content: '\e028';
+}
+.icon-dh:before{
+    content: '\e114';
+}
+#header #end a:first-child{
+    display: none;
+}
+#section{
+    margin-top: 7rem;
+}
+#section #left #l1{
+    width: 100%;
+    height: 400px;
+    background-image: url("../images/ad1.jpg");
+    background-size: 100% 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 4px 4px rgb(40, 14, 14);
+    color: white;
+}
+#section #left #l1 #l2,#l3{
+    padding-top: 40%;
+}
+#section #left #l1 a{
+    display: inline-block;
+    width: 60%;
+    height: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 2px white;
+    text-align: center;
+    color: white;
+}
+#section #left #l1 a:hover{
+    background-color: orange;
+}
+#section #right #r1{
+    width: 100%;
+    height: 400px;
+    background-image: url("../images/adhot1.jpg");
+    background-size: 100% 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 4px 4px rgb(40, 14, 14);
+    color: white;
+}
+#section #right #r1 span{
+    font-size: 15px;
+}
+#section #right #r1 #r2{
+    padding-top: 60% ;
+    padding-left: 50px;
+}
+#section #game{
+    display: flex;
+    margin-top: 30px;
+}
+#section #game .col-md-2{
+    width: 19%;
+}
+#section #game .col-md-2 .game{
+    height: 230px;
+    border-radius: 10px;
+    border: 1px solid #D7D7D7;
+    
+}
+#section #game .col-md-2 .game:hover{
+    box-shadow: 1px 1px 4px 4px #333333;
+}
+#section #game .game img{
+    width: 100%;
+    border-radius: 10px;
+}
+#section #game .game p span,a{
+    font-size: 18px;
+    color: white;
+}
+#section #game .game p span{
+    display: inline-block;
+    width: 22%;
+    height: 30px;
+    background-color: #444444;
+    border-radius: 5px;
+    text-align: center;
+}
+#section #game .game p a{
+    display: inline-block;
+    width: 30%;
+    height: 30px;
+    background-color: #333333;
+    border-radius: 5px;
+    text-align: center;
+}
+#section #game .game p a:hover{
+    background-color: orange;
+    color: white;
+}
+#section #dhl{
+    margin-top: 30px;
+}
+#section #dhl ul li{
+    width: 10%;
+    text-align: center;
+}
+#section #dhl ul li a{
+    color: gray;
+}
+#section #dhl ul li:nth-child(2n-1):hover{
+    background-color: #222222;
+    border-radius: 10px;
+}
+#section #dhl ul li:nth-child(2n-1):hover a{
+    color: white;
+}
+#section #new{
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 2px #333333;
+}
+#section #new a{
+    padding: 0;
+}
+#section #new #h5{
+    padding: 1rem;
+}
+#section #new a dl{
+    margin-bottom: 0;
+}
+#section #new a dl dt{
+    float: left;
+    width: 20%;
+}
+#section #new a dl dt img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+#section #new a dl{
+    overflow: hidden;
+}
+#section #new a dl:hover{
+    background-color: #333333;
+    border-radius: 10px;
+}
+#section #new a dl:hover h5{
+    color: white;
+}
+#section #new a dl:hover dd{
+    color: white;
+}
+#section #new a dl dd,h5{
+    color: black;
+}
+#section #new a dl dd{
+    font-size: 18px;
+    overflow: hidden;
+}
+#section #new a dl dt:first-child img{
+    border-radius: 10px 0 0 0;
+}
+#footer{
+    margin-top: 2rem;
+    height: 3rem;
+    background-color: rgb(60,62,59);
+    line-height: 3rem;
+}
+#footer a{
+    color: white;
+}
+#footer ul li:hover{
+    background-color: #026783;
+}
+#footer li{
+    width: 100%;
+    text-align: center;
+}
+#footer ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+#footer .row{
+    margin: 0;padding: 0;
+}

@@ -1,0 +1,37 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+}
+
+#div{
+    margin-left: 50px;
+}
+form fieldset{
+    border: 2px solid #ff4000;
+    width: 260px;
+}
+form fieldset legend{
+    margin-left: 20px;
+    font: bold 15px;
+    color: #ff9904;
+}
+.text{
+    border: 1px solid #ff4100;
+    width: 120px;
+    height: 20px;
+    line-height: 20px;
+}
+#input{
+    border: 1px solid #ff7701;
+    width: 80px;
+    text-align: center;
+    background: #ff7701;
+    color: #ffffff;
+}
+.label{
+    text-align: right;
+    padding-left: 10px;
+}
+#btn{
+    text-align: center;
+}

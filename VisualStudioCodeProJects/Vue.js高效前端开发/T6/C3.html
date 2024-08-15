@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+</head>
+
+<body>
+    <div id="app" style="margin:20px auto;width:600px">
+        <fieldset style="width:300px">
+            <legend> 人力资源管理系统</legend>
+            <a-form :form="form" class="login-form" @submit="doLogin">
+                <a-form-item>
+                    <a-input v-decorator="['userName',{rules:[{required:true,message:'登录姓名不能为空!'}]}]" placeholder="请输入登录姓名…">
+                        <a-icon slot="prefix" type="user" style="color:rgba(0, 0, 0,.25)" />
+                    </a-input>
+                </a-form-item>
+                <a-form-item>
+                    <a-input
+                        v-decorator="['password',{rules:[{required: true,message: '登录密码不能为空!' }]}]"
+                        type="password" placeholder="请输入登录密码...">
+                        <a-icon slot="prefix" type="lock" style="color:rgba(0, 0, 0.25)" />
+                    </a-input>
+                </a-form-item>
+                <a-form-item>
+                    <a-checkbox v-decorator="['remember',{valuePropName:'checked', initialValue: true}]">
+                        记住我
+                    </a-checkbox>
+                    <a class="login-form-forgot" href="">
+                        忘了密码
+                    </a>
+                    <a-button type="primary" html-type="submit" class="login-form-button">
+                        登录
+                    </a-button>
+                    或者
+                    <a href="">
+                        注册
+                    </a>
+                </a-form-item>
+            </a-form>
+        </fieldset>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            beforeCreate() {
+                this.form = this.$form.createForm(this)
+            },
+            methods: {
+                doLogin: function () {
+                    var _this = this;
+                    e.preventDefault();
+                    this.form.validateFields((err, values) => {
+                        if (!err) {
+                            _this.$message.info(values.userName + "登录成功！");
+                        }
+                    });
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

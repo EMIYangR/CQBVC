@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header-component></header-component>
+        <content-component></content-component>
+        <footer-component></footer-component>
+    </div>
+
+    <script>
+        let header = Vue.extend({
+            template: "<div style='backgroud-color:bule;align=center;'><h1>后台管理系统</h1></div>"
+        })
+        let content = Vue.extend({
+            template: "<div style='align=center;'><h1>后台管理中心内容</h1></div>"
+        })
+        let footer = Vue.extend({
+            template: "<div style='backgroud-color:bule;align=center;'><h1>版权所有</h1></div>"
+        })
+        Vue.component("header-component", header)
+        Vue.component("content-component", content)
+        Vue.component("footer-component", footer)
+        new Vue({
+            el: "#app"
+        })
+    </script>
+</body>
+
+</html>

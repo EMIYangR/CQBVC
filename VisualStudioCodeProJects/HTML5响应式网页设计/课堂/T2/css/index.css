@@ -1,0 +1,54 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+}
+@media all and (max-width:3000px){
+    #header{
+        height: 30px;
+        line-height: 30px;
+        background-color: #ffa500;
+    }
+    #header ul{
+        list-style: none;
+    }
+    #header ul #city{
+        width: 30%;
+        margin-right: 30%;
+    }
+    #header ul li{
+        float: left;
+        margin-left: 5%;
+    }
+    #header ul li a{
+        text-decoration: none;
+        font-size: 12px;
+    }
+}
+@media all and (max-width: 1024px){
+    #header{
+        background-color: #ff0000;
+        height: 30px;
+        line-height: 30px;
+    }
+    #header ul li{
+        float: none;
+    }
+    #header ul #gogole{
+        margin-left: 30%;
+    }
+    #header ul #gogole,#header ul .li{
+        float: left;
+    }
+}
+@media all and (max-width: 400px){
+    #header{
+        background-color: #ffd700;
+    }
+    #header ul li{
+        float: none;
+        margin-left: 30%;
+    }
+    #header ul #gogole{
+        margin-left: 30%;
+    }
+}

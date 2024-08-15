@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media all and (max-width:3000px){
+    #lb{
+        width: 100%;
+        height: 30px;
+        background-color: #0012ff;
+    }
+    #lb ul #s a{
+        color: #f6301a;
+    }
+}
+
+@media all and (max-width:768px){
+    #lb{
+        width: 100%;
+        height: 30px;
+        background-color: #000000;
+    }
+    #lb ul #s a{
+        color: #f6301a;
+    }
+}
+
+@media all and (max-width:380px){
+    #lb{
+        width: 100%;
+        height: 30px;
+        background-color: #ff00ff;
+    }
+    #lb ul #s a{
+        color: #fff0ff;
+    }
+    .nav a{
+        display: none;
+    }
+}
+
+#head{
+    height: 50px;
+    line-height: 50px;
+    background-image: url(../Case/实践案例2/images/ad.png);
+    background-repeat: no-repeat;
+    background-position: 250px;
+}
+#head h1{
+    width: 250px;
+    color: #fff;
+    background-color: #1e1015;
+    text-align: center;
+    float: left;
+}
+#lb ul{
+    font-size: 15px;
+}
+#lb ul li{
+    float: left;
+    list-style: none;
+    margin-left: 2.5%;
+    line-height: 30px;
+}
+#lb ul #s{
+    margin-right: 5%;
+}
+#lb ul li a{
+    text-decoration: none;
+    color: #fafbff;
+}

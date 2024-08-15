@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>员工信息表</h1>
+        <search-panel></search-panel>
+
+    </div>
+    <template id="parentComponent">
+        <div>
+            <div>
+                <label>姓名:</label>
+                <input type="text" v-model="key" placeholder="请输入关键字">
+            </div>
+            <emp-table :emp-list="fifterEmps"></emp-table>
+        </div>
+    </template>
+    <template id="childComponent">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>地址</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in empsList" :key="index">
+                        <td>{{index+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                emps: [
+                    { name: "张三", age: 20, address: "湖北" },
+                    { name: "李四", age: 23, address: "河北" },
+                    { name: "王五", age: 32, address: "河南" },
+                    { name: "赵六", age: 34, address: "湖南" }
+                ]
+            },
+            components: {
+                "search-panel": {
+                    props: ["emps"],
+                    data() {
+                        key: ""
+                    },
+                    template: "#parentComponent",
+                    components: {
+                        "emp-table": {
+                            props: ["emps"],
+                            template: "#childComponent"
+                        }
+                    },
+                    computed: {
+                        fifterEmps() {
+                            let _this = this;
+                            return _this.emps.fifter(function (emp) {
+                                return emp.name.indexOf(_this.key) != -1;
+                            })
+                        }
+                    }
+                }
+            }, co
+
+        })
+    </script>
+</body>
+
+</html>

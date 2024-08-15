@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+
+    <style>
+        #app {
+            width: 120px;
+            margin: 10px auto;
+        }
+
+        .msg {
+            width: 120px;
+            height: 30px;
+            border: solid 1px black;
+            margin: 10px 0px;
+            text-align: right;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="msg">{{result}}</div>
+        <p>
+            <a-button-group>
+                <A-button @click="getNum('1')">1</a-button>
+                <a-button @click="getNum('3')">2</a-button>
+                <a-button @click="getNum('2')">3</a-button>
+            </a-button-group>
+        </p>
+        <p>
+            <a-button-group>
+                <A-button @click="getNum('4')">4</a-button>
+                <a-button @click="getNum('5')">5</a-button>
+                <a-button @click="getNum('6')">6</a-button>
+            </a-button-group>
+        </p>
+        <p>
+            <a-button-group>
+                <A-button @click="getNum('7')">7</a-button>
+                <a-button @click="getNum('8')">8</a-button>
+                <a-button @click="getNum('9')">9</a-button>
+            </a-button-group>
+        </p>
+        <p>
+            <a-button-group>
+                <a-button @click="getNum('0')">0</a-button>
+                <a-button @click="doAdd()">+</a-button>
+                <a-button @click="doSub()">-</a-button>
+            </a-button-group>
+        </p>
+        <P>
+            <a-button block type="primary" @click="doEqual()">=</a-button>
+        </p>
+        <P>
+            <a-button block type="primary" @click="doEmpty()">重置</a-button>
+        </p>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                temp: 0,
+                operator: "",
+                result: ""
+            },
+            methods: {
+                getNum: function (num) {
+                    this.result += num;
+                },
+                doAdd: function () {
+                    this.temp += parseInt(this.result);
+                    this.result = "";
+                    this.operator = "+";
+                },
+                doSub: function () {
+                    this.temp -= parseInt(this.result);
+                    this.result = "";
+                    this.operator = "-";
+                },
+                doEqual: function () {
+                    if (this.operator == "+") {
+                        this.result = this.temp + parseInt(this.result);
+                    } else if (this.operator == "-") {
+                        this.result = this.temp - parseInt(this.result);
+                    } else {
+                        this.$message.error("运算错误！")
+                    }
+                },
+                doEmpty: function () {
+                    this.temp = 0;
+                    this.operator = "";
+                    this.result = "";
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

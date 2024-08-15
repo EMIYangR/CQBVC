@@ -1,0 +1,48 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* 将img的默认样式重置 */
+img{
+    border: 0;
+    vertical-align: middle;
+}
+/* 设置页面背景和字体 */
+body{
+    background: #14212a;
+    font: 12px 宋体 ,times new roman;
+}
+/* 设置登录界面页眉主体样式 */
+.page-header{
+    width: 100%;
+    height: 8.33rem;
+    background: #fff;
+}
+/* 设置登录页面页眉logo图标样式 */
+.page-header__logo{
+    width: 94.16rem;
+    height: 8.33rem;
+}
+
+/* 图片 */
+.login__bg,.mistore_logo{
+    margin-left: 10%;
+}
+
+/* 表单 */
+.page-form{
+    float: left;
+    width: 94.16rem;
+    height: 49.0rem;
+    background: url('../image/login_bg.jpg') no-repeat center center;
+}
+
+.page-body{
+    width: 33.33rem;
+    height: 39.16rem;
+    margin: 2.5rem auto;
+    color: #fff;
+    margin-right: 0rem;
+    
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+}
+
+
+/* 表 */
+#table{
+    width: 1000px;
+    font-size: 24px;
+}
+#table table,#table table th,#table table td{
+    border: 1px solid #000;
+}
+#table table #title{
+    background-color: #ff7701;
+}
+#table #name{
+    background-color: #ff5501;
+}
+#table table th{
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* 登录 */
+#login {
+    width: 400px;
+}
+#login .label{
+    text-align: right;
+}
+#btn{
+    text-align: center;
+}

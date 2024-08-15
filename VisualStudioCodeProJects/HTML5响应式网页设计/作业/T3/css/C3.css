@@ -1,0 +1,42 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+    background: #fff;
+}
+#div{
+    background: #0cc;
+}
+#d2{
+    height: 200px;
+    background: linear-gradient(#00cccc,#fff);
+}
+#div ul{
+    list-style: none;
+    overflow: hidden;
+    height: 80px;
+}
+#div ul li{
+    padding: 5px;
+    float: left;
+}
+#div ul li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: solid 0px #222;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    box-shadow: 5px 5px 10px #333;
+    background: radial-gradient(circle,#fff,#250672);
+    text-decoration: none;
+    color: #000;
+}
+#div ul li a:hover{
+    width: 200px;
+    background: linear-gradient(to top,#250672,#fff,#250672);
+}
+#div ul li a:left{
+    content: '管理';
+}

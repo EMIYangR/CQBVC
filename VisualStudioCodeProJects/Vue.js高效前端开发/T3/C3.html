@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <style>
+        p span {
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p>员工信息</p>
+        <p>姓名：<input type="text" v-model="name"><span>{{nameTip}}</span></p>
+        <p>邮件：<input type="text" v-model="email"><span>{{emailTip}}</span></p>
+        <p>电话：<input type="text" v-model="phone"><span>{{phoneTip}}</span></p>
+    </div>
+
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                name: "",
+                email: "",
+                phone: "",
+                nameTip: "",
+                emailTip: "",
+                phoneTip: "",
+            },
+            watch: {
+                name: function (val) {
+                    if (val != "") {
+                        this.nameTip = "名字输入正确！"
+                    } else {
+                        this.nameTip = "名字不能为空！"
+                    }
+                },
+                email: function (val) {
+                    if (val != "") {
+                        this.emailTip = "邮箱输入正确！"
+                    } else {
+                        this.emailTip = "邮箱不能为空！"
+                    }
+                }, 
+                phone: function (val) {
+                    if (val != "") {
+                        this.phoneTip = "电话输入正确！"
+                    } else {
+                        this.phoneTip = "电话不能为空！"
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

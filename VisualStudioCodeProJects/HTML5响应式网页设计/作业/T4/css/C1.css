@@ -1,0 +1,23 @@
+ul{
+    width: 300px;
+    list-style: none;
+}
+ul li{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #c3c7c3;
+    border-left: solid 1px #000;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition-delay: 100ms;
+    transition-duration: 250ms;
+}
+ul li:hover{
+    width: 200px;
+    background-color: #250672;
+    color: #fff;
+    box-shadow: 5px 5px 15px #000;
+    transition: all 600ms linear 10ms;
+}

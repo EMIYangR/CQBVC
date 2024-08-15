@@ -1,0 +1,20 @@
+/* 重置所有标签的外边距和内边距为0 */
+*{
+    margin: 0;
+    padding: 0;
+    /* list-style-type: none;
+    font-size: 13px; */
+}
+dl,ul,ol,menu,li{
+    list-style: none;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+a:active,a:hover{
+    text-decoration: none;
+}
+fieldset,img{
+    border: 0;
+}

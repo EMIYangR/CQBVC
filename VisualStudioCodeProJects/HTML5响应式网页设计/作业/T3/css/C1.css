@@ -1,0 +1,33 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+    font-size: 12px;
+}
+a img{
+    border: none;
+    border-radius: 30px 10px;
+    box-shadow: 5px 5px 10px #666666;
+}
+#div{
+    display: flex;
+}
+#div dl{
+    flex: 1;
+    flex-flow: row wrap;
+    width: 360px;
+    height: 300px;
+    margin-right: 6px;
+    margin-bottom: 8px;
+}
+#div dd{
+    line-height: 24px;
+}
+#div dd .newPrice{
+    font-size: 16px;
+    color: #f60;
+}
+#div dd .oldPrice{
+    text-decoration: line-through;
+}
+
+

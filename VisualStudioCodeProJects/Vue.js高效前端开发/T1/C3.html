@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <style>
+        #app {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .banner {
+            width: 600px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            box-shadow: 5px 5px 10px #888;
+            font-size: 48px;
+            font-weight: bolder;
+            background-color: #033592;
+            color: #fff;
+            margin: 0px auto;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="banner">
+            {{date | formatDate}}
+        </div>
+    </div>
+
+    <script>
+        let padDate = function (val) {
+            return val < 10 ? "0" + val : val;
+        }
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                date: null
+            },
+            created() {
+                this.date = new Date();
+            },
+            mounted() {
+                let _this = this;
+                this.timer = setInterval(function () {
+                    _this.date = new Date();
+                }, 1000);
+            },
+            beforeDestroy() {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+            },
+            filters: {
+                formatDate: function (val) {
+                    let currdate = new Date();
+                    let year = currdate.getFullYear();
+                    let mouth = padDate(currdate.getMonth() + 1);
+                    let day = padDate(currdate.getDay());
+                    let hour = padDate(currdate.getHours());
+                    let minutes = padDate(currdate.getMinutes());
+                    let seconds = padDate(currdate.getSeconds());
+                    return year + "-" + mouth + "-" + day + " " + hour + ":" + minutes + ":" + seconds;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

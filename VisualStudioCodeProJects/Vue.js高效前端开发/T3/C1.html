@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <table id="app">
+        <caption>{{title}}</caption>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr v-for="(item,index) in emps" :key="index">
+            <td>{{index}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+        </tr>
+    </table>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                title: "员工信息列表",
+                emps: [
+                    { name: "张三", age: 20 },
+                    { name: "李四", age: 23 },
+                    { name: "王五", age: 32 },
+                    { name: "赵六", age: 34 }
+                ]
+            }
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <fieldset>
+            <legend>大学生成绩录入</legend>
+            <p><label>学生姓名：</label><input type="text" v-model="name" placeholder="请输入姓名..."></p>
+            <p><label>学生成绩：</label><input type="text" v-model="score" placeholder="请输入成绩..."></p>
+            <hr>
+            <div id="msg">
+                <div v-if="score>70">
+                    <h4 style="color: green;">{{name}}成功晋级，旅游去了！</h4>
+                </div>
+                <div v-else>
+                    <h4 style="color: red;">{{name}}你还需努力，加油学习！</h4>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                name: "",
+                score: ""
+            }
+        })
+    </script>
+</body>
+
+</html>

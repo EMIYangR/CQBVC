@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>员工信息表</h1>
+        </h1>
+        <empList-component></empList-component>
+
+    </div>
+    <div id="empList">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>地址</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in emps" :key="index">
+                        <td>{{index+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.age}}</td>
+                        <td>{{item.address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            components: {
+                "empList-compontent": {
+                    template: "#empList",
+                    data: {
+                        emps: [
+                            { name: "张三", age: 20, address: "湖北" },
+                            { name: "李四", age: 23, address: "河北" },
+                            { name: "王五", age: 32, address: "河南" },
+                            { name: "赵六", age: 34, address: "湖南" }
+                        ]
+                    }
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>

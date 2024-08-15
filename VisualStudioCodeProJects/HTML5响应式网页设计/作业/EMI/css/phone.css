@@ -1,0 +1,64 @@
+@media all and (max-width:576px) {
+    #header #logo a span{
+        display: none;
+    }
+    #header #end a:first-child{
+        display: block;
+    }
+    #header .a{
+        display: none;
+    }
+    #header #end .b{
+        display: none
+    }
+    #header #end:hover{
+        height: 10rem;
+    }
+    #header #end:hover .b{
+        display: inline-block;
+    }
+    #section #l3{
+        margin-top: -50%;
+    }
+    #section #right{
+        margin-top: 30px;
+    }
+    #section #game .game p a{
+        margin-bottom: 20%;
+    }
+    #section #game .self-col{
+        width: calc(100%/3);
+    }
+    #section #game .game p{
+        display: flex;
+    }
+    #section #game .game p span{
+        width: 60%;
+    }
+    #section #game .game p a{
+        width: 80%;
+        margin-top: 40px;
+        margin-left: -100%;
+    }
+    #section #game .col-md-2 .game h5{
+        font-size: 17px;
+    }
+    #section #dhl ul li:nth-child(2n){
+        display: none;
+    }
+    #section #dhl ul li{
+        width: 100px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+    }
+    #section #new a dl dt{
+        float: none;
+    }
+    #section #new a dl dt{
+        width: 100%;
+    }
+    #section #new a dl dt img{
+        height: 120px;
+    }
+}

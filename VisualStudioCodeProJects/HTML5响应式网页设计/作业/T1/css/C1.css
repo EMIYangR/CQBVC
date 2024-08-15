@@ -1,0 +1,42 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+}
+#div{
+    width: 1000px;
+    margin: 0px auto;
+}
+#logo{
+    /* margin-left: 45%; */
+    text-align: center;
+}
+#line ul{
+    width: 700px;
+    margin-left: 20%;
+}
+#line ul li{
+    list-style: none;
+    float: left;
+    margin-left: 5%;
+}
+#line ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+#line ul li a:hover{
+    color: orange;
+}
+#search{
+    clear: both;
+    padding-left: 100px;
+    margin-top: 7px;
+}
+#search input{
+    height: 30px;
+}
+#search #text{ 
+    width: 600px;
+    margin-left: 50px;
+    margin-top: 15px;
+}

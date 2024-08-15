@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#div{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   
+   flex-flow: row nowrap;
+
+   justify-content: space-between;
+
+   align-items: flex-start;
+}
+#div div{
+    width: 25%;
+    height: 50px;
+}
+.color1{
+    background-color: red;
+    /* height: 75px; */
+}
+.color2{
+    background-color: green;
+    /* height: 100px; */
+}
+.color3{
+    background-color: blue;
+    /* height: 50px; */
+}
+.color4{
+    background-color: purple;
+}
+
+.color5{
+    background-color: brown;
+}
+
+.color6{
+    background-color: gray;
+}
+
+.color7{
+    background-color: blanchedalmond;
+}
+
+.color8{
+    background-color: rosybrown;
+}

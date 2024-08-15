@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a-row style="background-color: purple;">
+            <a-col :span="24">
+                <h1>CMS后台管理系统</h1>
+            </a-col>
+        </a-row>
+        <a-row>
+            <a-col :span="8" style="background-color: #66ccff;">
+                导航菜单
+            </a-col>
+            <a-col :span="16">
+                CMS后台管理内容
+            </a-col>
+        </a-row>
+    </div>
+    <script>
+        new Vue({
+            el:"#app"
+        })
+    </script>
+</body>
+</html>

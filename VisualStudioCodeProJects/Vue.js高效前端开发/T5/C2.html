@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+
+    <style>
+        #layout-top .logo {
+            width: 220px;
+            height: 31px;
+            background: rgba((255), 255, 255, .2);
+            margin: 16px 24px 16px 0;
+            float: left;
+            text-align: center;
+            line-height: 31px;
+            color: white;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <a-layout id="layout-top">
+            <a-layout-header class="header">
+                <div class="logo">CMS 后合管理系统</div>
+                <a-menu theme="dark" mode="horizontal" :defaultSelectedKeys="['2']" :style="{lineHeight:'64px'}">
+                    <a-menu-item key="1">栏目管理</a-menu-item>
+                    <a-menu-item key="2">内容管理</a-menu-item>
+                    <a-menu-item key="3">广告管理</a-menu-item>
+                    <a-menu-item key="4">模板管理</a-menu-item>
+                    <a-menu-item key="5">系统设置</a-menu-item>
+                </a-menu>
+            </a-layout-header>
+            <a-layout>
+                <a-layout-sider width="200" style="background:#fff">
+                    <a-menu mode="inline" :style="{height:'100%',borderRight:0}">
+                        <a-sub-menu key="sub1">
+                            <span slot="title">网站设置</span>
+                            <a-menu-item key="1">网站信息</a-menu-item>
+                            <a-menu-item key="2">备案信息</a-menu-item>
+                            <a-menu-item key='3'>SEO 信息</a-menu-item>
+                            <a-menu-item key="4">二维码</a-menu-item>
+                        </a-sub-menu>
+                        <a-sub-menu key="sub2">
+                            <span slot="title">数据设置</span>
+                            <a-menu-item key="5">状态数据</a-menu-item>
+                            <a-menu-item key=“6'>类别数据</a-menu-item>
+                        </a-sub-menu>
+                    </a-menu>
+                </a-layout-sider>
+                <a-layout style="padding:0 24px 24px">
+                    <a-breadcrumb style='margin:16px 0'>
+                        <a-breadcrumb-item>首页</a-breadcrumb-item>
+                        <a-breadcrumb-item>系统设置</a-breadcrumb-item>
+                        <a-breadcrumb-item>网站设置</a-breadcrumb-Item>
+                        <a-breadcrumb-item>网站信息</a-breadcrumb-item>
+                    </a-breadcrumb>
+                    <a-layout-content :style="{background: '#fff',padding:'24px',margin:'0px', minHeight:'280px'}">
+                        网站信息主要内容
+                    </a-layout-content>
+                </a-layout>
+            </a-layout>
+        </a-layout>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app"
+
+        });
+    </script>
+</body>
+
+</html>

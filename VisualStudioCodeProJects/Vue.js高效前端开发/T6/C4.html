@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/antd.min.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/antd.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <a-row class="header">
+            <a-col :span="12">
+                <h1>CMS 后台管理导航</h1>
+            </a-col>
+        </a-row>
+        <a-row>
+            <a-col :span="4" class="side">
+                <a-tree checkable v-bind="attrs">
+                </a-tree>
+            </a-col>
+            <a-col :span="8">CMS后合管理一栏目管理</a-col>
+        </a-row>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                attrs: {
+                    treeData: [{
+                        title: "核心数据管理",
+                        key: "1",
+                        children: [{
+                            title: "栏目管理",
+                            key: "1-1"
+                        }, {
+                            title: "内容管理",
+                            key: "1-2"
+                        }, {
+                            title: "广告管理",
+                            key: "1-3",
+                        }]
+                    }, {
+                        title: "基础数据管理",
+                        key: "2",
+                        children: [{
+                            title: "网站设置",
+                            key: "2-1"
+                        }, {
+                            title: "用户管理",
+                            key: "2-2",
+                        }, {
+                            title: "模板管理",
+                            key: "2-3",
+                        }]
+                    }],
+                    defaultExpandedKeys: ["1", "2"],
+                    defaultCheckedKeys: ["1-1"]
+
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

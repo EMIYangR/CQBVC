@@ -1,0 +1,19 @@
+#div{
+    display: flex;
+    flex-flow: row wrap;
+}
+#d1,#d2{
+    width: 350px;
+    height: 214px;
+    border: solid 100px;
+}
+#d1{
+    border-image: url(../Case/实践案例2/images/background.png);
+    background: url(../Case/实践案例2/images/good1.jpg);
+}
+#d2{
+    border-image-source: url(../Case/实践案例2/images/background.png);
+    border-image-slice: 50;
+    border-image-repeat: round;
+    background: url(../Case/实践案例2/images/good2.jpg);
+}
