@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/helloAllByName" method="post">
+    请输入你要查询的商品名称：
+    <input type="text">
+    <input type="submit" value="查询">
+</form>
+<table border="1">
+    <tr>
+        <td>产品编号</td>
+        <td>产品名称</td>
+        <td>产品价格</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>iQOO 11</td>
+        <td>4699.00</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>iQOO 11 pro</td>
+        <td>4699.00</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>iQOO 11S</td>
+        <td>4699.00</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>iQOO 12</td>
+        <td>4699.00</td>
+    </tr>
+    {#        {% for item in p %}#}
+    {#        <tr>#}
+    {#            <td>{{ item["productid"] }}</td>#}
+    {#            <td>{{ item["productname"] }}</td>#}
+    {#            <td>{{ item["productprice"] }}</td>#}
+    {#        </tr>#}
+    {#        {% endfor %}#}
+
+</table>
+</body>
+</html>
