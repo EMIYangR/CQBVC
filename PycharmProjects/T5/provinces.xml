@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<country name="中国">
+    <province name="湖北">
+        <city>武汉</city>
+        <city>宜昌</city>
+        <city>黄石</city>
+    </province>
+    <province name="湖南">
+        <city>长沙</city>
+        <city>衡阳</city>
+        <city>湘潭</city>
+        <city>株洲</city>
+    </province>
+</country>
