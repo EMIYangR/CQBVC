@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\bin\Debug\T2.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\bin\Debug\T2.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\bin\Debug\T2.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\obj\Debug\T2.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\obj\Debug\T2.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\obj\Debug\T2.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\obj\Debug\T2.pdb

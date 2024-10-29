@@ -1,0 +1,8 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\bin\Debug\Test.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\bin\Debug\Test.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\bin\Debug\Test.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\obj\Debug\Test.csproj.SuggestedBindingRedirects.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\obj\Debug\Test.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\Test\Test\obj\Debug\Test.pdb

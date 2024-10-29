@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\T6\C1\bin\Debug\C1.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T6\C1\bin\Debug\C1.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T6\C1\bin\Debug\C1.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T6\C1\obj\Debug\C1.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T6\C1\obj\Debug\C1.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T6\C1\obj\Debug\C1.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T6\C1\obj\Debug\C1.pdb

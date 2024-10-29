@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\T1\C5\bin\Debug\C5.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T1\C5\bin\Debug\C5.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T1\C5\bin\Debug\C5.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T1\C5\obj\Debug\C5.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T1\C5\obj\Debug\C5.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T1\C5\obj\Debug\C5.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T1\C5\obj\Debug\C5.pdb

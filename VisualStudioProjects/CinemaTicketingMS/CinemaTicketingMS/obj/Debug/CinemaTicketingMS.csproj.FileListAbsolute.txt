@@ -1,0 +1,12 @@
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.Properties.Resources.resources
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.csproj.GenerateResource.cache
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.Login.resources
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\bin\Debug\CinemaTicketingMS.exe.config
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\bin\Debug\CinemaTicketingMS.exe
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\bin\Debug\CinemaTicketingMS.pdb
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.exe
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.pdb
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.Index.resources
+D:\Users\EMI\VisualStudioProjects\CinemaTicketingMS\CinemaTicketingMS\obj\Debug\CinemaTicketingMS.Orders.resources

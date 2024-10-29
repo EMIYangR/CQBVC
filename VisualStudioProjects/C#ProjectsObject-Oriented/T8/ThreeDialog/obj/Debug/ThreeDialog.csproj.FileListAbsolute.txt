@@ -1,0 +1,9 @@
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\bin\Debug\ThreeDialog.exe.config
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\bin\Debug\ThreeDialog.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\bin\Debug\ThreeDialog.pdb
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\obj\Debug\ThreeDialog.Form1.resources
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\obj\Debug\ThreeDialog.Properties.Resources.resources
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\obj\Debug\ThreeDialog.csproj.GenerateResource.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\obj\Debug\ThreeDialog.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\obj\Debug\ThreeDialog.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\ThreeDialog\obj\Debug\ThreeDialog.pdb

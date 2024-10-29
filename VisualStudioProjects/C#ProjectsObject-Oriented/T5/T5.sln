@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5", "T5\T5.csproj", "{A26F73E7-0F75-4FB3-B5B6-202CCCE88563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GriffinInherit", "C1\GriffinInherit.csproj", "{9C2CCA9C-2773-4938-AA9D-56EB04A02CDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A26F73E7-0F75-4FB3-B5B6-202CCCE88563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26F73E7-0F75-4FB3-B5B6-202CCCE88563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26F73E7-0F75-4FB3-B5B6-202CCCE88563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26F73E7-0F75-4FB3-B5B6-202CCCE88563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C2CCA9C-2773-4938-AA9D-56EB04A02CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2CCA9C-2773-4938-AA9D-56EB04A02CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2CCA9C-2773-4938-AA9D-56EB04A02CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2CCA9C-2773-4938-AA9D-56EB04A02CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F7D4E5B-F323-4F58-BF1E-9B7BAF0D1529}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TrainTicketing_MS\bin\Debug\TrainTicketing_MS.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TrainTicketing_MS\bin\Debug\TrainTicketing_MS.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TrainTicketing_MS\bin\Debug\TrainTicketing_MS.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TrainTicketing_MS\obj\Debug\TrainTicketing_MS.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TrainTicketing_MS\obj\Debug\TrainTicketing_MS.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TrainTicketing_MS\obj\Debug\TrainTicketing_MS.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TrainTicketing_MS\obj\Debug\TrainTicketing_MS.pdb

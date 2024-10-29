@@ -1,0 +1,6 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\bin\Release\T2.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\bin\Release\T2.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\bin\Release\T2.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\obj\Release\T2.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\obj\Release\T2.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\T2\obj\Release\T2.pdb

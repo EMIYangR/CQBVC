@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\FlyingChess\FlyingChess\bin\Debug\FlyingChess.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\FlyingChess\FlyingChess\bin\Debug\FlyingChess.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\FlyingChess\FlyingChess\bin\Debug\FlyingChess.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\FlyingChess\FlyingChess\obj\Debug\FlyingChess.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\FlyingChess\FlyingChess\obj\Debug\FlyingChess.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\FlyingChess\FlyingChess\obj\Debug\FlyingChess.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\FlyingChess\FlyingChess\obj\Debug\FlyingChess.pdb

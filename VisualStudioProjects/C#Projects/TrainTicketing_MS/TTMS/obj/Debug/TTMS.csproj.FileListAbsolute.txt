@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TTMS\obj\Debug\TTMS.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TTMS\obj\Debug\TTMS.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TTMS\bin\Debug\TTMS.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TTMS\bin\Debug\TTMS.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TTMS\bin\Debug\TTMS.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TTMS\obj\Debug\TTMS.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\TrainTicketing_MS\TTMS\obj\Debug\TTMS.pdb

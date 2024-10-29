@@ -1,0 +1,9 @@
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\bin\Debug\T8.exe.config
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\bin\Debug\T8.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\bin\Debug\T8.pdb
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\obj\Debug\T8.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\obj\Debug\T8.Properties.Resources.resources
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\obj\Debug\T8.csproj.GenerateResource.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\obj\Debug\T8.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\obj\Debug\T8.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\T8\obj\Debug\T8.pdb

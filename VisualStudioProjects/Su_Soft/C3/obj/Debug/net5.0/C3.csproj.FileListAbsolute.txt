@@ -1,0 +1,15 @@
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\bin\Debug\net5.0\C3.exe
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\bin\Debug\net5.0\C3.deps.json
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\bin\Debug\net5.0\C3.runtimeconfig.json
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\bin\Debug\net5.0\C3.runtimeconfig.dev.json
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\bin\Debug\net5.0\C3.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\bin\Debug\net5.0\ref\C3.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\bin\Debug\net5.0\C3.pdb
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\C3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\C3.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\C3.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\C3.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\C3.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\ref\C3.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\C3.pdb
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C3\obj\Debug\net5.0\C3.genruntimeconfig.cache

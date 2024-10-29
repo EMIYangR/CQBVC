@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\T9\T9\bin\Debug\T9.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T9\T9\bin\Debug\T9.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T9\T9\bin\Debug\T9.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T9\T9\obj\Debug\T9.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T9\T9\obj\Debug\T9.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T9\T9\obj\Debug\T9.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T9\T9\obj\Debug\T9.pdb

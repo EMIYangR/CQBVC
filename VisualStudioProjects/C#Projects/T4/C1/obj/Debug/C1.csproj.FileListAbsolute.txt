@@ -1,0 +1,14 @@
+C:\Users\EMI\source\repos\T4\C1\bin\Debug\C1.exe.config
+C:\Users\EMI\source\repos\T4\C1\bin\Debug\C1.exe
+C:\Users\EMI\source\repos\T4\C1\bin\Debug\C1.pdb
+C:\Users\EMI\source\repos\T4\C1\obj\Debug\C1.csproj.AssemblyReference.cache
+C:\Users\EMI\source\repos\T4\C1\obj\Debug\C1.csproj.CoreCompileInputs.cache
+C:\Users\EMI\source\repos\T4\C1\obj\Debug\C1.exe
+C:\Users\EMI\source\repos\T4\C1\obj\Debug\C1.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T4\C1\bin\Debug\C1.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T4\C1\bin\Debug\C1.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T4\C1\bin\Debug\C1.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T4\C1\obj\Debug\C1.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T4\C1\obj\Debug\C1.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T4\C1\obj\Debug\C1.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T4\C1\obj\Debug\C1.pdb

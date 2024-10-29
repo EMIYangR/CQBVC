@@ -1,0 +1,10 @@
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\obj\Debug\FilesMove.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\obj\Debug\FilesMove.Form1.resources
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\obj\Debug\FilesMove.Properties.Resources.resources
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\obj\Debug\FilesMove.csproj.GenerateResource.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\obj\Debug\FilesMove.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\bin\Debug\FilesMove.exe.config
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\bin\Debug\FilesMove.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\bin\Debug\FilesMove.pdb
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\obj\Debug\FilesMove.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\FilesMove\obj\Debug\FilesMove.pdb

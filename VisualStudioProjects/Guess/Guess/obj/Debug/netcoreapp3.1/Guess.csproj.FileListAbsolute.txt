@@ -1,0 +1,14 @@
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\bin\Debug\netcoreapp3.1\Guess.exe
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\bin\Debug\netcoreapp3.1\Guess.deps.json
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\bin\Debug\netcoreapp3.1\Guess.runtimeconfig.json
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\bin\Debug\netcoreapp3.1\Guess.runtimeconfig.dev.json
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\bin\Debug\netcoreapp3.1\Guess.dll
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\bin\Debug\netcoreapp3.1\Guess.pdb
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.dll
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.pdb
+D:\Users\EMI\VisualStudioProjects\Guess\Guess\obj\Debug\netcoreapp3.1\Guess.genruntimeconfig.cache

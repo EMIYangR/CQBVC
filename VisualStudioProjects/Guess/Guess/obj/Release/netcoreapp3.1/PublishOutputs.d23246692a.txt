@@ -1,0 +1,5 @@
+D:\Users\EMI\Desktop\123\Guess.exe
+D:\Users\EMI\Desktop\123\Guess.dll
+D:\Users\EMI\Desktop\123\Guess.deps.json
+D:\Users\EMI\Desktop\123\Guess.runtimeconfig.json
+D:\Users\EMI\Desktop\123\Guess.pdb

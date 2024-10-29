@@ -1,0 +1,6 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C6\bin\Debug\C6.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C6\bin\Debug\C6.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C6\bin\Debug\C6.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C6\obj\Debug\C6.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C6\obj\Debug\C6.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C6\obj\Debug\C6.pdb

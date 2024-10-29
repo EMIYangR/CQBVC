@@ -1,0 +1,6 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C3\bin\Debug\C3.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C3\bin\Debug\C3.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C3\bin\Debug\C3.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C3\obj\Debug\C3.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C3\obj\Debug\C3.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\T2\C3\obj\Debug\C3.pdb

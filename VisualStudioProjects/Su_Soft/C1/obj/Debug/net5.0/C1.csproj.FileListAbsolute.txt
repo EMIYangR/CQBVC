@@ -1,0 +1,16 @@
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\bin\Debug\net5.0\C1.exe
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\bin\Debug\net5.0\C1.deps.json
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\bin\Debug\net5.0\C1.runtimeconfig.json
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\bin\Debug\net5.0\C1.runtimeconfig.dev.json
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\bin\Debug\net5.0\C1.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\bin\Debug\net5.0\ref\C1.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\bin\Debug\net5.0\C1.pdb
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\ref\C1.dll
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.pdb
+D:\Users\EMI\VisualStudioProjects\Su_Soft\C1\obj\Debug\net5.0\C1.genruntimeconfig.cache

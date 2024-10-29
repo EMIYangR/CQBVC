@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\DirectoryOperation\bin\Debug\DirectoryOperation.exe.config
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\DirectoryOperation\bin\Debug\DirectoryOperation.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\DirectoryOperation\bin\Debug\DirectoryOperation.pdb
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\DirectoryOperation\obj\Debug\DirectoryOperation.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\DirectoryOperation\obj\Debug\DirectoryOperation.exe
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\DirectoryOperation\obj\Debug\DirectoryOperation.pdb
+D:\Users\EMI\VisualStudioProjects\C#ProjectsObject-Oriented\T8\DirectoryOperation\obj\Debug\DirectoryOperation.csproj.AssemblyReference.cache

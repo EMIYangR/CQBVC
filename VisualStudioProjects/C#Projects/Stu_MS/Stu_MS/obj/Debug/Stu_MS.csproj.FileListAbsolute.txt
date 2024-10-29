@@ -1,0 +1,7 @@
+D:\Users\EMI\VisualStudioProjects\C#Projects\Stu_MS\Stu_MS\obj\Debug\Stu_MS.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\Stu_MS\Stu_MS\obj\Debug\Stu_MS.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\C#Projects\Stu_MS\Stu_MS\bin\Debug\Stu_MS.exe.config
+D:\Users\EMI\VisualStudioProjects\C#Projects\Stu_MS\Stu_MS\bin\Debug\Stu_MS.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\Stu_MS\Stu_MS\bin\Debug\Stu_MS.pdb
+D:\Users\EMI\VisualStudioProjects\C#Projects\Stu_MS\Stu_MS\obj\Debug\Stu_MS.exe
+D:\Users\EMI\VisualStudioProjects\C#Projects\Stu_MS\Stu_MS\obj\Debug\Stu_MS.pdb
