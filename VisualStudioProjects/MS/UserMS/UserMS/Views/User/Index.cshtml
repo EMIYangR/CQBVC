@@ -1,0 +1,46 @@
+﻿@model IEnumerable<UserMS.Models.UserInfo>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2 align="center">用户管理页</h2>
+        <p><a href="/User/Add">新增用户</a></p>
+        <form action="/User/Index" method="post">
+            <p>
+                <input type="text" name="ID" id="ID" value="" placeholder="根据ID查询用户信息" />
+                <input type="submit" value="查询" />
+            </p>
+        </form>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Pwd</th>
+                <th>操作</th>
+            </tr>
+            @foreach (var item in ViewBag.Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Pwd</td>
+                    <td>
+                        <a href="/User/Edit/@item.ID">编辑</a>|
+                        <a href="/User/Detail/@item.ID">详细信息</a>|
+                        <a href="/User/Delete/@item.ID">删除</a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>

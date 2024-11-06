@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MVC.Models.Line>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form action="Index" method="post">
+            <p>
+                <label>请输入线路名称：</label>
+                <input type="text" name="name" />
+                <input type="submit" value="搜索" id="btn1" />
+            </p>
+        </form>
+        <table id="tb" class="table table-bordered table-hover table-responsive">
+            <tr>
+                <th>线路编号</th>
+                <th>线路名称</th>
+                <th>类别名称</th>
+                <th>价格</th>
+                <th>操作</th>
+            </tr>
+            @foreach (var item in ViewBag.Lines)
+            {
+                <tr>
+                    <td>@item.lineID</td>
+                    <td>@item.lineName</td>
+                    <td>@item.typeName</td>
+                    <td>@item.price</td>
+                    <td> @Html.ActionLink("详情", "Edit", new { id = item.lineID })</td>
+                </tr>
+            }
+        </table>
+        <a href="/Lines/Index?id=-1">上一页</a>
+        <a href="/Lines/Index?id=1">下一页</a>
+    </div>
+</body>
+</html>

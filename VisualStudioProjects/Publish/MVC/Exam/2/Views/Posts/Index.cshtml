@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row g-3 mb-4 align-items-center justify-content-between">
+    <div class="col-auto">
+        <h1 class="app-page-title mb-0"></h1>
+    </div>
+    <div class="col-auto">
+        <div class="page-utilities">
+            <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+                <div class="col-auto">
+                    <form class="docs-search-form row gx-1 align-items-center" method="post" action="/Posts/Index">
+                        <div class="col-auto">
+                            <input type="text" id="reportname" name="reportname" class="form-control search-docs" placeholder="通过用户账号查询">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn app-btn-secondary">搜索</button>
+                        </div>
+                    </form>
+
+                </div><!--//col-->
+            </div><!--//row-->
+        </div><!--//table-utilities-->
+    </div><!--//col-auto-->
+</div><!--//row-->
+<table class="table table-bordered table-condensed">
+    <tr>
+        <th>
+            用户昵称
+        </th>
+        <th>
+            图片
+        </th>
+        <th>
+            视频
+        </th>
+        <th>
+            内容
+        </th>
+        <th>
+            是否热门
+        </th>
+        <th>
+            是否禁用
+        </th>
+        <th>
+            是否原创
+        </th>
+        <th>
+            发帖时间
+        </th>
+        <th>
+            帖子状态
+        </th>
+        <th>操作</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserInfo.UserNick)
+            </td>
+            <td>
+                @if (item.PostPic != "无" && item.PostPic != "" && item.PostPic != null)
+                {
+                    <img src="~/Content/User/image/@item.PostPic" style="width: 160px; height: 90px;" />
+                }
+            </td>
+            <td>
+                @if (item.PostVideo != "无" && item.PostVideo != "" && item.PostVideo != null)
+                {
+                    <video src="~/Content/User/video/@item.PostVideo" style="width: 160px; height: 90px;"></video>
+                }
+            </td>
+            <td>
+                @if (item.PostContent != "无" && item.PostContent != "" && item.PostContent != null)
+                {
+                    @Html.DisplayFor(modelItem => item.PostContent)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsHot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDIY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostStatus.Status)
+            </td>
+            <td>
+                <a href="/Posts/DeleteConfirmed/@item.PostID">删除</a>|
+                <a href="/Posts/Ban/@item.PostID">屏蔽</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<YueBoAdmin.Models.Post>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+<br />
+
+每页 @Model.PageSize 条，共 @Model.TotalItemCount 条

@@ -1,0 +1,36 @@
+﻿@model UserMS.Models.UserInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <h2>编辑</h2>
+        <form action="/User/Edit/@Html.DisplayFor(model => model.ID)" method="post">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td>
+                        @Html.DisplayFor(model => model.ID)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Pwd</th>
+                    <td>
+                        @Html.EditorFor(model => model.Pwd)
+                    </td>
+                </tr>
+            </table>
+            <a href="/User/Index">返回</a>|
+            <input type="submit" value="修改" />
+        </form>
+    </div>
+</body>
+</html>

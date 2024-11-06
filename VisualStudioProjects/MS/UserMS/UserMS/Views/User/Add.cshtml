@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div>
+        <h2>添加</h2>
+        <form action="/User/Add" method="post">
+            <table>
+                <tr>
+                    <th>Pwd</th>
+                    <td><input type="text" name="Pwd" id="Pwd" value="" required/></td>
+                </tr>
+            </table>
+            <a href="/User/Index">返回</a>|
+            <input type="submit" value="添加" />
+        </form>
+    </div>
+</body>
+</html>

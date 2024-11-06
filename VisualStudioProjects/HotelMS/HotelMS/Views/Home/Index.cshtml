@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HotelMS.Models.Room>
+
+<h1>酒店管理</h1>
+
+<table class="table table-bordered table-condensed table-hover table-responsive table-striped text-center">
+    <tr id="Index-Tr">
+        <th>编号</th>
+        <th>房间类型</th>
+        <th>房间号</th>
+        <th>单价</th>
+        <th>内线电话</th>
+        <th>状态</th>
+        <th>删除</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.RoomType.TypeName</td>
+            <td>@item.Name</td>
+            <td>&yen;@item.Price</td>
+            <td>@item.Phone</td>
+            <td>
+                @if (item.Statu == 0)
+                {
+                    <span style="color:green;">空房间</span> <a href="/Home/Change/@item.ID" class="btn btn-primary">入住</a>
+
+                }
+                else
+                {
+                    <span style="color:red;">已入住</span> <a href="/Home/Change/@item.ID" class="btn btn-primary">退房</a>
+                }
+            </td>
+            <td>
+                <a href="/Home/Del/@item.ID" class="btn btn-warning" onclick="return confirm('是否确认删除？')">删除</a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="freshlivedbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPic" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ProductDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClassID" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ProductClass" Relationship="Self.FK_Product_ProductClass" FromRole="Product" ToRole="ProductClass" />
+  </EntityType>
+  <EntityType Name="ProductClass">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParentClassID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Product_ProductClass" FromRole="ProductClass" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="v_Product_ProductClass">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductPic" />
+      <PropertyRef Name="ProductPrice" />
+      <PropertyRef Name="ProductDesc" />
+      <PropertyRef Name="ClassID" />
+      <PropertyRef Name="AddTime" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPic" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ProductDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClassID" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ClassName" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="ParentClassID" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_Product_ProductClass">
+    <End Role="ProductClass" Type="Self.ProductClass" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductClass">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FreshLiveDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="ProductClass" EntityType="Self.ProductClass" />
+    <EntitySet Name="v_Product_ProductClass" EntityType="Self.v_Product_ProductClass" />
+    <AssociationSet Name="FK_Product_ProductClass" Association="Self.FK_Product_ProductClass">
+      <End Role="ProductClass" EntitySet="ProductClass" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <FunctionImport Name="proc_ProductByPaging" ReturnType="Collection(freshlivedbModel.proc_ProductByPaging_Result)">
+      <Parameter Name="pageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+      <Parameter Name="productName" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="proc_ProductByPaging_Result">
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="ProductPic" Nullable="false" MaxLength="64" />
+    <Property Type="Decimal" Name="ProductPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="ProductDesc" Nullable="false" MaxLength="Max" />
+    <Property Type="Int32" Name="ClassID" Nullable="false" />
+    <Property Type="DateTime" Name="AddTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ClassName" Nullable="true" MaxLength="16" />
+    <Property Type="Int32" Name="ParentClassID" Nullable="true" />
+  </ComplexType>
+</Schema>

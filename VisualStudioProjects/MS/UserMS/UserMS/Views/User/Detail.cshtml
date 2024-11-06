@@ -1,0 +1,30 @@
+﻿@model UserMS.Models.UserInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+</head>
+<body>
+    <div>
+        <h2>详情</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <td>@Html.DisplayFor(model => model.ID)</td>
+            </tr>
+            <tr>
+                <th>Pwd</th>
+                <td>@Html.DisplayFor(model => model.Pwd)</td>
+            </tr>
+        </table>
+        <a href="/User/Index">返回</a>|
+        <a href="/User/Edit/@Html.DisplayFor(model => model.ID)">编辑</a>
+    </div>
+</body>
+</html>
