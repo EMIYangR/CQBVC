@@ -1,0 +1,8 @@
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.RazorAssemblyInfo.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T4\T4_3\obj\Debug\netcoreapp3.1\T4_3.RazorAssemblyInfo.cs

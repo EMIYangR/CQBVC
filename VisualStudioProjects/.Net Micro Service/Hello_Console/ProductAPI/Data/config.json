@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "FreshLiveDB": "server=192.168.106.13;database=freshlivedb;User Id=sa;Password=123456;"
+  },
+  "RedisDB": "127.0.0.1:6379,abortConnect=false"
+}

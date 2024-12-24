@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService_Product_Server";
+import "google/protobuf/Empty.proto";
+
+package product;
+
+// The greeting service definition.
+service ProductManager {
+  // Sends a greeting
+  rpc GetProductByID (ProductRequest) returns (ProductReply);
+  rpc GetProductAll (google.protobuf.Empty) returns (AllProductsReply);
+}
+
+// The request message containing the user's name.
+message ProductRequest {
+  int32 pid = 1;
+}
+
+// The response message containing the greetings.
+message ProductReply {
+  Product product=1;
+}
+
+message Product{
+	int32 productID=1;
+	string productName=2;
+	string productPic=3;
+	double productPrice=4;
+	string productDesc=5;
+	int32 classID=6;
+	string addTime=7;
+
+}
+
+message AllProductsReply {
+  repeated Product product=1;
+}
+

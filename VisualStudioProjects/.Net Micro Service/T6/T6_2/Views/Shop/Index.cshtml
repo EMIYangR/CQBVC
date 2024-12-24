@@ -1,0 +1,62 @@
+﻿<div>
+    <div>
+        <div>
+            <fieldset>
+                <legend>商品列表</legend>
+                <table>
+                    <tr>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th>操作</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@string.Format("{0:C}", item.Price)</td>
+                            <td>
+                                <a href="/Shop/AddCart/@item.Id">添加到购物车</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>购物车</legend>
+                @if (!ViewBag.Cart != null)
+                {
+                    <table>
+                        <tr>
+                            <th>名称</th>
+                            <th>价格</th>
+                            <th>小计</th>
+                            <th>操作</th>
+                        </tr>
+                        @foreach (var item in ViewBag.Cart)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.Amount</td>
+                                <td>@string.Format("{0:C}", item.Total)</td>
+                                <td>
+                                    <a href="/Shop/RemoveCart/@item.Id">添加到购物车</a>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                    <div>
+                        总计：@string.Format("{0:C}", ViewBag.CartTotal)
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        没有购买商品
+                    </div>
+                }
+            </fieldset>
+        </div>
+    </div>
+</div>

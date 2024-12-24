@@ -1,0 +1,23 @@
+﻿@model IEnumerable<T2Class.Models.Product>
+
+@{
+    Layout = null;
+}
+
+<table class="table table-bordered table-danger table-hover">
+    <tr>
+        <th>产品编号</th>
+        <th>产品名称</th>
+        <th>产品价格</th>
+        <th>产品简介</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductId</td>
+            <td>@item.ProductName</td>
+            <td>@item.ProductPrice</td>
+            <td>@item.ProductDesc</td>
+        </tr>
+    }
+</table>

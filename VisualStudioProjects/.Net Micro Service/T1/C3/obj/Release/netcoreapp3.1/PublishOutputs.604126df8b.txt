@@ -1,0 +1,5 @@
+D:\Users\EMI\Desktop\work\T8C1\C3.exe
+D:\Users\EMI\Desktop\work\T8C1\C3.dll
+D:\Users\EMI\Desktop\work\T8C1\C3.deps.json
+D:\Users\EMI\Desktop\work\T8C1\C3.runtimeconfig.json
+D:\Users\EMI\Desktop\work\T8C1\C3.pdb

@@ -1,0 +1,14 @@
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Release\netcoreapp3.1\Hello_Console.exe
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Release\netcoreapp3.1\Hello_Console.deps.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Release\netcoreapp3.1\Hello_Console.runtimeconfig.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Release\netcoreapp3.1\Hello_Console.runtimeconfig.dev.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Release\netcoreapp3.1\Hello_Console.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Release\netcoreapp3.1\Hello_Console.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\obj\Release\netcoreapp3.1\Hello_Console.genruntimeconfig.cache

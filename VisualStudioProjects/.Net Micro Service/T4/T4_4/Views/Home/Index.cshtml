@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div>
+        <h5>聊天室</h5>
+        <h6>群聊</h6>
+        <p>
+            <div id="login">
+                <div>
+                    <div>
+                        <div>
+                            <span>用户姓名：</span>
+                        </div>
+                        <input type="text" name="user" id="user" />
+                    </div>
+                    <input type="button" id="LoginBtn" value="登录" />
+                </div>
+            </div>
+            <div id="chat">
+                <div>
+                    <div>
+                        <ul id="msgs">
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <span>用户姓名：</span>
+                            </div>
+                            <input type="text" name="user" id="user" />
+                        </div>
+                        <input type="button" id="SendBtn" value="发送" />
+                    </div>
+                </div>
+                <div>&nbsp;</div>
+            </div>
+        </p>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/lib/microsoft-signalr/signalr.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/chat.js"></script>
+}

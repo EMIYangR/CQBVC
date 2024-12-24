@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BL3fk3qEOXQQT8g5W/WT84/FtxqchSrDyC6U5BTzrVpCllgeSkJPMegsjfMEei0FRpRMIuMfIsu3AedAUkFo0w==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\EMI\\VisualStudioProjects\\.Net Micro Service\\T1Class\\T7_1\\T6_4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\EMI\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\EMI\\.nuget\\packages\\stackexchange.redis\\2.6.122\\stackexchange.redis.2.6.122.nupkg.sha512",
+    "C:\\Users\\EMI\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+﻿@{ 
+    ViewData["Title"] = "商品列表";
+}
+
+<h1>按价格排序</h1>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.Name
+            <span>@string.Format("{0:C}",item.Price)</span>
+        </li>
+    }
+</ul>

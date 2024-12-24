@@ -1,0 +1,14 @@
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\bin\Release\netcoreapp3.1\C3.exe
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\bin\Release\netcoreapp3.1\C3.deps.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\bin\Release\netcoreapp3.1\C3.runtimeconfig.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\bin\Release\netcoreapp3.1\C3.runtimeconfig.dev.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\bin\Release\netcoreapp3.1\C3.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\bin\Release\netcoreapp3.1\C3.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1\C3\obj\Release\netcoreapp3.1\C3.genruntimeconfig.cache

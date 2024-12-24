@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "VPnHYv4z9840x/Zo2wdn4FDyDDbMiJAhqT7rZ1Ya9Ztv3eXl2PhNu11vpEvLyHGlAmbeeU3j46Hf/ihIt9Waig==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\EMI\\VisualStudioProjects\\.Net Micro Service\\T1Class\\T6_3\\T6_3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\EMI\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\EMI\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\EMI\\.nuget\\packages\\stackexchange.redis\\2.6.122\\stackexchange.redis.2.6.122.nupkg.sha512",
+    "C:\\Users\\EMI\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Index</title>
+
+</head>
+<body>
+    <h1>有趣的万年历</h1>
+    <hr>
+    <table>
+        <tr>
+            @foreach (var item in ViewBag.Weeks)
+            {
+                <th>@item</th>
+            }
+        </tr>
+        <tr>
+            @for (int i = 0; i < ViewBag.FristDaysofMouth; i++)
+            {
+                <td>&nbsp;</td>
+            }
+
+            @for (int i = 1; i <= ViewBag.Days; i++)
+            {
+                <td>@i</td>
+                Console.Write(i + "\t");
+                if ((ViewBag.TotalDays + i - 1) % 7 == 5)
+                {
+                    string newLine = "</tr><tr>";
+                    @Html.Raw(newLine);
+                }
+            }
+        </tr>
+    </table>
+</body>
+</html>

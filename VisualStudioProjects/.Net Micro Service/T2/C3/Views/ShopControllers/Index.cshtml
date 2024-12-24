@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Index</title>
+
+</head>
+<body>
+    <div>
+        <div>
+            <div>
+                <h1>商品查询</h1>
+            </div>
+        </div>
+        <hr />
+        <div>
+            <div>
+                <input type="text" placeholder="请输入商品名称..." />
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th>说明</th>
+                    </tr>
+                    <tr v-for="prod in prodFilterLIst" :key="prod.ProductID">
+                        <td>{{ prod.ProductID}}</td>
+                        <td>{{ prod.ProductName}}</td>
+                        <td>&yen;{{ prod.ProductPrice|priceFormat}}</td>
+                        <td>{{ prod.ProductDesc}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "app",
+            data: {
+                key: "",
+                prodList: []
+            },
+            created: function () {
+                var a = this;
+                axios.get("https://localhost:44300/api/Product").then(function (res) {
+                    a.prodList = res.data;
+                }).catch(function (err) {
+                    console.log(err);
+                });
+            },
+            computed: {
+                prodFilterLIst: function () {
+                    var a = this;
+                    return this.prodList, filter(function (item) {
+                        return item.productName.indexOf(self.key) != -1;
+                    });
+                }
+            },
+            filters: {
+                priceFormat: function (item) {
+                    return item.toFixed(2);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+
+

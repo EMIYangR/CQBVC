@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "T8": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

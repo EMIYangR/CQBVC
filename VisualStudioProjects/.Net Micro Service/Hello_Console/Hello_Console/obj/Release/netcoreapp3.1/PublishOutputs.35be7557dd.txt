@@ -1,0 +1,5 @@
+D:\Users\EMI\Desktop\Images\image_Hello\Hello_Console.exe
+D:\Users\EMI\Desktop\Images\image_Hello\Hello_Console.dll
+D:\Users\EMI\Desktop\Images\image_Hello\Hello_Console.deps.json
+D:\Users\EMI\Desktop\Images\image_Hello\Hello_Console.runtimeconfig.json
+D:\Users\EMI\Desktop\Images\image_Hello\Hello_Console.pdb

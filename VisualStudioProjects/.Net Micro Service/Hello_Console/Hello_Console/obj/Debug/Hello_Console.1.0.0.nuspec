@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Hello_Console</id>
+    <version>1.0.0</version>
+    <authors>Hello_Console</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Debug\netcoreapp3.1\Hello_Console.runtimeconfig.json" target="lib\netcoreapp3.1\Hello_Console.runtimeconfig.json" />
+    <file src="D:\Users\EMI\VisualStudioProjects\.Net Micro Service\Hello_Console\Hello_Console\bin\Debug\netcoreapp3.1\Hello_Console.dll" target="lib\netcoreapp3.1\Hello_Console.dll" />
+  </files>
+</package>

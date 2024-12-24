@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6DohJmNpKy/RVUjsJLj7cFXPw0ilu4hATUEJ9yxiWaeFJ0eqqNIc9MjPulvwDWeo0+GAwHOjjAnIIarWzDwTsQ==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\EMI\\VisualStudioProjects\\.Net Micro Service\\Hello_Console\\Hello_Console\\Hello_Console.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\EMI\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}

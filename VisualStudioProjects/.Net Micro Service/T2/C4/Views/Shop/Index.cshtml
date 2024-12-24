@@ -1,0 +1,12 @@
+﻿@{ 
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>商品信息</h1>
+<ul class="list-group">
+    <li class="list-group-item">商品编号：@ViewBag.p.ID</li>
+    <li class="list-group-item">商品名称：@ViewBag.p.Name</li>
+    <li class="list-group-item">类别名称：@ViewBag.p.Category.Name</li>
+    <li class="list-group-item">商品价格：@string.Format("{0:C}", ViewBag.p.Price)</li>
+</ul>

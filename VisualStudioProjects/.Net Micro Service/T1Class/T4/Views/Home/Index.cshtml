@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div>
+    <p>
+        账户：<input type="text" name="user" id="user"/>
+    </p>
+    <p>
+        信息：<input type="text" name="msg" id="msg" placeholder="请留下你的留言..."/>
+    </p>
+    <p>
+        <button id="btnSend">发送</button>
+    </p>
+</div>
+
+<hr />
+
+<div>
+    <ul id="msgs"></ul>
+</div>
+
+
+@section Scripts{ 
+    <script src="~/lib/microsoft-signalr/signalr.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/chat.js"></script>
+}

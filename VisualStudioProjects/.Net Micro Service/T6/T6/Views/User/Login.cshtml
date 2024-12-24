@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "首页";
+}
+
+<h1>用户登录</h1>
+<div>
+    @using (Html.BeginForm()){
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <span>登录账号：</span>
+                    </div>
+                    <input type="text" name="loginId" placeholder="请输入登录账号..." />
+                </div>
+                <div>
+                    <div>
+                        <span>登录密码：</span>
+                    </div>
+                    <input type="password" name="loginPwd" placeholder="请输入登录密码..." />
+                </div>
+            </div>
+            <div>
+                <input type="submit" name="name" value="登录" />
+            </div>
+        </div>
+    }
+
+</div>

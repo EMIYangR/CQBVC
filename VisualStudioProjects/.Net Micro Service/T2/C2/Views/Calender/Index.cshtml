@@ -1,0 +1,31 @@
+﻿@{                                                                                                                                               
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Index</title>
+
+</head>
+<body>
+    <h1>有趣的万年历</h1>
+    <hr>
+    @using (Html.BeginForm("Show", "Calender"))
+    {
+        <p>
+            <label for="year">年份：</label>
+            @Html.TextBox("year")
+        </p>
+        <p>
+            <label for="month">月份：</label>
+            @Html.TextBox("month")
+        </p>
+       <p>
+           <input type="submit" id="btnSubmit" name="btnSubmit" value="查询" />
+       </p>
+    }
+</body>
+</html>
+
+

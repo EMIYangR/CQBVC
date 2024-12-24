@@ -1,0 +1,14 @@
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\bin\Debug\netcoreapp3.1\T1Class.exe
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\bin\Debug\netcoreapp3.1\T1Class.deps.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\bin\Debug\netcoreapp3.1\T1Class.runtimeconfig.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\bin\Debug\netcoreapp3.1\T1Class.runtimeconfig.dev.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\bin\Debug\netcoreapp3.1\T1Class.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\bin\Debug\netcoreapp3.1\T1Class.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.csproj.AssemblyReference.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T1Class\obj\Debug\netcoreapp3.1\T1Class.genruntimeconfig.cache

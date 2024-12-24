@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "T4";
+
+package Users;
+
+service UserManagerService {
+  rpc Login (LoginRequest) returns (LoginRespose);
+}
+
+message LoginRequest {
+  string loginId = 1;
+  string loginPwd = 2;
+}
+
+message LoginRespose {
+  string userName = 1;
+}

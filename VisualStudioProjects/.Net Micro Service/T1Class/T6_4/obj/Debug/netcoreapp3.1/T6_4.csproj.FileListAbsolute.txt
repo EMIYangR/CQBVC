@@ -1,0 +1,17 @@
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\T6_4.exe
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\T6_4.deps.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\T6_4.runtimeconfig.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\T6_4.runtimeconfig.dev.json
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\T6_4.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\T6_4.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.AssemblyInfoInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.AssemblyInfo.cs
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.csproj.CoreCompileInputs.cache
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.csproj.CopyComplete
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.dll
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.pdb
+D:\Users\EMI\VisualStudioProjects\.Net Micro Service\T1Class\T7_1\obj\Debug\netcoreapp3.1\T6_4.genruntimeconfig.cache

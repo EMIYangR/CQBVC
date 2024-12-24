@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<GrpcService_Product_Server.Product>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Grpc请求结果：@ViewBag.Message</h2>
+<h2>Grpc请求结果：@ViewBag.AllProduct</h2>
+
+<div>
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>价格</th>
+            <th>简介</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.ProductName</td>
+                <td>@item.ProductPrice</td>
+                <td>@item.ProductDesc</td>
+            </tr>
+        }
+    </table>
+</div>
